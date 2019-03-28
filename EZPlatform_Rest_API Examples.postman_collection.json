@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "db92c3e5-b58d-43df-9e5b-a114686b8014",
 		"name": "EzPlatform Rest API Examples",
-		"description": "Some example from https://github.com/ezsystems/ezpublish-kernel/blob/master/doc/specifications/rest/REST-API-V2.rst The eZPlatform REST API Specification. contact me: ramzi_arfa@hotmail.de",
+		"description": "Some example from https://github.com/ezsystems/ezpublish-kernel/blob/master/doc/specifications/rest/REST-API-V2.rst The eZPlatform REST API Specification. contribution welcome: https://github.com/arfaram/ezplatform_rest_api_postman",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
