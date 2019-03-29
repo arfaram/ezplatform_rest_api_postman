@@ -2709,15 +2709,13 @@
 								"key": "Destination",
 								"value": "/api/ezp/v2/content/locations/1/2/207",
 								"description": "Path seems to be a bug here! should like copy content only the LocationId !",
-								"type": "text",
-								"disabled": true
+								"type": "text"
 							},
 							{
 								"key": "Destination",
 								"value": "/api/ezp/v2/content/trash",
 								"description": "Path seems to be a bug here!  should be /content/trash",
-								"type": "text",
-								"disabled": true
+								"type": "text"
 							},
 							{
 								"key": "Destination",
@@ -2753,6 +2751,263 @@
 							]
 						},
 						"description": "Using Location path"
+					},
+					"response": [
+						{
+							"name": "Create a new location for content - link",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.ez.api.Location+xml"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/vnd.ez.api.LocationCreate+xml",
+										"type": "text"
+									},
+									{
+										"key": "X-CSRF-Token",
+										"value": "c76V4TvmX95rp6ahNZPUimhDoFehRc625O3hU5Lwz1k",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<LocationCreate>\n  <ParentLocation href=\"/api/ezp/v2/content/locations/1/2/306\" />\n  <priority>2</priority>\n  <hidden>false</hidden>\n  <sortField>PATH</sortField>\n  <sortOrder>ASC</sortOrder>\n  <remoteId>1334424myremoteId</remoteId>\n</LocationCreate>"
+								},
+								"url": {
+									"raw": "{{your_domain}}/api/ezp/v2/content/objects/72/locations",
+									"host": [
+										"{{your_domain}}"
+									],
+									"path": [
+										"api",
+										"ezp",
+										"v2",
+										"content",
+										"objects",
+										"72",
+										"locations"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Mar 2019 17:41:24 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.10 (Debian)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private"
+								},
+								{
+									"key": "Accept-Patch",
+									"value": "application/vnd.ez.api.LocationUpdate+xml"
+								},
+								{
+									"key": "Location",
+									"value": "/api/ezp/v2/content/locations/1/2/306/339"
+								},
+								{
+									"key": "Vary",
+									"value": "cookie,authorization"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2165"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.ez.api.Location+xml"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Location media-type=\"application/vnd.ez.api.Location+xml\" href=\"/api/ezp/v2/content/locations/1/2/306/339\">\n    <id>339</id>\n    <priority>2</priority>\n    <hidden>false</hidden>\n    <invisible>false</invisible>\n    <ParentLocation media-type=\"application/vnd.ez.api.Location+xml\" href=\"/api/ezp/v2/content/locations/1/2/306\"/>\n    <pathString>/1/2/306/339/</pathString>\n    <depth>3</depth>\n    <childCount>0</childCount>\n    <remoteId>1334424myremoteId</remoteId>\n    <Children media-type=\"application/vnd.ez.api.LocationList+xml\" href=\"/api/ezp/v2/content/locations/1/2/306/339/children\"/>\n    <Content media-type=\"application/vnd.ez.api.Content+xml\" href=\"/api/ezp/v2/content/objects/72\"/>\n    <sortField>PATH</sortField>\n    <sortOrder>ASC</sortOrder>\n    <UrlAliases media-type=\"application/vnd.ez.api.UrlAliasRefList+xml\" href=\"/api/ezp/v2/content/locations/1/2/306/339/urlaliases\"/>\n    <ContentInfo media-type=\"application/vnd.ez.api.ContentInfo+xml\" href=\"/api/ezp/v2/content/objects/72\">\n        <Content media-type=\"application/vnd.ez.api.ContentInfo+xml\" href=\"/api/ezp/v2/content/objects/72\" remoteId=\"qwert4321\" id=\"72\">\n            <ContentType media-type=\"application/vnd.ez.api.ContentType+xml\" href=\"/api/ezp/v2/content/types/14\"/>\n            <Name>Greek salad with red cabbage</Name>\n            <Versions media-type=\"application/vnd.ez.api.VersionList+xml\" href=\"/api/ezp/v2/content/objects/72/versions\"/>\n            <CurrentVersion media-type=\"application/vnd.ez.api.Version+xml\" href=\"/api/ezp/v2/content/objects/72/currentversion\"/>\n            <Section media-type=\"application/vnd.ez.api.Section+xml\" href=\"/api/ezp/v2/content/sections/1\"/>\n            <Locations media-type=\"application/vnd.ez.api.LocationList+xml\" href=\"/api/ezp/v2/content/objects/72/locations\"/>\n            <Owner media-type=\"application/vnd.ez.api.User+xml\" href=\"/api/ezp/v2/user/users/14\"/>\n            <lastModificationDate>2019-03-28T17:36:47+01:00</lastModificationDate>\n            <publishedDate>2018-11-17T19:21:57+01:00</publishedDate>\n            <mainLanguageCode>eng-GB</mainLanguageCode>\n            <currentVersionNo>6</currentVersionNo>\n            <alwaysAvailable>true</alwaysAvailable>\n            <ObjectStates media-type=\"application/vnd.ez.api.ContentObjectStates+xml\" href=\"/api/ezp/v2/content/objects/72/objectstates\"/>\n        </Content>\n    </ContentInfo>\n</Location>"
+						}
+					]
+				},
+				{
+					"name": "Swap Location",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-CSRF-Token",
+								"type": "text",
+								"value": "{{csrf_token}}"
+							},
+							{
+								"key": "X-HTTP-Method-Override",
+								"value": "SWAP",
+								"type": "text"
+							},
+							{
+								"key": "Destination",
+								"value": "/api/ezp/v2/content/locations/1/2/207",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{your_domain}}/api/ezp/v2/content/locations/2",
+							"host": [
+								"{{your_domain}}"
+							],
+							"path": [
+								"api",
+								"ezp",
+								"v2",
+								"content",
+								"locations",
+								"2"
+							]
+						},
+						"description": "Swap Home with another location"
+					},
+					"response": [
+						{
+							"name": "Create a new location for content - link",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.ez.api.Location+xml"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/vnd.ez.api.LocationCreate+xml",
+										"type": "text"
+									},
+									{
+										"key": "X-CSRF-Token",
+										"value": "c76V4TvmX95rp6ahNZPUimhDoFehRc625O3hU5Lwz1k",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<LocationCreate>\n  <ParentLocation href=\"/api/ezp/v2/content/locations/1/2/306\" />\n  <priority>2</priority>\n  <hidden>false</hidden>\n  <sortField>PATH</sortField>\n  <sortOrder>ASC</sortOrder>\n  <remoteId>1334424myremoteId</remoteId>\n</LocationCreate>"
+								},
+								"url": {
+									"raw": "{{your_domain}}/api/ezp/v2/content/objects/72/locations",
+									"host": [
+										"{{your_domain}}"
+									],
+									"path": [
+										"api",
+										"ezp",
+										"v2",
+										"content",
+										"objects",
+										"72",
+										"locations"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 28 Mar 2019 17:41:24 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.10 (Debian)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private"
+								},
+								{
+									"key": "Accept-Patch",
+									"value": "application/vnd.ez.api.LocationUpdate+xml"
+								},
+								{
+									"key": "Location",
+									"value": "/api/ezp/v2/content/locations/1/2/306/339"
+								},
+								{
+									"key": "Vary",
+									"value": "cookie,authorization"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2165"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.ez.api.Location+xml"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Location media-type=\"application/vnd.ez.api.Location+xml\" href=\"/api/ezp/v2/content/locations/1/2/306/339\">\n    <id>339</id>\n    <priority>2</priority>\n    <hidden>false</hidden>\n    <invisible>false</invisible>\n    <ParentLocation media-type=\"application/vnd.ez.api.Location+xml\" href=\"/api/ezp/v2/content/locations/1/2/306\"/>\n    <pathString>/1/2/306/339/</pathString>\n    <depth>3</depth>\n    <childCount>0</childCount>\n    <remoteId>1334424myremoteId</remoteId>\n    <Children media-type=\"application/vnd.ez.api.LocationList+xml\" href=\"/api/ezp/v2/content/locations/1/2/306/339/children\"/>\n    <Content media-type=\"application/vnd.ez.api.Content+xml\" href=\"/api/ezp/v2/content/objects/72\"/>\n    <sortField>PATH</sortField>\n    <sortOrder>ASC</sortOrder>\n    <UrlAliases media-type=\"application/vnd.ez.api.UrlAliasRefList+xml\" href=\"/api/ezp/v2/content/locations/1/2/306/339/urlaliases\"/>\n    <ContentInfo media-type=\"application/vnd.ez.api.ContentInfo+xml\" href=\"/api/ezp/v2/content/objects/72\">\n        <Content media-type=\"application/vnd.ez.api.ContentInfo+xml\" href=\"/api/ezp/v2/content/objects/72\" remoteId=\"qwert4321\" id=\"72\">\n            <ContentType media-type=\"application/vnd.ez.api.ContentType+xml\" href=\"/api/ezp/v2/content/types/14\"/>\n            <Name>Greek salad with red cabbage</Name>\n            <Versions media-type=\"application/vnd.ez.api.VersionList+xml\" href=\"/api/ezp/v2/content/objects/72/versions\"/>\n            <CurrentVersion media-type=\"application/vnd.ez.api.Version+xml\" href=\"/api/ezp/v2/content/objects/72/currentversion\"/>\n            <Section media-type=\"application/vnd.ez.api.Section+xml\" href=\"/api/ezp/v2/content/sections/1\"/>\n            <Locations media-type=\"application/vnd.ez.api.LocationList+xml\" href=\"/api/ezp/v2/content/objects/72/locations\"/>\n            <Owner media-type=\"application/vnd.ez.api.User+xml\" href=\"/api/ezp/v2/user/users/14\"/>\n            <lastModificationDate>2019-03-28T17:36:47+01:00</lastModificationDate>\n            <publishedDate>2018-11-17T19:21:57+01:00</publishedDate>\n            <mainLanguageCode>eng-GB</mainLanguageCode>\n            <currentVersionNo>6</currentVersionNo>\n            <alwaysAvailable>true</alwaysAvailable>\n            <ObjectStates media-type=\"application/vnd.ez.api.ContentObjectStates+xml\" href=\"/api/ezp/v2/content/objects/72/objectstates\"/>\n        </Content>\n    </ContentInfo>\n</Location>"
+						}
+					]
+				},
+				{
+					"name": "Delete Subtree",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "X-CSRF-Token",
+								"type": "text",
+								"value": "{{csrf_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{your_domain}}/api/ezp/v2/content/locations/1/2/207/365",
+							"host": [
+								"{{your_domain}}"
+							],
+							"path": [
+								"api",
+								"ezp",
+								"v2",
+								"content",
+								"locations",
+								"1",
+								"2",
+								"207",
+								"365"
+							]
+						},
+						"description": "Swap Home with another location"
 					},
 					"response": [
 						{
@@ -3619,6 +3874,1838 @@
 			]
 		},
 		{
+			"name": "Policies",
+			"item": [
+				{
+					"name": "Load Role Policies",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/vnd.ez.api.PolicyList+xml",
+								"type": "text"
+							},
+							{
+								"key": "X-CSRF-Token",
+								"value": "{{csrf_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{your_domain}}/api/ezp/v2/user/roles/5/policies",
+							"host": [
+								"{{your_domain}}"
+							],
+							"path": [
+								"api",
+								"ezp",
+								"v2",
+								"user",
+								"roles",
+								"5",
+								"policies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Load User Policies",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/vnd.ez.api.PolicyList+xml"
+							},
+							{
+								"key": "X-CSRF-Token",
+								"type": "text",
+								"value": "{{csrf_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{your_domain}}/api/ezp/v2/user/policies?userId=231",
+							"host": [
+								"{{your_domain}}"
+							],
+							"path": [
+								"api",
+								"ezp",
+								"v2",
+								"user",
+								"policies"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "231"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Load User Policies",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/vnd.ez.api.PolicyList+xml"
+									},
+									{
+										"key": "X-CSRF-Token",
+										"type": "text",
+										"value": "{{csrf_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{your_domain}}/api/ezp/v2/user/policies?userId=231",
+									"host": [
+										"{{your_domain}}"
+									],
+									"path": [
+										"api",
+										"ezp",
+										"v2",
+										"user",
+										"policies"
+									],
+									"query": [
+										{
+											"key": "userId",
+											"value": "231"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2019 17:47:01 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.10 (Debian)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2790"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.ez.api.PolicyList+xml"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<PolicyList media-type=\"application/vnd.ez.api.PolicyList+xml\" href=\"/api/ezp/v2/user/policies\">\n    <Policy media-type=\"application/vnd.ez.api.Policy+xml\" href=\"/api/ezp/v2/user/roles/1/policies/357\">\n        <id>357</id>\n        <module>user</module>\n        <function>login</function>\n        <limitations>\n            <limitation identifier=\"SiteAccess\">\n                <values>\n                    <ref media-type=\"application/vnd.ez.api.ref+xml\" href=\"1766001124\"/>\n                    <ref media-type=\"application/vnd.ez.api.ref+xml\" href=\"3430272718\"/>\n                    <ref media-type=\"application/vnd.ez.api.ref+xml\" href=\"2106599819\"/>\n                    <ref media-type=\"application/vnd.ez.api.ref+xml\" href=\"1739204639\"/>\n                </values>\n            </limitation>\n        </limitations>\n    </Policy>\n    <Policy media-type=\"application/vnd.ez.api.Policy+xml\" href=\"/api/ezp/v2/user/roles/1/policies/358\">\n        <id>358</id>\n        <module>user</module>\n        <function>register</function>\n    </Policy>\n    <Policy media-type=\"application/vnd.ez.api.Policy+xml\" href=\"/api/ezp/v2/user/roles/1/policies/359\">\n        <id>359</id>\n        <module>tags</module>\n        <function>read</function>\n    </Policy>\n    <Policy media-type=\"application/vnd.ez.api.Policy+xml\" href=\"/api/ezp/v2/user/roles/1/policies/360\">\n        <id>360</id>\n        <module>tags</module>\n        <function>view</function>\n    </Policy>\n    <Policy media-type=\"application/vnd.ez.api.Policy+xml\" href=\"/api/ezp/v2/user/roles/1/policies/361\">\n        <id>361</id>\n        <module>content</module>\n        <function>read</function>\n        <limitations>\n            <limitation identifier=\"Section\">\n                <values>\n                    <ref media-type=\"application/vnd.ez.api.ref+xml\" href=\"1\"/>\n                    <ref media-type=\"application/vnd.ez.api.ref+xml\" href=\"3\"/>\n                    <ref media-type=\"application/vnd.ez.api.ref+xml\" href=\"7\"/>\n                </values>\n            </limitation>\n        </limitations>\n    </Policy>\n    <Policy media-type=\"application/vnd.ez.api.Policy+xml\" href=\"/api/ezp/v2/user/roles/1/policies/362\">\n        <id>362</id>\n        <module>content</module>\n        <function>view_embed</function>\n        <limitations>\n            <limitation identifier=\"Section\">\n                <values>\n                    <ref media-type=\"application/vnd.ez.api.ref+xml\" href=\"1\"/>\n                    <ref media-type=\"application/vnd.ez.api.ref+xml\" href=\"3\"/>\n                </values>\n            </limitation>\n        </limitations>\n    </Policy>\n    <Policy media-type=\"application/vnd.ez.api.Policy+xml\" href=\"/api/ezp/v2/user/roles/4/policies/363\">\n        <id>363</id>\n        <module>user</module>\n        <function>selfedit</function>\n    </Policy>\n    <Policy media-type=\"application/vnd.ez.api.Policy+xml\" href=\"/api/ezp/v2/user/roles/4/policies/364\">\n        <id>364</id>\n        <module>notification</module>\n        <function>use</function>\n    </Policy>\n    <Policy media-type=\"application/vnd.ez.api.Policy+xml\" href=\"/api/ezp/v2/user/roles/4/policies/365\">\n        <id>365</id>\n        <module>content</module>\n        <function>read</function>\n        <limitations>\n            <limitation identifier=\"Owner\">\n                <values>\n                    <ref media-type=\"application/vnd.ez.api.ref+xml\" href=\"1\"/>\n                </values>\n            </limitation>\n            <limitation identifier=\"Class\">\n                <values>\n                    <ref media-type=\"application/vnd.ez.api.ref+xml\" href=\"4\"/>\n                </values>\n            </limitation>\n        </limitations>\n    </Policy>\n</PolicyList>"
+						}
+					]
+				},
+				{
+					"name": "Load Policy",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.ez.api.Policy+xml",
+								"type": "text"
+							},
+							{
+								"key": "X-CSRF-Token",
+								"value": "{{csrf_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{your_domain}}/api/ezp/v2/user/roles/5/policies/341",
+							"host": [
+								"{{your_domain}}"
+							],
+							"path": [
+								"api",
+								"ezp",
+								"v2",
+								"user",
+								"roles",
+								"5",
+								"policies",
+								"341"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Policy - !Cache Issue!",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/vnd.ez.api.Policy+xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/vnd.ez.api.PolicyCreate+xml",
+								"type": "text"
+							},
+							{
+								"key": "X-CSRF-Token",
+								"type": "text",
+								"value": "{{csrf_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<PolicyCreate>\n  <module>content</module>\n  <function>publish</function>\n  <limitations>\n    <limitation identifier=\"Class\">\n      <values>\n        <ref href=\"/content/types/28\" />\n      </values>\n    </limitation>\n    <limitation identifier=\"Node\">\n      <values>\n        <ref href=\"306\"/>\n      </values>\n    </limitation>\n    <limitation identifier=\"Language\">\n        <values>\n            <ref href=\"ger-DE\"/>\n            <ref href=\"eng-GB\"/>\n        </values>\n    </limitation>\n  </limitations>\n</PolicyCreate>"
+						},
+						"url": {
+							"raw": "{{your_domain}}/api/ezp/v2/user/roles/4/policies",
+							"host": [
+								"{{your_domain}}"
+							],
+							"path": [
+								"api",
+								"ezp",
+								"v2",
+								"user",
+								"roles",
+								"4",
+								"policies"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "d62eec44-86ea-403a-b3cd-0432f5bca62f",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "e69cda4f-7557-4499-bd1e-fa0a7f69b665",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Roles",
+			"item": [
+				{
+					"name": "Load Roles",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.ez.api.RoleList+xml"
+							},
+							{
+								"key": "X-CSRF-Token",
+								"value": "{{csrf_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{your_domain}}/api/ezp/v2/user/roles?limit=10&offset=0",
+							"host": [
+								"{{your_domain}}"
+							],
+							"path": [
+								"api",
+								"ezp",
+								"v2",
+								"user",
+								"roles"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Load Groups Of User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.ez.api.UserGroupRefList+xml"
+									},
+									{
+										"key": "X-CSRF-Token",
+										"value": "{{csrf_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{your_domain}}/api/ezp/v2/user/users/14/groups?limit=10",
+									"host": [
+										"{{your_domain}}"
+									],
+									"path": [
+										"api",
+										"ezp",
+										"v2",
+										"user",
+										"users",
+										"14",
+										"groups"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2019 17:10:40 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.10 (Debian)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Content-Length",
+									"value": "274"
+								},
+								{
+									"key": "Age",
+									"value": "0"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.ez.api.UserGroupRefList+xml"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<UserGroupRefList media-type=\"application/vnd.ez.api.UserGroupRefList+xml\" href=\"/api/ezp/v2/user/users/14/groups\">\n    <UserGroup media-type=\"application/vnd.ez.api.UserGroup+xml\" href=\"/api/ezp/v2/user/groups/1/5/13\"/>\n</UserGroupRefList>"
+						}
+					]
+				},
+				{
+					"name": "Load Role per Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.ez.api.Role+json"
+							},
+							{
+								"key": "X-CSRF-Token",
+								"value": "{{csrf_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{your_domain}}/api/ezp/v2/user/roles/1",
+							"host": [
+								"{{your_domain}}"
+							],
+							"path": [
+								"api",
+								"ezp",
+								"v2",
+								"user",
+								"roles",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Load Groups Of User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.ez.api.UserGroupRefList+xml"
+									},
+									{
+										"key": "X-CSRF-Token",
+										"value": "{{csrf_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{your_domain}}/api/ezp/v2/user/users/14/groups?limit=10",
+									"host": [
+										"{{your_domain}}"
+									],
+									"path": [
+										"api",
+										"ezp",
+										"v2",
+										"user",
+										"users",
+										"14",
+										"groups"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2019 17:10:40 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.10 (Debian)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Content-Length",
+									"value": "274"
+								},
+								{
+									"key": "Age",
+									"value": "0"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.ez.api.UserGroupRefList+xml"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<UserGroupRefList media-type=\"application/vnd.ez.api.UserGroupRefList+xml\" href=\"/api/ezp/v2/user/users/14/groups\">\n    <UserGroup media-type=\"application/vnd.ez.api.UserGroup+xml\" href=\"/api/ezp/v2/user/groups/1/5/13\"/>\n</UserGroupRefList>"
+						}
+					]
+				},
+				{
+					"name": "Load Role per Identifier",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.ez.api.RoleList+xml"
+							},
+							{
+								"key": "X-CSRF-Token",
+								"value": "{{csrf_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{your_domain}}/api/ezp/v2/user/roles?identifier=editor",
+							"host": [
+								"{{your_domain}}"
+							],
+							"path": [
+								"api",
+								"ezp",
+								"v2",
+								"user",
+								"roles"
+							],
+							"query": [
+								{
+									"key": "identifier",
+									"value": "editor"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Load Groups Of User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.ez.api.UserGroupRefList+xml"
+									},
+									{
+										"key": "X-CSRF-Token",
+										"value": "{{csrf_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{your_domain}}/api/ezp/v2/user/users/14/groups?limit=10",
+									"host": [
+										"{{your_domain}}"
+									],
+									"path": [
+										"api",
+										"ezp",
+										"v2",
+										"user",
+										"users",
+										"14",
+										"groups"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2019 17:10:40 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.10 (Debian)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Content-Length",
+									"value": "274"
+								},
+								{
+									"key": "Age",
+									"value": "0"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.ez.api.UserGroupRefList+xml"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<UserGroupRefList media-type=\"application/vnd.ez.api.UserGroupRefList+xml\" href=\"/api/ezp/v2/user/users/14/groups\">\n    <UserGroup media-type=\"application/vnd.ez.api.UserGroup+xml\" href=\"/api/ezp/v2/user/groups/1/5/13\"/>\n</UserGroupRefList>"
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "1d1deea7-1328-4988-ae1f-07ed977fdd7b",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "817c633f-0a40-4045-9317-d8a87f0823b8",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Sections",
+			"item": [
+				{
+					"name": "Create Section",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.ez.api.Section+xml",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/vnd.ez.api.SectionInput+xml",
+								"type": "text"
+							},
+							{
+								"key": "X-CSRF-Token",
+								"value": "{{csrf_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<SectionInput>\n  <identifier>restricted</identifier>\n  <name>Restricted</name>\n</SectionInput>"
+						},
+						"url": {
+							"raw": "{{your_domain}}/api/ezp/v2/content/sections",
+							"host": [
+								"{{your_domain}}"
+							],
+							"path": [
+								"api",
+								"ezp",
+								"v2",
+								"content",
+								"sections"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Section",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.ez.api.Section+xml",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/vnd.ez.api.SectionInput+xml",
+										"type": "text"
+									},
+									{
+										"key": "X-CSRF-Token",
+										"value": "{{csrf_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<SectionInput>\n  <identifier>restricted</identifier>\n  <name>Restricted</name>\n</SectionInput>"
+								},
+								"url": {
+									"raw": "{{your_domain}}/api/ezp/v2/content/sections",
+									"host": [
+										"{{your_domain}}"
+									],
+									"path": [
+										"api",
+										"ezp",
+										"v2",
+										"content",
+										"sections"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2019 15:11:28 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.10 (Debian)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private"
+								},
+								{
+									"key": "Accept-Patch",
+									"value": "application/vnd.ez.api.SectionInput+xml"
+								},
+								{
+									"key": "Location",
+									"value": "/api/ezp/v2/content/sections/9"
+								},
+								{
+									"key": "Vary",
+									"value": "cookie,authorization"
+								},
+								{
+									"key": "Content-Length",
+									"value": "227"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.ez.api.Section+xml"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Section media-type=\"application/vnd.ez.api.Section+xml\" href=\"/api/ezp/v2/content/sections/9\">\n    <sectionId>9</sectionId>\n    <identifier>restricted</identifier>\n    <name>Restricted</name>\n</Section>"
+						}
+					]
+				},
+				{
+					"name": "Get Sections",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/vnd.ez.api.SectionList+xml"
+							},
+							{
+								"key": "X-CSRF-Token",
+								"type": "text",
+								"value": "{{csrf_token}}",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{your_domain}}/api/ezp/v2/content/sections",
+							"host": [
+								"{{your_domain}}"
+							],
+							"path": [
+								"api",
+								"ezp",
+								"v2",
+								"content",
+								"sections"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Section",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.ez.api.Section+xml",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/vnd.ez.api.SectionInput+xml",
+										"type": "text"
+									},
+									{
+										"key": "X-CSRF-Token",
+										"value": "{{csrf_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<SectionInput>\n  <identifier>restricted</identifier>\n  <name>Restricted</name>\n</SectionInput>"
+								},
+								"url": {
+									"raw": "{{your_domain}}/api/ezp/v2/content/sections",
+									"host": [
+										"{{your_domain}}"
+									],
+									"path": [
+										"api",
+										"ezp",
+										"v2",
+										"content",
+										"sections"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2019 15:11:28 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.10 (Debian)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private"
+								},
+								{
+									"key": "Accept-Patch",
+									"value": "application/vnd.ez.api.SectionInput+xml"
+								},
+								{
+									"key": "Location",
+									"value": "/api/ezp/v2/content/sections/9"
+								},
+								{
+									"key": "Vary",
+									"value": "cookie,authorization"
+								},
+								{
+									"key": "Content-Length",
+									"value": "227"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.ez.api.Section+xml"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Section media-type=\"application/vnd.ez.api.Section+xml\" href=\"/api/ezp/v2/content/sections/9\">\n    <sectionId>9</sectionId>\n    <identifier>restricted</identifier>\n    <name>Restricted</name>\n</Section>"
+						}
+					]
+				},
+				{
+					"name": "Get Section per identifier",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/vnd.ez.api.SectionList+xml"
+							},
+							{
+								"key": "X-CSRF-Token",
+								"type": "text",
+								"value": "{{csrf_token}}",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{your_domain}}/api/ezp/v2/content/sections?identifier=restricted",
+							"host": [
+								"{{your_domain}}"
+							],
+							"path": [
+								"api",
+								"ezp",
+								"v2",
+								"content",
+								"sections"
+							],
+							"query": [
+								{
+									"key": "identifier",
+									"value": "restricted"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Section per identifier",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/vnd.ez.api.SectionList+xml"
+									},
+									{
+										"key": "X-CSRF-Token",
+										"type": "text",
+										"value": "{{csrf_token}}",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{your_domain}}/api/ezp/v2/content/sections?identifier=restricted",
+									"host": [
+										"{{your_domain}}"
+									],
+									"path": [
+										"api",
+										"ezp",
+										"v2",
+										"content",
+										"sections"
+									],
+									"query": [
+										{
+											"key": "identifier",
+											"value": "restricted"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2019 15:32:30 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.10 (Debian)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Length",
+									"value": "342"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.ez.api.SectionList+xml"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<SectionList media-type=\"application/vnd.ez.api.SectionList+xml\" href=\"/api/ezp/v2/content/sections\">\n    <Section media-type=\"application/vnd.ez.api.Section+xml\" href=\"/api/ezp/v2/content/sections/9\">\n        <sectionId>9</sectionId>\n        <identifier>restricted</identifier>\n        <name>Restricted</name>\n    </Section>\n</SectionList>"
+						},
+						{
+							"name": "Create Section",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.ez.api.Section+xml",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/vnd.ez.api.SectionInput+xml",
+										"type": "text"
+									},
+									{
+										"key": "X-CSRF-Token",
+										"value": "{{csrf_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<SectionInput>\n  <identifier>restricted</identifier>\n  <name>Restricted</name>\n</SectionInput>"
+								},
+								"url": {
+									"raw": "{{your_domain}}/api/ezp/v2/content/sections",
+									"host": [
+										"{{your_domain}}"
+									],
+									"path": [
+										"api",
+										"ezp",
+										"v2",
+										"content",
+										"sections"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2019 15:11:28 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.10 (Debian)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private"
+								},
+								{
+									"key": "Accept-Patch",
+									"value": "application/vnd.ez.api.SectionInput+xml"
+								},
+								{
+									"key": "Location",
+									"value": "/api/ezp/v2/content/sections/9"
+								},
+								{
+									"key": "Vary",
+									"value": "cookie,authorization"
+								},
+								{
+									"key": "Content-Length",
+									"value": "227"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.ez.api.Section+xml"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Section media-type=\"application/vnd.ez.api.Section+xml\" href=\"/api/ezp/v2/content/sections/9\">\n    <sectionId>9</sectionId>\n    <identifier>restricted</identifier>\n    <name>Restricted</name>\n</Section>"
+						}
+					]
+				},
+				{
+					"name": "Get Section per Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/vnd.ez.api.SectionList+xml"
+							},
+							{
+								"key": "X-CSRF-Token",
+								"type": "text",
+								"value": "{{csrf_token}}",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{your_domain}}/api/ezp/v2/content/sections/9",
+							"host": [
+								"{{your_domain}}"
+							],
+							"path": [
+								"api",
+								"ezp",
+								"v2",
+								"content",
+								"sections",
+								"9"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Section",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.ez.api.Section+xml",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/vnd.ez.api.SectionInput+xml",
+										"type": "text"
+									},
+									{
+										"key": "X-CSRF-Token",
+										"value": "{{csrf_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<SectionInput>\n  <identifier>restricted</identifier>\n  <name>Restricted</name>\n</SectionInput>"
+								},
+								"url": {
+									"raw": "{{your_domain}}/api/ezp/v2/content/sections",
+									"host": [
+										"{{your_domain}}"
+									],
+									"path": [
+										"api",
+										"ezp",
+										"v2",
+										"content",
+										"sections"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2019 15:11:28 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.10 (Debian)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private"
+								},
+								{
+									"key": "Accept-Patch",
+									"value": "application/vnd.ez.api.SectionInput+xml"
+								},
+								{
+									"key": "Location",
+									"value": "/api/ezp/v2/content/sections/9"
+								},
+								{
+									"key": "Vary",
+									"value": "cookie,authorization"
+								},
+								{
+									"key": "Content-Length",
+									"value": "227"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.ez.api.Section+xml"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Section media-type=\"application/vnd.ez.api.Section+xml\" href=\"/api/ezp/v2/content/sections/9\">\n    <sectionId>9</sectionId>\n    <identifier>restricted</identifier>\n    <name>Restricted</name>\n</Section>"
+						},
+						{
+							"name": "Get Section per Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/vnd.ez.api.SectionList+xml"
+									},
+									{
+										"key": "X-CSRF-Token",
+										"type": "text",
+										"value": "{{csrf_token}}",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{your_domain}}/api/ezp/v2/content/sections/9",
+									"host": [
+										"{{your_domain}}"
+									],
+									"path": [
+										"api",
+										"ezp",
+										"v2",
+										"content",
+										"sections",
+										"9"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2019 15:32:44 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.10 (Debian)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "accept-patch",
+									"value": "application/vnd.ez.api.SectionInput+xml"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Content-Length",
+									"value": "227"
+								},
+								{
+									"key": "Age",
+									"value": "136"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.ez.api.Section+xml"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Section media-type=\"application/vnd.ez.api.Section+xml\" href=\"/api/ezp/v2/content/sections/9\">\n    <sectionId>9</sectionId>\n    <identifier>restricted</identifier>\n    <name>Restricted</name>\n</Section>"
+						}
+					]
+				},
+				{
+					"name": "Update Section",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/vnd.ez.api.Section+xml"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/vnd.ez.api.SectionInput+xml"
+							},
+							{
+								"key": "X-CSRF-Token",
+								"type": "text",
+								"value": "{{csrf_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<SectionInput>\n  <identifier>restricted_rename</identifier>\n  <name>Restricted rename</name>\n</SectionInput>"
+						},
+						"url": {
+							"raw": "{{your_domain}}/api/ezp/v2/content/sections/9",
+							"host": [
+								"{{your_domain}}"
+							],
+							"path": [
+								"api",
+								"ezp",
+								"v2",
+								"content",
+								"sections",
+								"9"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Section",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.ez.api.Section+xml",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/vnd.ez.api.SectionInput+xml",
+										"type": "text"
+									},
+									{
+										"key": "X-CSRF-Token",
+										"value": "{{csrf_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<SectionInput>\n  <identifier>restricted</identifier>\n  <name>Restricted</name>\n</SectionInput>"
+								},
+								"url": {
+									"raw": "{{your_domain}}/api/ezp/v2/content/sections",
+									"host": [
+										"{{your_domain}}"
+									],
+									"path": [
+										"api",
+										"ezp",
+										"v2",
+										"content",
+										"sections"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2019 15:11:28 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.10 (Debian)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private"
+								},
+								{
+									"key": "Accept-Patch",
+									"value": "application/vnd.ez.api.SectionInput+xml"
+								},
+								{
+									"key": "Location",
+									"value": "/api/ezp/v2/content/sections/9"
+								},
+								{
+									"key": "Vary",
+									"value": "cookie,authorization"
+								},
+								{
+									"key": "Content-Length",
+									"value": "227"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.ez.api.Section+xml"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Section media-type=\"application/vnd.ez.api.Section+xml\" href=\"/api/ezp/v2/content/sections/9\">\n    <sectionId>9</sectionId>\n    <identifier>restricted</identifier>\n    <name>Restricted</name>\n</Section>"
+						},
+						{
+							"name": "Update Section",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/vnd.ez.api.Section+xml"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/vnd.ez.api.SectionInput+xml"
+									},
+									{
+										"key": "X-CSRF-Token",
+										"type": "text",
+										"value": "{{csrf_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<SectionInput>\n  <identifier>restricted_rename</identifier>\n  <name>Restricted rename</name>\n</SectionInput>"
+								},
+								"url": {
+									"raw": "{{your_domain}}/api/ezp/v2/content/sections/9",
+									"host": [
+										"{{your_domain}}"
+									],
+									"path": [
+										"api",
+										"ezp",
+										"v2",
+										"content",
+										"sections",
+										"9"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2019 15:34:56 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.10 (Debian)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private"
+								},
+								{
+									"key": "Accept-Patch",
+									"value": "application/vnd.ez.api.SectionInput+xml"
+								},
+								{
+									"key": "Vary",
+									"value": "cookie,authorization"
+								},
+								{
+									"key": "Content-Length",
+									"value": "241"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.ez.api.Section+xml"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Section media-type=\"application/vnd.ez.api.Section+xml\" href=\"/api/ezp/v2/content/sections/9\">\n    <sectionId>9</sectionId>\n    <identifier>restricted_rename</identifier>\n    <name>Restricted rename</name>\n</Section>"
+						}
+					]
+				},
+				{
+					"name": "Delete Section",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "X-CSRF-Token",
+								"type": "text",
+								"value": "{{csrf_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{your_domain}}/api/ezp/v2/content/sections/1",
+							"host": [
+								"{{your_domain}}"
+							],
+							"path": [
+								"api",
+								"ezp",
+								"v2",
+								"content",
+								"sections",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Section",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.ez.api.Section+xml",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/vnd.ez.api.SectionInput+xml",
+										"type": "text"
+									},
+									{
+										"key": "X-CSRF-Token",
+										"value": "{{csrf_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<SectionInput>\n  <identifier>restricted</identifier>\n  <name>Restricted</name>\n</SectionInput>"
+								},
+								"url": {
+									"raw": "{{your_domain}}/api/ezp/v2/content/sections",
+									"host": [
+										"{{your_domain}}"
+									],
+									"path": [
+										"api",
+										"ezp",
+										"v2",
+										"content",
+										"sections"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2019 15:11:28 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.10 (Debian)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private"
+								},
+								{
+									"key": "Accept-Patch",
+									"value": "application/vnd.ez.api.SectionInput+xml"
+								},
+								{
+									"key": "Location",
+									"value": "/api/ezp/v2/content/sections/9"
+								},
+								{
+									"key": "Vary",
+									"value": "cookie,authorization"
+								},
+								{
+									"key": "Content-Length",
+									"value": "227"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.ez.api.Section+xml"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Section media-type=\"application/vnd.ez.api.Section+xml\" href=\"/api/ezp/v2/content/sections/9\">\n    <sectionId>9</sectionId>\n    <identifier>restricted</identifier>\n    <name>Restricted</name>\n</Section>"
+						},
+						{
+							"name": "Update Section",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/vnd.ez.api.Section+xml"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/vnd.ez.api.SectionInput+xml"
+									},
+									{
+										"key": "X-CSRF-Token",
+										"type": "text",
+										"value": "{{csrf_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<SectionInput>\n  <identifier>restricted_rename</identifier>\n  <name>Restricted rename</name>\n</SectionInput>"
+								},
+								"url": {
+									"raw": "{{your_domain}}/api/ezp/v2/content/sections/9",
+									"host": [
+										"{{your_domain}}"
+									],
+									"path": [
+										"api",
+										"ezp",
+										"v2",
+										"content",
+										"sections",
+										"9"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2019 15:34:56 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.10 (Debian)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private"
+								},
+								{
+									"key": "Accept-Patch",
+									"value": "application/vnd.ez.api.SectionInput+xml"
+								},
+								{
+									"key": "Vary",
+									"value": "cookie,authorization"
+								},
+								{
+									"key": "Content-Length",
+									"value": "241"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.ez.api.Section+xml"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Section media-type=\"application/vnd.ez.api.Section+xml\" href=\"/api/ezp/v2/content/sections/9\">\n    <sectionId>9</sectionId>\n    <identifier>restricted_rename</identifier>\n    <name>Restricted rename</name>\n</Section>"
+						},
+						{
+							"name": "Delete Section",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "X-CSRF-Token",
+										"type": "text",
+										"value": "{{csrf_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{your_domain}}/api/ezp/v2/content/sections/1",
+									"host": [
+										"{{your_domain}}"
+									],
+									"path": [
+										"api",
+										"ezp",
+										"v2",
+										"content",
+										"sections",
+										"1"
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2019 15:37:54 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.10 (Debian)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private"
+								},
+								{
+									"key": "Vary",
+									"value": "cookie,authorization"
+								},
+								{
+									"key": "Content-Length",
+									"value": "294"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.ez.api.ErrorMessage+xml"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<ErrorMessage media-type=\"application/vnd.ez.api.ErrorMessage+xml\">\n    <errorCode>409</errorCode>\n    <errorMessage>Conflict</errorMessage>\n    <errorDescription>Argument 'section' has a bad state: section is still assigned to content</errorDescription>\n</ErrorMessage>"
+						}
+					]
+				}
+			]
+		},
+		{
 			"name": "Taxonomy",
 			"item": [
 				{
@@ -3679,7 +5766,7 @@
 			"name": "Trash",
 			"item": [
 				{
-					"name": "Get Trash Items",
+					"name": "List TrashItems",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -3710,10 +5797,190 @@
 							]
 						}
 					},
+					"response": [
+						{
+							"name": "List TrashItems",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.ez.api.TrashItem+xml"
+									},
+									{
+										"key": "X-CSRF-Token",
+										"value": "{{csrf_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{your_domain}}/api/ezp/v2/content/trash",
+									"host": [
+										"{{your_domain}}"
+									],
+									"path": [
+										"api",
+										"ezp",
+										"v2",
+										"content",
+										"trash"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2019 16:27:17 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.10 (Debian)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Accept-Patch",
+									"value": "application/vnd.ez.api.ContentUpdate+xml"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2015"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.ez.api.Trash+xml"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Trash media-type=\"application/vnd.ez.api.Trash+xml\" href=\"/api/ezp/v2/content/trash\">\n    <TrashItem media-type=\"application/vnd.ez.api.TrashItem+xml\" href=\"/api/ezp/v2/content/trash/227\">\n        <id>227</id>\n        <priority>30</priority>\n        <hidden>false</hidden>\n        <invisible>false</invisible>\n        <ParentLocation media-type=\"application/vnd.ez.api.Location+xml\" href=\"/api/ezp/v2/content/locations/1/2\"/>\n        <pathString>/1/2/227/</pathString>\n        <depth>2</depth>\n        <childCount>0</childCount>\n        <remoteId>a486461945dcc72ca06d5b2b71113186</remoteId>\n        <Content media-type=\"application/vnd.ez.api.Content+xml\" href=\"/api/ezp/v2/content/objects/225\"/>\n        <sortField>PATH</sortField>\n        <sortOrder>ASC</sortOrder>\n        <ContentInfo media-type=\"application/vnd.ez.api.ContentInfo+xml\" href=\"/api/ezp/v2/content/objects/225\">\n            <Content media-type=\"application/vnd.ez.api.ContentInfo+xml\" href=\"/api/ezp/v2/content/objects/225\" remoteId=\"a9681603b483020725d7bf1432e08db5\" id=\"225\">\n                <ContentType media-type=\"application/vnd.ez.api.ContentType+xml\" href=\"/api/ezp/v2/content/types/21\"/>\n                <Name>About</Name>\n                <Versions media-type=\"application/vnd.ez.api.VersionList+xml\" href=\"/api/ezp/v2/content/objects/225/versions\"/>\n                <CurrentVersion media-type=\"application/vnd.ez.api.Version+xml\" href=\"/api/ezp/v2/content/objects/225/currentversion\"/>\n                <Section media-type=\"application/vnd.ez.api.Section+xml\" href=\"/api/ezp/v2/content/sections/1\"/>\n                <Locations media-type=\"application/vnd.ez.api.LocationList+xml\" href=\"/api/ezp/v2/content/objects/225/locations\"/>\n                <Owner media-type=\"application/vnd.ez.api.User+xml\" href=\"/api/ezp/v2/user/users/14\"/>\n                <lastModificationDate>2018-11-17T19:23:29+01:00</lastModificationDate>\n                <publishedDate>2018-11-17T19:23:27+01:00</publishedDate>\n                <mainLanguageCode>eng-GB</mainLanguageCode>\n                <currentVersionNo>4</currentVersionNo>\n                <alwaysAvailable>true</alwaysAvailable>\n                <ObjectStates media-type=\"application/vnd.ez.api.ContentObjectStates+xml\" href=\"/api/ezp/v2/content/objects/225/objectstates\"/>\n            </Content>\n        </ContentInfo>\n    </TrashItem>\n</Trash>"
+						},
+						{
+							"name": "List TrashItems",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.ez.api.TrashItem+xml"
+									},
+									{
+										"key": "X-CSRF-Token",
+										"value": "{{csrf_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{your_domain}}/api/ezp/v2/content/trash",
+									"host": [
+										"{{your_domain}}"
+									],
+									"path": [
+										"api",
+										"ezp",
+										"v2",
+										"content",
+										"trash"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2019 16:30:12 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.10 (Debian)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Accept-Patch",
+									"value": "application/vnd.ez.api.ContentUpdate+xml"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2015"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.ez.api.Trash+xml"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Trash media-type=\"application/vnd.ez.api.Trash+xml\" href=\"/api/ezp/v2/content/trash\">\n    <TrashItem media-type=\"application/vnd.ez.api.TrashItem+xml\" href=\"/api/ezp/v2/content/trash/369\">\n        <id>369</id>\n        <priority>30</priority>\n        <hidden>false</hidden>\n        <invisible>false</invisible>\n        <ParentLocation media-type=\"application/vnd.ez.api.Location+xml\" href=\"/api/ezp/v2/content/locations/1/2\"/>\n        <pathString>/1/2/369/</pathString>\n        <depth>2</depth>\n        <childCount>0</childCount>\n        <remoteId>a486461945dcc72ca06d5b2b71113186</remoteId>\n        <Content media-type=\"application/vnd.ez.api.Content+xml\" href=\"/api/ezp/v2/content/objects/225\"/>\n        <sortField>PATH</sortField>\n        <sortOrder>ASC</sortOrder>\n        <ContentInfo media-type=\"application/vnd.ez.api.ContentInfo+xml\" href=\"/api/ezp/v2/content/objects/225\">\n            <Content media-type=\"application/vnd.ez.api.ContentInfo+xml\" href=\"/api/ezp/v2/content/objects/225\" remoteId=\"a9681603b483020725d7bf1432e08db5\" id=\"225\">\n                <ContentType media-type=\"application/vnd.ez.api.ContentType+xml\" href=\"/api/ezp/v2/content/types/21\"/>\n                <Name>About</Name>\n                <Versions media-type=\"application/vnd.ez.api.VersionList+xml\" href=\"/api/ezp/v2/content/objects/225/versions\"/>\n                <CurrentVersion media-type=\"application/vnd.ez.api.Version+xml\" href=\"/api/ezp/v2/content/objects/225/currentversion\"/>\n                <Section media-type=\"application/vnd.ez.api.Section+xml\" href=\"/api/ezp/v2/content/sections/1\"/>\n                <Locations media-type=\"application/vnd.ez.api.LocationList+xml\" href=\"/api/ezp/v2/content/objects/225/locations\"/>\n                <Owner media-type=\"application/vnd.ez.api.User+xml\" href=\"/api/ezp/v2/user/users/14\"/>\n                <lastModificationDate>2018-11-17T19:23:29+01:00</lastModificationDate>\n                <publishedDate>2018-11-17T19:23:27+01:00</publishedDate>\n                <mainLanguageCode>eng-GB</mainLanguageCode>\n                <currentVersionNo>4</currentVersionNo>\n                <alwaysAvailable>true</alwaysAvailable>\n                <ObjectStates media-type=\"application/vnd.ez.api.ContentObjectStates+xml\" href=\"/api/ezp/v2/content/objects/225/objectstates\"/>\n            </Content>\n        </ContentInfo>\n    </TrashItem>\n</Trash>"
+						}
+					]
+				},
+				{
+					"name": "Get TrashItem",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.ez.api.TrashItem+xml"
+							},
+							{
+								"key": "X-CSRF-Token",
+								"value": "{{csrf_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{your_domain}}/api/ezp/v2/content/trash/369",
+							"host": [
+								"{{your_domain}}"
+							],
+							"path": [
+								"api",
+								"ezp",
+								"v2",
+								"content",
+								"trash",
+								"369"
+							]
+						}
+					},
 					"response": []
 				},
 				{
-					"name": "Restore Item",
+					"name": "Untrash Item",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -3735,7 +6002,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{your_domain}}/api/ezp/v2/content/trash/231",
+							"raw": "{{your_domain}}/api/ezp/v2/content/trash/369",
 							"host": [
 								"{{your_domain}}"
 							],
@@ -3745,7 +6012,7 @@
 								"v2",
 								"content",
 								"trash",
-								"231"
+								"369"
 							]
 						},
 						"description": "/content/trash/< LOCATION-ID >"
@@ -3842,7 +6109,7 @@
 			"name": "User",
 			"item": [
 				{
-					"name": "Get user data",
+					"name": "Get user data per Id",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -3871,6 +6138,288 @@
 								"user",
 								"users",
 								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user per login",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.ez.api.UserList+xml"
+							},
+							{
+								"key": "X-CSRF-Token",
+								"value": "{{csrf_token}}",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{your_domain}}/api/ezp/v2/user/users?login=john",
+							"host": [
+								"{{your_domain}}"
+							],
+							"path": [
+								"api",
+								"ezp",
+								"v2",
+								"user",
+								"users"
+							],
+							"query": [
+								{
+									"key": "login",
+									"value": "john"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Users per role Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.ez.api.UserList+xml"
+							},
+							{
+								"key": "X-CSRF-Token",
+								"value": "{{csrf_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{your_domain}}/api/ezp/v2/user/users?roleId=/api/ezp/v2/user/roles/4",
+							"host": [
+								"{{your_domain}}"
+							],
+							"path": [
+								"api",
+								"ezp",
+								"v2",
+								"user",
+								"users"
+							],
+							"query": [
+								{
+									"key": "roleId",
+									"value": "/api/ezp/v2/user/roles/4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.ez.api.User+xml"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/vnd.ez.api.UserCreate+xml",
+								"type": "text"
+							},
+							{
+								"key": "X-CSRF-Token",
+								"value": "{{csrf_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<UserCreate>\n  <mainLanguageCode>eng-GB</mainLanguageCode>\n  <remoteId>remoteId-qwert426</remoteId>\n  <login>john</login>\n  <email>john.doe@example.net</email>\n  <password>john-does-password</password>\n  <fields>\n    <field>\n      <fieldDefinitionIdentifier>first_name</fieldDefinitionIdentifier>\n      <languageCode>eng-GB</languageCode>\n      <fieldValue>John</fieldValue>\n    </field>\n    <field>\n      <fieldDefinitionIdentifier>last_name</fieldDefinitionIdentifier>\n      <languageCode>eng-GB</languageCode>\n      <fieldValue>Doe</fieldValue>\n    </field>\n  </fields>\n</UserCreate>"
+						},
+						"url": {
+							"raw": "{{your_domain}}/api/ezp/v2/user/groups/1/5/12/users",
+							"host": [
+								"{{your_domain}}"
+							],
+							"path": [
+								"api",
+								"ezp",
+								"v2",
+								"user",
+								"groups",
+								"1",
+								"5",
+								"12",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Load Groups Of User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.ez.api.UserGroupRefList+xml"
+							},
+							{
+								"key": "X-CSRF-Token",
+								"value": "{{csrf_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{your_domain}}/api/ezp/v2/user/users/14/groups?limit=10",
+							"host": [
+								"{{your_domain}}"
+							],
+							"path": [
+								"api",
+								"ezp",
+								"v2",
+								"user",
+								"users",
+								"14",
+								"groups"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Load Groups Of User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.ez.api.UserGroupRefList+xml"
+									},
+									{
+										"key": "X-CSRF-Token",
+										"value": "{{csrf_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{your_domain}}/api/ezp/v2/user/users/14/groups?limit=10",
+									"host": [
+										"{{your_domain}}"
+									],
+									"path": [
+										"api",
+										"ezp",
+										"v2",
+										"user",
+										"users",
+										"14",
+										"groups"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2019 17:10:40 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.10 (Debian)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Content-Length",
+									"value": "274"
+								},
+								{
+									"key": "Age",
+									"value": "0"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.ez.api.UserGroupRefList+xml"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<UserGroupRefList media-type=\"application/vnd.ez.api.UserGroupRefList+xml\" href=\"/api/ezp/v2/user/users/14/groups\">\n    <UserGroup media-type=\"application/vnd.ez.api.UserGroup+xml\" href=\"/api/ezp/v2/user/groups/1/5/13\"/>\n</UserGroupRefList>"
+						}
+					]
+				},
+				{
+					"name": "Delte User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "X-CSRF-Token",
+								"value": "{{csrf_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{your_domain}}/api/ezp/v2/user/users/364",
+							"host": [
+								"{{your_domain}}"
+							],
+							"path": [
+								"api",
+								"ezp",
+								"v2",
+								"user",
+								"users",
+								"364"
 							]
 						}
 					},
@@ -3909,7 +6458,7 @@
 			"name": "URL Alias / Wildcard",
 			"item": [
 				{
-					"name": "Get location URL Alias",
+					"name": "Get custom location URLAliases",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -3918,7 +6467,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{your_domain}}/api/ezp/v2/content/locations/1/2/94/95/150/urlaliases",
+							"raw": "{{your_domain}}/api/ezp/v2/content/locations/1/2/54/74/urlaliases?custom=true",
 							"host": [
 								"{{your_domain}}"
 							],
@@ -3930,10 +6479,15 @@
 								"locations",
 								"1",
 								"2",
-								"94",
-								"95",
-								"150",
+								"54",
+								"74",
 								"urlaliases"
+							],
+							"query": [
+								{
+									"key": "custom",
+									"value": "true"
+								}
 							]
 						}
 					},
@@ -3959,7 +6513,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<UrlAliasCreate type=\"LOCATION\">\n  <location href='api/ezp/v2/content/locations/1/2/94/95/109/223' />\n  <path>meetup4</path>\n  <languageCode>ger-DE</languageCode>\n  <alwaysAvailable>true</alwaysAvailable>\n  <forward>true</forward>\n</UrlAliasCreate>"
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<UrlAliasCreate type=\"LOCATION\">\n  <location href='api/ezp/v2/content/locations/1/2/54/74' />\n  <path>meetup4</path>\n  <languageCode>ger-DE</languageCode>\n  <alwaysAvailable>true</alwaysAvailable>\n  <forward>true</forward>\n</UrlAliasCreate>"
 						},
 						"url": {
 							"raw": "{{your_domain}}/api/ezp/v2/content/urlaliases",
@@ -3972,6 +6526,119 @@
 								"v2",
 								"content",
 								"urlaliases"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create URL Alias",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.ez.api.UrlAlias+xml"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/vnd.ez.api.UrlAliasCreate+xml"
+									},
+									{
+										"key": "X-CSRF-Token",
+										"value": "{{csrf_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<UrlAliasCreate type=\"LOCATION\">\n  <location href='api/ezp/v2/content/locations/1/2/54/74' />\n  <path>meetup4</path>\n  <languageCode>ger-DE</languageCode>\n  <alwaysAvailable>true</alwaysAvailable>\n  <forward>true</forward>\n</UrlAliasCreate>"
+								},
+								"url": {
+									"raw": "{{your_domain}}/api/ezp/v2/content/urlaliases",
+									"host": [
+										"{{your_domain}}"
+									],
+									"path": [
+										"api",
+										"ezp",
+										"v2",
+										"content",
+										"urlaliases"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2019 16:39:07 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.10 (Debian)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private"
+								},
+								{
+									"key": "Location",
+									"value": "/api/ezp/v2/content/urlaliases/0-3beaecf5cc32ccfb27cd2b9a4ffb5090"
+								},
+								{
+									"key": "Vary",
+									"value": "cookie,authorization"
+								},
+								{
+									"key": "Content-Length",
+									"value": "508"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.ez.api.UrlAlias+xml"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<UrlAlias media-type=\"application/vnd.ez.api.UrlAlias+xml\" href=\"/api/ezp/v2/content/urlaliases/0-3beaecf5cc32ccfb27cd2b9a4ffb5090\" id=\"0-3beaecf5cc32ccfb27cd2b9a4ffb5090\" type=\"LOCATION\">\n    <location media-type=\"application/vnd.ez.api.Location+xml\" href=\"/api/ezp/v2/content/locations/74\"/>\n    <path>/meetup4</path>\n    <languageCodes>ger-DE</languageCodes>\n    <alwaysAvailable>true</alwaysAvailable>\n    <isHistory>false</isHistory>\n    <forward>true</forward>\n    <custom>true</custom>\n</UrlAlias>"
+						}
+					]
+				},
+				{
+					"name": "Delete custom URLAlias",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "X-CSRF-Token",
+								"value": "{{csrf_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{your_domain}}/api/ezp/v2/content/urlaliases/0-3beaecf5cc32ccfb27cd2b9a4ffb5090",
+							"host": [
+								"{{your_domain}}"
+							],
+							"path": [
+								"api",
+								"ezp",
+								"v2",
+								"content",
+								"urlaliases",
+								"0-3beaecf5cc32ccfb27cd2b9a4ffb5090"
 							]
 						}
 					},
@@ -4008,7 +6675,7 @@
 			"name": "Views",
 			"item": [
 				{
-					"name": "View content",
+					"name": "Create View",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -4056,7 +6723,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"ViewInput\":{\"identifier\":\"search-köln\",\"public\":false,\"ContentQuery\":{\"Criteria\":{},\"FacetBuilders\":{},\"Filter\":{\"ContentTypeIdentifierCriterion\":\"article\",\"ParentLocationIdCriterion\":95},\"SortClauses\":{},\"Query\":{\"FullTextCriterion\":\"köln\"},\"limit\":10,\"offset\":0}}}"
+							"raw": "{\"ViewInput\":{\"identifier\":\"search-in-products\",\"public\":false,\"ContentQuery\":{\"Criteria\":{},\"FacetBuilders\":{},\"Filter\":{\"ContentTypeIdentifierCriterion\":\"product\",\"ParentLocationIdCriterion\":54},\"SortClauses\":{},\"Query\":{\"FullTextCriterion\":\"chicken\"},\"limit\":10,\"offset\":0}}}"
 						},
 						"url": {
 							"raw": "{{your_domain}}/api/ezp/v2/views",
@@ -4090,7 +6757,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<ViewInput>\n  <identifier>TitleView</identifier>\n  <ContentQuery>\n    <Filter>\n      <ContentTypeIdentifierCriterion>blog_post</ContentTypeIdentifierCriterion>\n      <Field>\n       <operator>CONTAINS</operator>\n       <value>Cologne</value>\n       <name>tags</name>\n      </Field>\n    </Filter>\n    <limit>10</limit>\n    <offset>0</offset>\n    <SortClauses>\n      <ContentName>ascending</ContentName>\n    </SortClauses>\n  </ContentQuery>\n</ViewInput>"
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<ViewInput>\n  <identifier>TitleView</identifier>\n  <ContentQuery>\n    <Filter>\n      <ContentTypeIdentifierCriterion>product</ContentTypeIdentifierCriterion>\n      <Field>\n       <operator>CONTAINS</operator>\n       <value>chicken</value>\n       <name>title</name>\n      </Field>\n    </Filter>\n    <limit>10</limit>\n    <offset>1</offset>\n    <SortClauses>\n      <ContentName>ascending</ContentName>\n    </SortClauses>\n  </ContentQuery>\n</ViewInput>"
 						},
 						"url": {
 							"raw": "{{your_domain}}/api/ezp/v2/views",
@@ -4104,12 +6771,12 @@
 								"views"
 							]
 						},
-						"description": "https://raw.githubusercontent.com/alongosz/ezpublish-kernel/16d99ea31abb7c028fb6847a07d5f0caf55993d3/eZ/Publish/Core/REST/Server/Input/Parser/Criterion/Field.php"
+						"description": "Operator list: ezpublish-kernel/eZ/Publish/Core/REST/Server/Input/Parser/Criterion/Field.php"
 					},
 					"response": []
 				},
 				{
-					"name": "View Sub items search with subtree",
+					"name": "View Sub items. SubtreeCriterion",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -4124,7 +6791,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"ViewInput\":{\"identifier\":\"search\",\"public\":false,\"ContentQuery\":{\"Criteria\":{},\"FacetBuilders\":{},\"Filter\":{\"ContentTypeIdentifierCriterion\":\"product_item\",\"SubtreeCriterion\":\"/1/2/\"},\"SortClauses\":{\"DateModified\":\"descending\"},\"Query\":{\"FullTextCriterion\":\"köln\"},\"limit\":10,\"offset\":0}}}"
+							"raw": "{\"ViewInput\":{\"identifier\":\"search-in-products\",\"public\":false,\"ContentQuery\":{\"Criteria\":{},\"FacetBuilders\":{},\"Filter\":{\"ContentTypeIdentifierCriterion\":\"product\",\"SubtreeCriterion\":\"/1/2/54/\"},\"SortClauses\":{\"DateModified\":\"descending\"},\"Query\":{\"FullTextCriterion\":\"chicken\"},\"limit\":10,\"offset\":0}}}"
 						},
 						"url": {
 							"raw": "{{your_domain}}/api/ezp/v2/views",
@@ -4141,6 +6808,86 @@
 						"description": "{\"ViewInput\":{\"identifier\":\"contents-loading-subitems-51\",\"public\":false,\"ContentQuery\":{\"Criteria\":{},\"FacetBuilders\":{},\"SortClauses\":{},\"Filter\":{\"ContentIdCriterion\":\"98,171,54\"},\"limit\":3}}}\n{\"ViewInput\":{\"identifier\":\"subitems-51\",\"public\":false,\"LocationQuery\":{\"Criteria\":{},\"FacetBuilders\":{},\"SortClauses\":{\"ContentName\":\"descending\"},\"Filter\":{\"ParentLocationIdCriterion\":51},\"limit\":10,\"offset\":0}}}\n{\"ViewInput\":{\"identifier\":\"subitems-51\",\"public\":false,\"LocationQuery\":{\"Criteria\":{},\"FacetBuilders\":{},\"SortClauses\":{\"DateModified\":\"descending\"},\"Filter\":{\"ParentLocationIdCriterion\":51},\"limit\":10,\"offset\":0}}}\n{\"ViewInput\":{\"identifier\":\"search-köln\",\"public\":false,\"ContentQuery\":{\"Criteria\":{},\"FacetBuilders\":{},\"Filter\":{\"ContentTypeIdentifierCriterion\":\"article\"},\"SortClauses\":{},\"Query\":{\"FullTextCriterion\":\"köln\"},\"limit\":10,\"offset\":0}}}\n{\"ViewInput\":{\"identifier\":\"search-köln\",\"public\":false,\"ContentQuery\":{\"Criteria\":{},\"FacetBuilders\":{},\"Filter\":{\"ContentTypeIdentifierCriterion\":\"article\",\"ParentLocationIdCriterion\":95},\"SortClauses\":{},\"Query\":{\"FullTextCriterion\":\"köln\"},\"limit\":10,\"offset\":0}}}"
 					},
 					"response": []
+				},
+				{
+					"name": "List views/Get View/ Get Results of existing View- NotImplemented",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{your_domain}}/api/ezp/v2/views",
+							"host": [
+								"{{your_domain}}"
+							],
+							"path": [
+								"api",
+								"ezp",
+								"v2",
+								"views"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List views",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{your_domain}}/api/ezp/v2/content/views",
+									"host": [
+										"{{your_domain}}"
+									],
+									"path": [
+										"api",
+										"ezp",
+										"v2",
+										"content",
+										"views"
+									]
+								}
+							},
+							"status": "Not Implemented",
+							"code": 501,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Mar 2019 14:57:35 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.10 (Debian)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Length",
+									"value": "302"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.ez.api.ErrorMessage+xml"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<ErrorMessage media-type=\"application/vnd.ez.api.ErrorMessage+xml\">\n    <errorCode>501</errorCode>\n    <errorMessage>Not Implemented</errorMessage>\n    <errorDescription>Intentionally not implemented: ezpublish_rest.controller.content:listView</errorDescription>\n</ErrorMessage>"
+						}
+					]
 				}
 			]
 		},
