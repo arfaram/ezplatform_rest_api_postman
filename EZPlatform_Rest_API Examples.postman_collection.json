@@ -13,7 +13,13 @@
 					"name": "Root Resources",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.ez.api.Root+xml",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{your_domain}}/api/ezp/v2",
 							"host": [
@@ -26,7 +32,91 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Root Resources",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.ez.api.Root+xml",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{your_domain}}/api/ezp/v2",
+									"host": [
+										"{{your_domain}}"
+									],
+									"path": [
+										"api",
+										"ezp",
+										"v2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 02 Sep 2019 09:38:12 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.10 (Debian)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "public, s-maxage=86400"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept,cookie,authorization"
+								},
+								{
+									"key": "X-Cache-Debug",
+									"value": "1"
+								},
+								{
+									"key": "xkey",
+									"value": "ez-all"
+								},
+								{
+									"key": "X-Debug-Token",
+									"value": "307417"
+								},
+								{
+									"key": "X-Debug-Token-Link",
+									"value": "http://www.ezplatform2_5_ee_demo.psger/_profiler/307417"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "sf_redirect=deleted; expires=Sun, 02-Sep-2018 09:38:11 GMT; Max-Age=0; path=/; httponly"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2775"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=99"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.ez.api.Root+xml"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Root media-type=\"application/vnd.ez.api.Root+xml\">\n    <content media-type=\"\" href=\"/api/ezp/v2/content/objects\"/>\n    <contentByRemoteId media-type=\"\" href=\"/api/ezp/v2/content/objects{?remoteId}\"/>\n    <contentTypes media-type=\"application/vnd.ez.api.ContentTypeInfoList+xml\" href=\"/api/ezp/v2/content/types\"/>\n    <contentTypeByIdentifier media-type=\"\" href=\"/api/ezp/v2/content/types{?identifier}\"/>\n    <contentTypeGroups media-type=\"application/vnd.ez.api.ContentTypeGroupList+xml\" href=\"/api/ezp/v2/content/typegroups\"/>\n    <contentTypeGroupByIdentifier media-type=\"\" href=\"/api/ezp/v2/content/typegroups{?identifier}\"/>\n    <users media-type=\"application/vnd.ez.api.UserRefList+xml\" href=\"/api/ezp/v2/user/users\"/>\n    <usersByRoleId media-type=\"application/vnd.ez.api.UserRefList+xml\" href=\"/api/ezp/v2/user/users{?roleId}\"/>\n    <usersByRemoteId media-type=\"application/vnd.ez.api.UserRefList+xml\" href=\"/api/ezp/v2/user/users{?remoteId}\"/>\n    <usersByEmail media-type=\"application/vnd.ez.api.UserRefList+xml\" href=\"/api/ezp/v2/user/users{?email}\"/>\n    <usersByLogin media-type=\"application/vnd.ez.api.UserRefList+xml\" href=\"/api/ezp/v2/user/users{?login}\"/>\n    <roles media-type=\"application/vnd.ez.api.RoleList+xml\" href=\"/api/ezp/v2/user/roles\"/>\n    <rootLocation media-type=\"application/vnd.ez.api.Location+xml\" href=\"/api/ezp/v2/content/locations/1/2\"/>\n    <rootUserGroup media-type=\"application/vnd.ez.api.UserGroup+xml\" href=\"/api/ezp/v2/user/groups/1/5\"/>\n    <rootMediaFolder media-type=\"application/vnd.ez.api.Location+xml\" href=\"/api/ezp/v2/content/locations/1/43\"/>\n    <locationByRemoteId media-type=\"\" href=\"/api/ezp/v2/content/locations{?remoteId}\"/>\n    <locationByPath media-type=\"\" href=\"/api/ezp/v2/content/locations{?locationPath}\"/>\n    <trash media-type=\"application/vnd.ez.api.Trash+xml\" href=\"/api/ezp/v2/content/trash\"/>\n    <sections media-type=\"application/vnd.ez.api.SectionList+xml\" href=\"/api/ezp/v2/content/sections\"/>\n    <views media-type=\"application/vnd.ez.api.RefList+xml\" href=\"/api/ezp/v2/views\"/>\n    <objectStateGroups media-type=\"application/vnd.ez.api.ObjectStateGroupList+xml\" href=\"/api/ezp/v2/content/objectstategroups\"/>\n    <objectStates media-type=\"application/vnd.ez.api.ObjectStateList+xml\" href=\"/api/ezp/v2/content/objectstategroups/{objectStateGroupId}/objectstates\"/>\n    <globalUrlAliases media-type=\"application/vnd.ez.api.UrlAliasRefList+xml\" href=\"/api/ezp/v2/content/urlaliases\"/>\n    <urlWildcards media-type=\"application/vnd.ez.api.UrlWildcardList+xml\" href=\"/api/ezp/v2/content/urlwildcards\"/>\n    <createSession media-type=\"application/vnd.ez.api.UserSession+xml\" href=\"/api/ezp/v2/user/sessions\"/>\n    <refreshSession media-type=\"application/vnd.ez.api.UserSession+xml\" href=\"/api/ezp/v2/user/sessions/{sessionId}/refresh\"/>\n</Root>"
+						}
+					]
 				},
 				{
 					"name": "OPTIONS Content Request",
@@ -1927,6 +2017,122 @@
 						}
 					},
 					"response": []
+				}
+			]
+		},
+		{
+			"name": "Countries",
+			"item": [
+				{
+					"name": "Countries list - ISO-3166",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/vnd.ez.api.Country+xml",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{your_domain}}/api/ezp/v2/services/countries",
+							"host": [
+								"{{your_domain}}"
+							],
+							"path": [
+								"api",
+								"ezp",
+								"v2",
+								"services",
+								"countries"
+							]
+						},
+						"description": "https://doc.ezplatform.com/en/latest/api/general_rest_usage/#get-the-list-of-countries"
+					},
+					"response": [
+						{
+							"name": "Countries list - ISO-3166",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/vnd.ez.api.Country+xml",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{your_domain}}/api/ezp/v2/services/countries",
+									"host": [
+										"{{your_domain}}"
+									],
+									"path": [
+										"api",
+										"ezp",
+										"v2",
+										"services",
+										"countries"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 29 Aug 2019 18:38:33 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.10 (Debian)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-Cache-Debug",
+									"value": "1"
+								},
+								{
+									"key": "xkey",
+									"value": "ez-all"
+								},
+								{
+									"key": "Vary",
+									"value": "cookie,authorization"
+								},
+								{
+									"key": "X-Debug-Token",
+									"value": "d0f7e2"
+								},
+								{
+									"key": "X-Debug-Token-Link",
+									"value": "http://www.ezplatform2_5_ee_demo.psger/_profiler/d0f7e2"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.ez.api.CountryList+xml"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<CountryList media-type=\"application/vnd.ez.api.CountryList+xml\">\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"AF\">\n        <name>Afghanistan</name>\n        <Alpha2>AF</Alpha2>\n        <Alpha3>AFG</Alpha3>\n        <IDC>93</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"AX\">\n        <name>Åland</name>\n        <Alpha2>AX</Alpha2>\n        <Alpha3>ALA</Alpha3>\n        <IDC>358</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"AL\">\n        <name>Albania</name>\n        <Alpha2>AL</Alpha2>\n        <Alpha3>ALB</Alpha3>\n        <IDC>355</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"DZ\">\n        <name>Algeria</name>\n        <Alpha2>DZ</Alpha2>\n        <Alpha3>DZA</Alpha3>\n        <IDC>213</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"AS\">\n        <name>American Samoa</name>\n        <Alpha2>AS</Alpha2>\n        <Alpha3>ASM</Alpha3>\n        <IDC>1684</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"AD\">\n        <name>Andorra</name>\n        <Alpha2>AD</Alpha2>\n        <Alpha3>AND</Alpha3>\n        <IDC>376</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"AO\">\n        <name>Angola</name>\n        <Alpha2>AO</Alpha2>\n        <Alpha3>AGO</Alpha3>\n        <IDC>244</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"AI\">\n        <name>Anguilla</name>\n        <Alpha2>AI</Alpha2>\n        <Alpha3>AIA</Alpha3>\n        <IDC>1264</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"AQ\">\n        <name>Antarctica</name>\n        <Alpha2>AQ</Alpha2>\n        <Alpha3>ATA</Alpha3>\n        <IDC>672</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"AG\">\n        <name>Antigua and Barbuda</name>\n        <Alpha2>AG</Alpha2>\n        <Alpha3>ATG</Alpha3>\n        <IDC>1268</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"AR\">\n        <name>Argentina</name>\n        <Alpha2>AR</Alpha2>\n        <Alpha3>ARG</Alpha3>\n        <IDC>54</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"AM\">\n        <name>Armenia</name>\n        <Alpha2>AM</Alpha2>\n        <Alpha3>ARM</Alpha3>\n        <IDC>374</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"AW\">\n        <name>Aruba</name>\n        <Alpha2>AW</Alpha2>\n        <Alpha3>ABW</Alpha3>\n        <IDC>297</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"AU\">\n        <name>Australia</name>\n        <Alpha2>AU</Alpha2>\n        <Alpha3>AUS</Alpha3>\n        <IDC>61</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"AT\">\n        <name>Austria</name>\n        <Alpha2>AT</Alpha2>\n        <Alpha3>AUT</Alpha3>\n        <IDC>43</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"AZ\">\n        <name>Azerbaijan</name>\n        <Alpha2>AZ</Alpha2>\n        <Alpha3>AZE</Alpha3>\n        <IDC>994</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"BS\">\n        <name>Bahamas</name>\n        <Alpha2>BS</Alpha2>\n        <Alpha3>BHS</Alpha3>\n        <IDC>1242</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"BH\">\n        <name>Bahrain</name>\n        <Alpha2>BH</Alpha2>\n        <Alpha3>BHR</Alpha3>\n        <IDC>973</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"BD\">\n        <name>Bangladesh</name>\n        <Alpha2>BD</Alpha2>\n        <Alpha3>BGD</Alpha3>\n        <IDC>880</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"BB\">\n        <name>Barbados</name>\n        <Alpha2>BB</Alpha2>\n        <Alpha3>BRB</Alpha3>\n        <IDC>1246</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"BY\">\n        <name>Belarus</name>\n        <Alpha2>BY</Alpha2>\n        <Alpha3>BLR</Alpha3>\n        <IDC>375</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"BE\">\n        <name>Belgium</name>\n        <Alpha2>BE</Alpha2>\n        <Alpha3>BEL</Alpha3>\n        <IDC>32</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"BZ\">\n        <name>Belize</name>\n        <Alpha2>BZ</Alpha2>\n        <Alpha3>BLZ</Alpha3>\n        <IDC>501</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"BJ\">\n        <name>Benin</name>\n        <Alpha2>BJ</Alpha2>\n        <Alpha3>BEN</Alpha3>\n        <IDC>229</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"BM\">\n        <name>Bermuda</name>\n        <Alpha2>BM</Alpha2>\n        <Alpha3>BMU</Alpha3>\n        <IDC>1441</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"BT\">\n        <name>Bhutan</name>\n        <Alpha2>BT</Alpha2>\n        <Alpha3>BTN</Alpha3>\n        <IDC>975</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"BO\">\n        <name>Bolivia</name>\n        <Alpha2>BO</Alpha2>\n        <Alpha3>BOL</Alpha3>\n        <IDC>591</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"BA\">\n        <name>Bosnia and Herzegovina</name>\n        <Alpha2>BA</Alpha2>\n        <Alpha3>BIH</Alpha3>\n        <IDC>387</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"BW\">\n        <name>Botswana</name>\n        <Alpha2>BW</Alpha2>\n        <Alpha3>BWA</Alpha3>\n        <IDC>267</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"BV\">\n        <name>Bouvet Island</name>\n        <Alpha2>BV</Alpha2>\n        <Alpha3>BVT</Alpha3>\n        <IDC>47</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"BR\">\n        <name>Brazil</name>\n        <Alpha2>BR</Alpha2>\n        <Alpha3>BRA</Alpha3>\n        <IDC>55</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"IO\">\n        <name>British Indian Ocean Territory</name>\n        <Alpha2>IO</Alpha2>\n        <Alpha3>IOT</Alpha3>\n        <IDC>246</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"BN\">\n        <name>Brunei Darussalam</name>\n        <Alpha2>BN</Alpha2>\n        <Alpha3>BRN</Alpha3>\n        <IDC>673</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"BG\">\n        <name>Bulgaria</name>\n        <Alpha2>BG</Alpha2>\n        <Alpha3>BGR</Alpha3>\n        <IDC>359</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"BF\">\n        <name>Burkina Faso</name>\n        <Alpha2>BF</Alpha2>\n        <Alpha3>BFA</Alpha3>\n        <IDC>226</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"BI\">\n        <name>Burundi</name>\n        <Alpha2>BI</Alpha2>\n        <Alpha3>BDI</Alpha3>\n        <IDC>257</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"KH\">\n        <name>Cambodia</name>\n        <Alpha2>KH</Alpha2>\n        <Alpha3>KHM</Alpha3>\n        <IDC>855</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"CM\">\n        <name>Cameroon</name>\n        <Alpha2>CM</Alpha2>\n        <Alpha3>CMR</Alpha3>\n        <IDC>237</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"CA\">\n        <name>Canada</name>\n        <Alpha2>CA</Alpha2>\n        <Alpha3>CAN</Alpha3>\n        <IDC>1</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"CV\">\n        <name>Cape Verde</name>\n        <Alpha2>CV</Alpha2>\n        <Alpha3>CPV</Alpha3>\n        <IDC>238</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"KY\">\n        <name>Cayman Islands</name>\n        <Alpha2>KY</Alpha2>\n        <Alpha3>CYM</Alpha3>\n        <IDC>1345</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"CF\">\n        <name>Central African Republic</name>\n        <Alpha2>CF</Alpha2>\n        <Alpha3>CAF</Alpha3>\n        <IDC>236</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"TD\">\n        <name>Chad</name>\n        <Alpha2>TD</Alpha2>\n        <Alpha3>TCD</Alpha3>\n        <IDC>235</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"CL\">\n        <name>Chile</name>\n        <Alpha2>CL</Alpha2>\n        <Alpha3>CHL</Alpha3>\n        <IDC>56</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"CN\">\n        <name>China</name>\n        <Alpha2>CN</Alpha2>\n        <Alpha3>CHN</Alpha3>\n        <IDC>86</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"CX\">\n        <name>Christmas Island</name>\n        <Alpha2>CX</Alpha2>\n        <Alpha3>CXR</Alpha3>\n        <IDC>61</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"CC\">\n        <name>Cocos (Keeling) Islands</name>\n        <Alpha2>CC</Alpha2>\n        <Alpha3>CCK</Alpha3>\n        <IDC>61</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"CO\">\n        <name>Colombia</name>\n        <Alpha2>CO</Alpha2>\n        <Alpha3>COL</Alpha3>\n        <IDC>57</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"KM\">\n        <name>Comoros</name>\n        <Alpha2>KM</Alpha2>\n        <Alpha3>COM</Alpha3>\n        <IDC>269</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"CG\">\n        <name>Congo</name>\n        <Alpha2>CG</Alpha2>\n        <Alpha3>COG</Alpha3>\n        <IDC>242</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"CD\">\n        <name>Congo, The Democratic Republic Of The</name>\n        <Alpha2>CD</Alpha2>\n        <Alpha3>COD</Alpha3>\n        <IDC>243</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"CK\">\n        <name>Cook Islands</name>\n        <Alpha2>CK</Alpha2>\n        <Alpha3>COK</Alpha3>\n        <IDC>682</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"CR\">\n        <name>Costa Rica</name>\n        <Alpha2>CR</Alpha2>\n        <Alpha3>CRI</Alpha3>\n        <IDC>506</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"CI\">\n        <name>Côte d'Ivoire</name>\n        <Alpha2>CI</Alpha2>\n        <Alpha3>CIV</Alpha3>\n        <IDC>225</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"HR\">\n        <name>Croatia</name>\n        <Alpha2>HR</Alpha2>\n        <Alpha3>HRV</Alpha3>\n        <IDC>385</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"CU\">\n        <name>Cuba</name>\n        <Alpha2>CU</Alpha2>\n        <Alpha3>CUB</Alpha3>\n        <IDC>53</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"CY\">\n        <name>Cyprus</name>\n        <Alpha2>CY</Alpha2>\n        <Alpha3>CYP</Alpha3>\n        <IDC>357</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"CZ\">\n        <name>Czech Republic</name>\n        <Alpha2>CZ</Alpha2>\n        <Alpha3>CZE</Alpha3>\n        <IDC>420</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"DK\">\n        <name>Denmark</name>\n        <Alpha2>DK</Alpha2>\n        <Alpha3>DNK</Alpha3>\n        <IDC>45</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"DJ\">\n        <name>Djibouti</name>\n        <Alpha2>DJ</Alpha2>\n        <Alpha3>DJI</Alpha3>\n        <IDC>253</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"DM\">\n        <name>Dominica</name>\n        <Alpha2>DM</Alpha2>\n        <Alpha3>DMA</Alpha3>\n        <IDC>1767</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"DO\">\n        <name>Dominican Republic</name>\n        <Alpha2>DO</Alpha2>\n        <Alpha3>DOM</Alpha3>\n        <IDC>1809</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"EC\">\n        <name>Ecuador</name>\n        <Alpha2>EC</Alpha2>\n        <Alpha3>ECU</Alpha3>\n        <IDC>593</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"EG\">\n        <name>Egypt</name>\n        <Alpha2>EG</Alpha2>\n        <Alpha3>EGY</Alpha3>\n        <IDC>20</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"SV\">\n        <name>El Salvador</name>\n        <Alpha2>SV</Alpha2>\n        <Alpha3>SLV</Alpha3>\n        <IDC>503</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"GQ\">\n        <name>Equatorial Guinea</name>\n        <Alpha2>GQ</Alpha2>\n        <Alpha3>GNQ</Alpha3>\n        <IDC>240</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"ER\">\n        <name>Eritrea</name>\n        <Alpha2>ER</Alpha2>\n        <Alpha3>ERI</Alpha3>\n        <IDC>291</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"EE\">\n        <name>Estonia</name>\n        <Alpha2>EE</Alpha2>\n        <Alpha3>EST</Alpha3>\n        <IDC>372</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"ET\">\n        <name>Ethiopia</name>\n        <Alpha2>ET</Alpha2>\n        <Alpha3>ETH</Alpha3>\n        <IDC>251</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"FK\">\n        <name>Falkland Islands (Malvinas)</name>\n        <Alpha2>FK</Alpha2>\n        <Alpha3>FLK</Alpha3>\n        <IDC>500</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"FO\">\n        <name>Faroe Islands</name>\n        <Alpha2>FO</Alpha2>\n        <Alpha3>FRO</Alpha3>\n        <IDC>298</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"FJ\">\n        <name>Fiji</name>\n        <Alpha2>FJ</Alpha2>\n        <Alpha3>FJI</Alpha3>\n        <IDC>679</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"FI\">\n        <name>Finland</name>\n        <Alpha2>FI</Alpha2>\n        <Alpha3>FIN</Alpha3>\n        <IDC>358</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"FR\">\n        <name>France</name>\n        <Alpha2>FR</Alpha2>\n        <Alpha3>FRA</Alpha3>\n        <IDC>33</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"GF\">\n        <name>French Guiana</name>\n        <Alpha2>GF</Alpha2>\n        <Alpha3>GUF</Alpha3>\n        <IDC>594</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"PF\">\n        <name>French Polynesia</name>\n        <Alpha2>PF</Alpha2>\n        <Alpha3>PYF</Alpha3>\n        <IDC>689</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"TF\">\n        <name>French Southern Territories</name>\n        <Alpha2>TF</Alpha2>\n        <Alpha3>ATF</Alpha3>\n        <IDC>0</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"GA\">\n        <name>Gabon</name>\n        <Alpha2>GA</Alpha2>\n        <Alpha3>GAB</Alpha3>\n        <IDC>241</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"GM\">\n        <name>Gambia</name>\n        <Alpha2>GM</Alpha2>\n        <Alpha3>GMB</Alpha3>\n        <IDC>220</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"GE\">\n        <name>Georgia</name>\n        <Alpha2>GE</Alpha2>\n        <Alpha3>GEO</Alpha3>\n        <IDC>995</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"DE\">\n        <name>Germany</name>\n        <Alpha2>DE</Alpha2>\n        <Alpha3>DEU</Alpha3>\n        <IDC>49</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"GH\">\n        <name>Ghana</name>\n        <Alpha2>GH</Alpha2>\n        <Alpha3>GHA</Alpha3>\n        <IDC>233</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"GI\">\n        <name>Gibraltar</name>\n        <Alpha2>GI</Alpha2>\n        <Alpha3>GIB</Alpha3>\n        <IDC>350</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"GR\">\n        <name>Greece</name>\n        <Alpha2>GR</Alpha2>\n        <Alpha3>GRC</Alpha3>\n        <IDC>30</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"GL\">\n        <name>Greenland</name>\n        <Alpha2>GL</Alpha2>\n        <Alpha3>GRL</Alpha3>\n        <IDC>299</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"GD\">\n        <name>Grenada</name>\n        <Alpha2>GD</Alpha2>\n        <Alpha3>GRD</Alpha3>\n        <IDC>1473</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"GP\">\n        <name>Guadeloupe</name>\n        <Alpha2>GP</Alpha2>\n        <Alpha3>GLP</Alpha3>\n        <IDC>590</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"GU\">\n        <name>Guam</name>\n        <Alpha2>GU</Alpha2>\n        <Alpha3>GUM</Alpha3>\n        <IDC>1671</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"GT\">\n        <name>Guatemala</name>\n        <Alpha2>GT</Alpha2>\n        <Alpha3>GTM</Alpha3>\n        <IDC>502</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"GG\">\n        <name>Guernsey</name>\n        <Alpha2>GG</Alpha2>\n        <Alpha3>GGY</Alpha3>\n        <IDC>44</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"GN\">\n        <name>Guinea</name>\n        <Alpha2>GN</Alpha2>\n        <Alpha3>GIN</Alpha3>\n        <IDC>224</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"GW\">\n        <name>Guinea-Bissau</name>\n        <Alpha2>GW</Alpha2>\n        <Alpha3>GNB</Alpha3>\n        <IDC>245</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"GY\">\n        <name>Guyana</name>\n        <Alpha2>GY</Alpha2>\n        <Alpha3>GUY</Alpha3>\n        <IDC>592</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"HT\">\n        <name>Haiti</name>\n        <Alpha2>HT</Alpha2>\n        <Alpha3>HTI</Alpha3>\n        <IDC>509</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"HM\">\n        <name>Heard Island and McDonald Islands</name>\n        <Alpha2>HM</Alpha2>\n        <Alpha3>HMD</Alpha3>\n        <IDC>672</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"HN\">\n        <name>Honduras</name>\n        <Alpha2>HN</Alpha2>\n        <Alpha3>HND</Alpha3>\n        <IDC>504</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"HK\">\n        <name>Hong Kong</name>\n        <Alpha2>HK</Alpha2>\n        <Alpha3>HKG</Alpha3>\n        <IDC>852</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"HU\">\n        <name>Hungary</name>\n        <Alpha2>HU</Alpha2>\n        <Alpha3>HUN</Alpha3>\n        <IDC>36</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"IS\">\n        <name>Iceland</name>\n        <Alpha2>IS</Alpha2>\n        <Alpha3>ISL</Alpha3>\n        <IDC>354</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"IN\">\n        <name>India</name>\n        <Alpha2>IN</Alpha2>\n        <Alpha3>IND</Alpha3>\n        <IDC>91</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"ID\">\n        <name>Indonesia</name>\n        <Alpha2>ID</Alpha2>\n        <Alpha3>IDN</Alpha3>\n        <IDC>62</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"IR\">\n        <name>Iran, Islamic Republic of</name>\n        <Alpha2>IR</Alpha2>\n        <Alpha3>IRN</Alpha3>\n        <IDC>98</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"IQ\">\n        <name>Iraq</name>\n        <Alpha2>IQ</Alpha2>\n        <Alpha3>IRQ</Alpha3>\n        <IDC>964</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"IE\">\n        <name>Ireland</name>\n        <Alpha2>IE</Alpha2>\n        <Alpha3>IRL</Alpha3>\n        <IDC>353</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"IM\">\n        <name>Isle of Man</name>\n        <Alpha2>IM</Alpha2>\n        <Alpha3>IMN</Alpha3>\n        <IDC>44</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"IL\">\n        <name>Israel</name>\n        <Alpha2>IL</Alpha2>\n        <Alpha3>ISR</Alpha3>\n        <IDC>972</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"IT\">\n        <name>Italy</name>\n        <Alpha2>IT</Alpha2>\n        <Alpha3>ITA</Alpha3>\n        <IDC>39</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"JM\">\n        <name>Jamaica</name>\n        <Alpha2>JM</Alpha2>\n        <Alpha3>JAM</Alpha3>\n        <IDC>1876</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"JP\">\n        <name>Japan</name>\n        <Alpha2>JP</Alpha2>\n        <Alpha3>JPN</Alpha3>\n        <IDC>81</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"JE\">\n        <name>Jersey</name>\n        <Alpha2>JE</Alpha2>\n        <Alpha3>JEY</Alpha3>\n        <IDC>44</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"JO\">\n        <name>Jordan</name>\n        <Alpha2>JO</Alpha2>\n        <Alpha3>JOR</Alpha3>\n        <IDC>962</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"KZ\">\n        <name>Kazakhstan</name>\n        <Alpha2>KZ</Alpha2>\n        <Alpha3>KAZ</Alpha3>\n        <IDC>7</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"KE\">\n        <name>Kenya</name>\n        <Alpha2>KE</Alpha2>\n        <Alpha3>KEN</Alpha3>\n        <IDC>254</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"KI\">\n        <name>Kiribati</name>\n        <Alpha2>KI</Alpha2>\n        <Alpha3>KIR</Alpha3>\n        <IDC>686</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"KP\">\n        <name>Korea, Democratic People's Republic of</name>\n        <Alpha2>KP</Alpha2>\n        <Alpha3>PRK</Alpha3>\n        <IDC>850</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"KR\">\n        <name>Korea, Republic of</name>\n        <Alpha2>KR</Alpha2>\n        <Alpha3>KOR</Alpha3>\n        <IDC>82</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"KW\">\n        <name>Kuwait</name>\n        <Alpha2>KW</Alpha2>\n        <Alpha3>KWT</Alpha3>\n        <IDC>965</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"KG\">\n        <name>Kyrgyzstan</name>\n        <Alpha2>KG</Alpha2>\n        <Alpha3>KGZ</Alpha3>\n        <IDC>996</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"LA\">\n        <name>Lao People's Democratic Republic</name>\n        <Alpha2>LA</Alpha2>\n        <Alpha3>LAO</Alpha3>\n        <IDC>856</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"LV\">\n        <name>Latvia</name>\n        <Alpha2>LV</Alpha2>\n        <Alpha3>LVA</Alpha3>\n        <IDC>371</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"LB\">\n        <name>Lebanon</name>\n        <Alpha2>LB</Alpha2>\n        <Alpha3>LBN</Alpha3>\n        <IDC>961</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"LS\">\n        <name>Lesotho</name>\n        <Alpha2>LS</Alpha2>\n        <Alpha3>LSO</Alpha3>\n        <IDC>266</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"LR\">\n        <name>Liberia</name>\n        <Alpha2>LR</Alpha2>\n        <Alpha3>LBR</Alpha3>\n        <IDC>231</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"LY\">\n        <name>Libyan Arab Jamahiriya</name>\n        <Alpha2>LY</Alpha2>\n        <Alpha3>LBY</Alpha3>\n        <IDC>218</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"LI\">\n        <name>Liechtenstein</name>\n        <Alpha2>LI</Alpha2>\n        <Alpha3>LIE</Alpha3>\n        <IDC>423</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"LT\">\n        <name>Lithuania</name>\n        <Alpha2>LT</Alpha2>\n        <Alpha3>LTU</Alpha3>\n        <IDC>370</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"LU\">\n        <name>Luxembourg</name>\n        <Alpha2>LU</Alpha2>\n        <Alpha3>LUX</Alpha3>\n        <IDC>352</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"MO\">\n        <name>Macau</name>\n        <Alpha2>MO</Alpha2>\n        <Alpha3>MAC</Alpha3>\n        <IDC>853</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"MK\">\n        <name>Macedonia, The Former Yugoslav Republic of</name>\n        <Alpha2>MK</Alpha2>\n        <Alpha3>MKD</Alpha3>\n        <IDC>389</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"MG\">\n        <name>Madagascar</name>\n        <Alpha2>MG</Alpha2>\n        <Alpha3>MDG</Alpha3>\n        <IDC>261</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"MW\">\n        <name>Malawi</name>\n        <Alpha2>MW</Alpha2>\n        <Alpha3>MWI</Alpha3>\n        <IDC>265</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"MY\">\n        <name>Malaysia</name>\n        <Alpha2>MY</Alpha2>\n        <Alpha3>MYS</Alpha3>\n        <IDC>60</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"MV\">\n        <name>Maldives</name>\n        <Alpha2>MV</Alpha2>\n        <Alpha3>MDV</Alpha3>\n        <IDC>960</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"ML\">\n        <name>Mali</name>\n        <Alpha2>ML</Alpha2>\n        <Alpha3>MLI</Alpha3>\n        <IDC>223</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"MT\">\n        <name>Malta</name>\n        <Alpha2>MT</Alpha2>\n        <Alpha3>MLT</Alpha3>\n        <IDC>356</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"MH\">\n        <name>Marshall Islands</name>\n        <Alpha2>MH</Alpha2>\n        <Alpha3>MHL</Alpha3>\n        <IDC>692</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"MQ\">\n        <name>Martinique</name>\n        <Alpha2>MQ</Alpha2>\n        <Alpha3>MTQ</Alpha3>\n        <IDC>596</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"MR\">\n        <name>Mauritania</name>\n        <Alpha2>MR</Alpha2>\n        <Alpha3>MRT</Alpha3>\n        <IDC>222</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"MU\">\n        <name>Mauritius</name>\n        <Alpha2>MU</Alpha2>\n        <Alpha3>MUS</Alpha3>\n        <IDC>230</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"YT\">\n        <name>Mayotte</name>\n        <Alpha2>YT</Alpha2>\n        <Alpha3>MYT</Alpha3>\n        <IDC>262</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"MX\">\n        <name>Mexico</name>\n        <Alpha2>MX</Alpha2>\n        <Alpha3>MEX</Alpha3>\n        <IDC>52</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"FM\">\n        <name>Micronesia, Federated States of</name>\n        <Alpha2>FM</Alpha2>\n        <Alpha3>FSM</Alpha3>\n        <IDC>691</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"MD\">\n        <name>Moldova, Republic of</name>\n        <Alpha2>MD</Alpha2>\n        <Alpha3>MDA</Alpha3>\n        <IDC>373</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"MC\">\n        <name>Monaco</name>\n        <Alpha2>MC</Alpha2>\n        <Alpha3>MCO</Alpha3>\n        <IDC>377</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"MN\">\n        <name>Mongolia</name>\n        <Alpha2>MN</Alpha2>\n        <Alpha3>MNG</Alpha3>\n        <IDC>976</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"ME\">\n        <name>Montenegro</name>\n        <Alpha2>ME</Alpha2>\n        <Alpha3>MNE</Alpha3>\n        <IDC>382</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"MS\">\n        <name>Montserrat</name>\n        <Alpha2>MS</Alpha2>\n        <Alpha3>MSR</Alpha3>\n        <IDC>1664</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"MA\">\n        <name>Morocco</name>\n        <Alpha2>MA</Alpha2>\n        <Alpha3>MAR</Alpha3>\n        <IDC>212</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"MZ\">\n        <name>Mozambique</name>\n        <Alpha2>MZ</Alpha2>\n        <Alpha3>MOZ</Alpha3>\n        <IDC>258</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"MM\">\n        <name>Myanmar</name>\n        <Alpha2>MM</Alpha2>\n        <Alpha3>MMR</Alpha3>\n        <IDC>95</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"NA\">\n        <name>Namibia</name>\n        <Alpha2>NA</Alpha2>\n        <Alpha3>NAM</Alpha3>\n        <IDC>264</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"NR\">\n        <name>Nauru</name>\n        <Alpha2>NR</Alpha2>\n        <Alpha3>NRU</Alpha3>\n        <IDC>674</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"NP\">\n        <name>Nepal</name>\n        <Alpha2>NP</Alpha2>\n        <Alpha3>NPL</Alpha3>\n        <IDC>977</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"NL\">\n        <name>Netherlands</name>\n        <Alpha2>NL</Alpha2>\n        <Alpha3>NLD</Alpha3>\n        <IDC>31</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"AN\">\n        <name>Netherlands Antilles</name>\n        <Alpha2>AN</Alpha2>\n        <Alpha3>ANT</Alpha3>\n        <IDC>599</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"NC\">\n        <name>New Caledonia</name>\n        <Alpha2>NC</Alpha2>\n        <Alpha3>NCL</Alpha3>\n        <IDC>687</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"NZ\">\n        <name>New Zealand</name>\n        <Alpha2>NZ</Alpha2>\n        <Alpha3>NZL</Alpha3>\n        <IDC>64</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"NI\">\n        <name>Nicaragua</name>\n        <Alpha2>NI</Alpha2>\n        <Alpha3>NIC</Alpha3>\n        <IDC>505</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"NE\">\n        <name>Niger</name>\n        <Alpha2>NE</Alpha2>\n        <Alpha3>NER</Alpha3>\n        <IDC>227</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"NG\">\n        <name>Nigeria</name>\n        <Alpha2>NG</Alpha2>\n        <Alpha3>NGA</Alpha3>\n        <IDC>234</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"NU\">\n        <name>Niue</name>\n        <Alpha2>NU</Alpha2>\n        <Alpha3>NIU</Alpha3>\n        <IDC>683</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"NF\">\n        <name>Norfolk Island</name>\n        <Alpha2>NF</Alpha2>\n        <Alpha3>NFK</Alpha3>\n        <IDC>6723</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"MP\">\n        <name>Northern Mariana Islands</name>\n        <Alpha2>MP</Alpha2>\n        <Alpha3>MNP</Alpha3>\n        <IDC>1670</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"NO\">\n        <name>Norway</name>\n        <Alpha2>NO</Alpha2>\n        <Alpha3>NOR</Alpha3>\n        <IDC>47</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"OM\">\n        <name>Oman</name>\n        <Alpha2>OM</Alpha2>\n        <Alpha3>OMN</Alpha3>\n        <IDC>968</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"PK\">\n        <name>Pakistan</name>\n        <Alpha2>PK</Alpha2>\n        <Alpha3>PAK</Alpha3>\n        <IDC>92</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"PW\">\n        <name>Palau</name>\n        <Alpha2>PW</Alpha2>\n        <Alpha3>PLW</Alpha3>\n        <IDC>680</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"PS\">\n        <name>Palestinian Territory, Occupied</name>\n        <Alpha2>PS</Alpha2>\n        <Alpha3>PSE</Alpha3>\n        <IDC>970</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"PA\">\n        <name>Panama</name>\n        <Alpha2>PA</Alpha2>\n        <Alpha3>PAN</Alpha3>\n        <IDC>507</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"PG\">\n        <name>Papua New Guinea</name>\n        <Alpha2>PG</Alpha2>\n        <Alpha3>PNG</Alpha3>\n        <IDC>675</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"PY\">\n        <name>Paraguay</name>\n        <Alpha2>PY</Alpha2>\n        <Alpha3>PRY</Alpha3>\n        <IDC>595</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"PE\">\n        <name>Peru</name>\n        <Alpha2>PE</Alpha2>\n        <Alpha3>PER</Alpha3>\n        <IDC>51</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"PH\">\n        <name>Philippines</name>\n        <Alpha2>PH</Alpha2>\n        <Alpha3>PHL</Alpha3>\n        <IDC>63</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"PN\">\n        <name>Pitcairn</name>\n        <Alpha2>PN</Alpha2>\n        <Alpha3>PCN</Alpha3>\n        <IDC>64</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"PL\">\n        <name>Poland</name>\n        <Alpha2>PL</Alpha2>\n        <Alpha3>POL</Alpha3>\n        <IDC>48</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"PT\">\n        <name>Portugal</name>\n        <Alpha2>PT</Alpha2>\n        <Alpha3>PRT</Alpha3>\n        <IDC>351</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"PR\">\n        <name>Puerto Rico</name>\n        <Alpha2>PR</Alpha2>\n        <Alpha3>PRI</Alpha3>\n        <IDC>1787</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"QA\">\n        <name>Qatar</name>\n        <Alpha2>QA</Alpha2>\n        <Alpha3>QAT</Alpha3>\n        <IDC>974</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"RE\">\n        <name>Reunion</name>\n        <Alpha2>RE</Alpha2>\n        <Alpha3>REU</Alpha3>\n        <IDC>262</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"RO\">\n        <name>Romania</name>\n        <Alpha2>RO</Alpha2>\n        <Alpha3>ROU</Alpha3>\n        <IDC>40</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"RU\">\n        <name>Russian Federation</name>\n        <Alpha2>RU</Alpha2>\n        <Alpha3>RUS</Alpha3>\n        <IDC>7</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"RW\">\n        <name>Rwanda</name>\n        <Alpha2>RW</Alpha2>\n        <Alpha3>RWA</Alpha3>\n        <IDC>250</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"BL\">\n        <name>Saint Barthélemy</name>\n        <Alpha2>BL</Alpha2>\n        <Alpha3>BLM</Alpha3>\n        <IDC>590</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"SH\">\n        <name>Saint Helena</name>\n        <Alpha2>SH</Alpha2>\n        <Alpha3>SHN</Alpha3>\n        <IDC>290</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"KN\">\n        <name>Saint Kitts and Nevis</name>\n        <Alpha2>KN</Alpha2>\n        <Alpha3>KNA</Alpha3>\n        <IDC>1869</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"LC\">\n        <name>Saint Lucia</name>\n        <Alpha2>LC</Alpha2>\n        <Alpha3>LCA</Alpha3>\n        <IDC>1758</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"MF\">\n        <name>Saint Martin</name>\n        <Alpha2>MF</Alpha2>\n        <Alpha3>MAF</Alpha3>\n        <IDC>590</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"PM\">\n        <name>Saint Pierre and Miquelon</name>\n        <Alpha2>PM</Alpha2>\n        <Alpha3>SPM</Alpha3>\n        <IDC>508</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"VC\">\n        <name>Saint Vincent and The Grenadines</name>\n        <Alpha2>VC</Alpha2>\n        <Alpha3>VCT</Alpha3>\n        <IDC>1784</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"WS\">\n        <name>Samoa</name>\n        <Alpha2>WS</Alpha2>\n        <Alpha3>WSM</Alpha3>\n        <IDC>685</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"SM\">\n        <name>San Marino</name>\n        <Alpha2>SM</Alpha2>\n        <Alpha3>SMR</Alpha3>\n        <IDC>378</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"ST\">\n        <name>Sao Tome and Principe</name>\n        <Alpha2>ST</Alpha2>\n        <Alpha3>STP</Alpha3>\n        <IDC>239</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"SA\">\n        <name>Saudi Arabia</name>\n        <Alpha2>SA</Alpha2>\n        <Alpha3>SAU</Alpha3>\n        <IDC>966</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"SN\">\n        <name>Senegal</name>\n        <Alpha2>SN</Alpha2>\n        <Alpha3>SEN</Alpha3>\n        <IDC>221</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"RS\">\n        <name>Serbia</name>\n        <Alpha2>RS</Alpha2>\n        <Alpha3>SRB</Alpha3>\n        <IDC>381</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"SC\">\n        <name>Seychelles</name>\n        <Alpha2>SC</Alpha2>\n        <Alpha3>SYC</Alpha3>\n        <IDC>248</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"SL\">\n        <name>Sierra Leone</name>\n        <Alpha2>SL</Alpha2>\n        <Alpha3>SLE</Alpha3>\n        <IDC>232</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"SG\">\n        <name>Singapore</name>\n        <Alpha2>SG</Alpha2>\n        <Alpha3>SGP</Alpha3>\n        <IDC>65</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"SK\">\n        <name>Slovakia</name>\n        <Alpha2>SK</Alpha2>\n        <Alpha3>SVK</Alpha3>\n        <IDC>421</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"SI\">\n        <name>Slovenia</name>\n        <Alpha2>SI</Alpha2>\n        <Alpha3>SVN</Alpha3>\n        <IDC>386</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"SB\">\n        <name>Solomon Islands</name>\n        <Alpha2>SB</Alpha2>\n        <Alpha3>SLB</Alpha3>\n        <IDC>677</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"SO\">\n        <name>Somalia</name>\n        <Alpha2>SO</Alpha2>\n        <Alpha3>SOM</Alpha3>\n        <IDC>252</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"ZA\">\n        <name>South Africa</name>\n        <Alpha2>ZA</Alpha2>\n        <Alpha3>ZAF</Alpha3>\n        <IDC>27</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"GS\">\n        <name>South Georgia and The South Sandwich Islands</name>\n        <Alpha2>GS</Alpha2>\n        <Alpha3>SGS</Alpha3>\n        <IDC>500</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"ES\">\n        <name>Spain</name>\n        <Alpha2>ES</Alpha2>\n        <Alpha3>ESP</Alpha3>\n        <IDC>34</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"LK\">\n        <name>Sri Lanka</name>\n        <Alpha2>LK</Alpha2>\n        <Alpha3>LKA</Alpha3>\n        <IDC>94</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"SD\">\n        <name>Sudan</name>\n        <Alpha2>SD</Alpha2>\n        <Alpha3>SDN</Alpha3>\n        <IDC>249</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"SR\">\n        <name>Suriname</name>\n        <Alpha2>SR</Alpha2>\n        <Alpha3>SUR</Alpha3>\n        <IDC>597</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"SJ\">\n        <name>Svalbard and Jan Mayen</name>\n        <Alpha2>SJ</Alpha2>\n        <Alpha3>SJM</Alpha3>\n        <IDC>47</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"SZ\">\n        <name>Swaziland</name>\n        <Alpha2>SZ</Alpha2>\n        <Alpha3>SWZ</Alpha3>\n        <IDC>268</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"SE\">\n        <name>Sweden</name>\n        <Alpha2>SE</Alpha2>\n        <Alpha3>SWE</Alpha3>\n        <IDC>46</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"CH\">\n        <name>Switzerland</name>\n        <Alpha2>CH</Alpha2>\n        <Alpha3>CHE</Alpha3>\n        <IDC>41</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"SY\">\n        <name>Syrian Arab Republic</name>\n        <Alpha2>SY</Alpha2>\n        <Alpha3>SYR</Alpha3>\n        <IDC>963</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"TW\">\n        <name>Taiwan</name>\n        <Alpha2>TW</Alpha2>\n        <Alpha3>TWN</Alpha3>\n        <IDC>886</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"TJ\">\n        <name>Tajikistan</name>\n        <Alpha2>TJ</Alpha2>\n        <Alpha3>TJK</Alpha3>\n        <IDC>992</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"TZ\">\n        <name>Tanzania, United Republic of</name>\n        <Alpha2>TZ</Alpha2>\n        <Alpha3>TZA</Alpha3>\n        <IDC>255</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"TH\">\n        <name>Thailand</name>\n        <Alpha2>TH</Alpha2>\n        <Alpha3>THA</Alpha3>\n        <IDC>66</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"TL\">\n        <name>Timor-Leste</name>\n        <Alpha2>TL</Alpha2>\n        <Alpha3>TLS</Alpha3>\n        <IDC>670</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"TG\">\n        <name>Togo</name>\n        <Alpha2>TG</Alpha2>\n        <Alpha3>TGO</Alpha3>\n        <IDC>228</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"TK\">\n        <name>Tokelau</name>\n        <Alpha2>TK</Alpha2>\n        <Alpha3>TKL</Alpha3>\n        <IDC>690</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"TO\">\n        <name>Tonga</name>\n        <Alpha2>TO</Alpha2>\n        <Alpha3>TON</Alpha3>\n        <IDC>676</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"TT\">\n        <name>Trinidad and Tobago</name>\n        <Alpha2>TT</Alpha2>\n        <Alpha3>TTO</Alpha3>\n        <IDC>1868</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"TN\">\n        <name>Tunisia</name>\n        <Alpha2>TN</Alpha2>\n        <Alpha3>TUN</Alpha3>\n        <IDC>216</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"TR\">\n        <name>Turkey</name>\n        <Alpha2>TR</Alpha2>\n        <Alpha3>TUR</Alpha3>\n        <IDC>90</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"TM\">\n        <name>Turkmenistan</name>\n        <Alpha2>TM</Alpha2>\n        <Alpha3>TKM</Alpha3>\n        <IDC>993</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"TC\">\n        <name>Turks and Caicos Islands</name>\n        <Alpha2>TC</Alpha2>\n        <Alpha3>TCA</Alpha3>\n        <IDC>1649</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"TV\">\n        <name>Tuvalu</name>\n        <Alpha2>TV</Alpha2>\n        <Alpha3>TUV</Alpha3>\n        <IDC>688</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"UG\">\n        <name>Uganda</name>\n        <Alpha2>UG</Alpha2>\n        <Alpha3>UGA</Alpha3>\n        <IDC>256</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"UA\">\n        <name>Ukraine</name>\n        <Alpha2>UA</Alpha2>\n        <Alpha3>UKR</Alpha3>\n        <IDC>380</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"AE\">\n        <name>United Arab Emirates</name>\n        <Alpha2>AE</Alpha2>\n        <Alpha3>ARE</Alpha3>\n        <IDC>971</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"GB\">\n        <name>United Kingdom</name>\n        <Alpha2>GB</Alpha2>\n        <Alpha3>GBR</Alpha3>\n        <IDC>44</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"UM\">\n        <name>United States Minor Outlying Islands</name>\n        <Alpha2>UM</Alpha2>\n        <Alpha3>UMI</Alpha3>\n        <IDC>1</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"US\">\n        <name>United States of America</name>\n        <Alpha2>US</Alpha2>\n        <Alpha3>USA</Alpha3>\n        <IDC>1</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"UY\">\n        <name>Uruguay</name>\n        <Alpha2>UY</Alpha2>\n        <Alpha3>URY</Alpha3>\n        <IDC>598</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"UZ\">\n        <name>Uzbekistan</name>\n        <Alpha2>UZ</Alpha2>\n        <Alpha3>UZB</Alpha3>\n        <IDC>998</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"VU\">\n        <name>Vanuatu</name>\n        <Alpha2>VU</Alpha2>\n        <Alpha3>VUT</Alpha3>\n        <IDC>678</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"VA\">\n        <name>Holy See (Vatican City State)</name>\n        <Alpha2>VA</Alpha2>\n        <Alpha3>VAT</Alpha3>\n        <IDC>3906</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"VE\">\n        <name>Venezuela</name>\n        <Alpha2>VE</Alpha2>\n        <Alpha3>VEN</Alpha3>\n        <IDC>58</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"VN\">\n        <name>Viet Nam</name>\n        <Alpha2>VN</Alpha2>\n        <Alpha3>VNM</Alpha3>\n        <IDC>84</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"VG\">\n        <name>Virgin Islands, British</name>\n        <Alpha2>VG</Alpha2>\n        <Alpha3>VGB</Alpha3>\n        <IDC>1284</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"VI\">\n        <name>Virgin Islands, U.S.</name>\n        <Alpha2>VI</Alpha2>\n        <Alpha3>VIR</Alpha3>\n        <IDC>1340</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"WF\">\n        <name>Wallis and Futuna</name>\n        <Alpha2>WF</Alpha2>\n        <Alpha3>WLF</Alpha3>\n        <IDC>681</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"EH\">\n        <name>Western Sahara</name>\n        <Alpha2>EH</Alpha2>\n        <Alpha3>ESH</Alpha3>\n        <IDC>212</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"YE\">\n        <name>Yemen</name>\n        <Alpha2>YE</Alpha2>\n        <Alpha3>YEM</Alpha3>\n        <IDC>967</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"ZM\">\n        <name>Zambia</name>\n        <Alpha2>ZM</Alpha2>\n        <Alpha3>ZMB</Alpha3>\n        <IDC>260</IDC>\n    </Country>\n    <Country media-type=\"application/vnd.ez.api.Country+xml\" id=\"ZW\">\n        <name>Zimbabwe</name>\n        <Alpha2>ZW</Alpha2>\n        <Alpha3>ZWE</Alpha3>\n        <IDC>263</IDC>\n    </Country>\n</CountryList>"
+						}
+					]
 				}
 			]
 		},
@@ -8485,7 +8691,7 @@
 					]
 				},
 				{
-					"name": "Products List",
+					"name": "Product List",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -8499,6 +8705,121 @@
 							"mode": "graphql",
 							"graphql": {
 								"query": "{\n  content {\n    products {\n      edges {\n        node {\n      _location {\n        urlAliases {\n          path\n        }\n      }\n      id\n      title\n      tags\n      image {\n        uri\n        alternativeText\n        variation(identifier: medium) {\n          uri\n        }\n      }\n     }\n    }\n   }\n }\n}\n",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "{{your_domain}}/graphql",
+							"host": [
+								"{{your_domain}}"
+							],
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "contentType Infos",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "{\n   _repository{\n   contentType(identifier: \"blog_post\"){\n     fieldDefinitions{ \n      identifier  \n      name  \n      isRequired  \n      isTranslatable \n      fieldGroup\n    }\n  }\n  }\n}",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "{{your_domain}}/graphql",
+									"host": [
+										"{{your_domain}}"
+									],
+									"path": [
+										"graphql"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 29 Jul 2019 21:11:28 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.10 (Debian)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-Cache-Debug",
+									"value": "1"
+								},
+								{
+									"key": "Vary",
+									"value": "cookie,Accept-Encoding,authorization"
+								},
+								{
+									"key": "X-Debug-Token",
+									"value": "799dd7"
+								},
+								{
+									"key": "X-Debug-Token-Link",
+									"value": "http://www.ezplatform2_5_ee_demo.psger/_profiler/799dd7"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Length",
+									"value": "256"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"_repository\": {\n            \"contentType\": {\n                \"fieldDefinitions\": [\n                    {\n                        \"identifier\": \"title\",\n                        \"name\": \"Title\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"intro\",\n                        \"name\": \"Intro\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"body\",\n                        \"name\": \"Body\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"image\",\n                        \"name\": \"Image\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"publication_date\",\n                        \"name\": \"Publication date\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"author\",\n                        \"name\": \"Author\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"authors_position\",\n                        \"name\": \"Author's position\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"tags\",\n                        \"name\": \"tags\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"metas\",\n                        \"name\": \"Metas\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"metadata\"\n                    }\n                ]\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "query images",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "{\n  media {\n    images( query:{ParentLocationId: 51}) {\n      edges {\n        node {\n          name\n          image {\n            variation(identifier: large) {\n              uri\n            }\n            alternativeText\n          }\n        }\n      }\n    }\n  }\n}\n",
 								"variables": ""
 							}
 						},
