@@ -454,6 +454,121 @@
 					"name": "Load Content",
 					"item": [
 						{
+							"name": "ezplatform-query-fieldtype",
+							"item": [
+								{
+									"name": "Load Content - Query FieldType",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/vnd.ez.api.ContentList+xml"
+											}
+										],
+										"url": {
+											"raw": "{{your_domain}}/api/ezp/v2/content/objects/318/versions/1/fields/blog_post_list/query/results",
+											"host": [
+												"{{your_domain}}"
+											],
+											"path": [
+												"api",
+												"ezp",
+												"v2",
+												"content",
+												"objects",
+												"318",
+												"versions",
+												"1",
+												"fields",
+												"blog_post_list",
+												"query",
+												"results"
+											]
+										},
+										"description": "https://github.com/bdunogier/ezplatform-query-fieldtype"
+									},
+									"response": [
+										{
+											"name": "Load Content - ContentInfos",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/vnd.ez.api.ContentInfo+xml"
+													}
+												],
+												"url": {
+													"raw": "{{your_domain}}/api/ezp/v2/content/objects/72",
+													"host": [
+														"{{your_domain}}"
+													],
+													"path": [
+														"api",
+														"ezp",
+														"v2",
+														"content",
+														"objects",
+														"72"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "xml",
+											"header": [
+												{
+													"key": "Date",
+													"value": "Thu, 28 Mar 2019 16:13:20 GMT"
+												},
+												{
+													"key": "Server",
+													"value": "Apache/2.4.10 (Debian)"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, private"
+												},
+												{
+													"key": "accept-patch",
+													"value": "application/vnd.ez.api.ContentUpdate+xml"
+												},
+												{
+													"key": "Vary",
+													"value": "Accept"
+												},
+												{
+													"key": "Content-Length",
+													"value": "1327"
+												},
+												{
+													"key": "Age",
+													"value": "1169"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=5, max=100"
+												},
+												{
+													"key": "Connection",
+													"value": "Keep-Alive"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/vnd.ez.api.ContentInfo+xml"
+												}
+											],
+											"cookie": [],
+											"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Content media-type=\"application/vnd.ez.api.ContentInfo+xml\" href=\"/api/ezp/v2/content/objects/72\" remoteId=\"qwert4321\" id=\"72\">\n    <ContentType media-type=\"application/vnd.ez.api.ContentType+xml\" href=\"/api/ezp/v2/content/types/14\"/>\n    <Name>Greek salad with red cabbage</Name>\n    <Versions media-type=\"application/vnd.ez.api.VersionList+xml\" href=\"/api/ezp/v2/content/objects/72/versions\"/>\n    <CurrentVersion media-type=\"application/vnd.ez.api.Version+xml\" href=\"/api/ezp/v2/content/objects/72/currentversion\"/>\n    <Section media-type=\"application/vnd.ez.api.Section+xml\" href=\"/api/ezp/v2/content/sections/1\"/>\n    <MainLocation media-type=\"application/vnd.ez.api.Location+xml\" href=\"/api/ezp/v2/content/locations/1/2/54/74\"/>\n    <Locations media-type=\"application/vnd.ez.api.LocationList+xml\" href=\"/api/ezp/v2/content/objects/72/locations\"/>\n    <Owner media-type=\"application/vnd.ez.api.User+xml\" href=\"/api/ezp/v2/user/users/14\"/>\n    <lastModificationDate>2019-03-26T18:13:49+01:00</lastModificationDate>\n    <publishedDate>2018-11-17T19:21:57+01:00</publishedDate>\n    <mainLanguageCode>eng-GB</mainLanguageCode>\n    <currentVersionNo>6</currentVersionNo>\n    <alwaysAvailable>true</alwaysAvailable>\n    <ObjectStates media-type=\"application/vnd.ez.api.ContentObjectStates+xml\" href=\"/api/ezp/v2/content/objects/72/objectstates\"/>\n</Content>"
+										}
+									]
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
 							"name": "Load Content - ContentInfos",
 							"request": {
 								"method": "GET",
@@ -796,7 +911,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>  \n<ContentCreate xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n  <ContentType href=\"/api/ezp/v2/content/types/48\"/>\n  <mainLanguageCode>ger-DE</mainLanguageCode>\n  <LocationCreate>\n    <ParentLocation href=\"/api/ezp/v2/content/locations/1/2/94/95/99\" />\n    <priority>0</priority>\n    <hidden>false</hidden>\n    <sortField>PATH</sortField>\n    <sortOrder>ASC</sortOrder>\n  </LocationCreate>\n  <Section href=\"/api/ezp/v2/content/sections/1\"/>\n  <alwaysAvailable>true</alwaysAvailable>\n  <remoteId></remoteId>\n  <fields>\n    <field>\n      <fieldDefinitionIdentifier>title</fieldDefinitionIdentifier>\n      <languageCode>ger-DE</languageCode>\n      <fieldValue>black stories - Köln Edition</fieldValue>\n    </field>\n    <field>\n      <fieldDefinitionIdentifier>summary</fieldDefinitionIdentifier>\n      <languageCode>ger-DE</languageCode>\n      <fieldValue>\n    <value key=\"xml\"><![CDATA[<section xmlns=\"http://ez.no/namespaces/ezpublish5/xhtml5/edit\"><p>Warum wurde in Köln-Deutz ein Mann von einem Hai angegriffen und so stark verletzt, dass er im Krankenhaus versorgt werden musste? Und weshalb sackte der Karnevalsprinz Paul II. am Rosenmontag um 11 Uhr 11 auf seinem Wagen plötzlich zusammen und starb? </p></section>]]></value>\n   </fieldValue>\n    </field>\n    <field>\n      <fieldDefinitionIdentifier>description</fieldDefinitionIdentifier>\n      <languageCode>ger-DE</languageCode>\n      <fieldValue>\n    <value key=\"xml\"><![CDATA[<section xmlns=\"http://ez.no/namespaces/ezpublish5/xhtml5/edit\"><p>Die kniffligen Rätsel von „black stories“ gibt es jetzt in der Köln Edition. Von Nippes bis zur Südstadt gilt es, den Tathergang Stück für Stück durch Fragen, Raten und Tüfteln zu rekonstruieren. Immer wieder greifen die 50 rabenschwarzen Geschichten „typisch Kölsches“ auf, und gelegentlich fließen tatsächliche Geschehnisse und Fakten aus der Geschichte Kölns ein. So erfährt die Rategemeinde zu jeder Story auch noch etwas über Köln und lernt nebenbei die schöne Domstadt näher kennen.\n</p><h3>Fazit der Redaktion von Koeln-Magazin.info:</h3><p>Die Köln Edition der beliebten „black stories“ ist ideal für Köln-Begeisterte und die, die es noch werden wollen. Das Spiel eignet sich außerdem gut als Andenken an eine schöne Städtereise. Ein gruseliger Rate-Spaß für Teenager und Erwachsene, der auf keiner Party fehlen darf. Bei den mysteriösen und morbiden Rätselgeschichten rund um Köln ist Gänsehaut garantiert. </p></section>]]></value>\n   </fieldValue>\n    </field>\n  </fields>\n</ContentCreate>"
+									"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>  \n<ContentCreate xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n  <ContentType href=\"/api/ezp/v2/content/types/28\"/>\n  <mainLanguageCode>ger-DE</mainLanguageCode>\n  <LocationCreate>\n    <ParentLocation href=\"/api/ezp/v2/content/locations/1/2/306\" />\n    <priority>0</priority>\n    <hidden>false</hidden>\n    <sortField>PATH</sortField>\n    <sortOrder>ASC</sortOrder>\n  </LocationCreate>\n  <Section href=\"/api/ezp/v2/content/sections/1\"/>\n  <alwaysAvailable>true</alwaysAvailable>\n  <remoteId></remoteId>\n  <fields>\n    <field>\n      <fieldDefinitionIdentifier>title</fieldDefinitionIdentifier>\n      <languageCode>ger-DE</languageCode>\n      <fieldValue>black stories - Köln Edition</fieldValue>\n    </field>\n    <field>\n      <fieldDefinitionIdentifier>intro</fieldDefinitionIdentifier>\n      <languageCode>ger-DE</languageCode>\n      <fieldValue>\n    <value key=\"xml\"><![CDATA[<section xmlns=\"http://ez.no/namespaces/ezpublish5/xhtml5/edit\"><p>Warum wurde in Köln-Deutz ein Mann von einem Hai angegriffen und so stark verletzt, dass er im Krankenhaus versorgt werden musste? Und weshalb sackte der Karnevalsprinz Paul II. am Rosenmontag um 11 Uhr 11 auf seinem Wagen plötzlich zusammen und starb? </p></section>]]></value>\n   </fieldValue>\n    </field>\n    <field>\n      <fieldDefinitionIdentifier>body</fieldDefinitionIdentifier>\n      <languageCode>ger-DE</languageCode>\n      <fieldValue>\n    <value key=\"xml\"><![CDATA[<section xmlns=\"http://ez.no/namespaces/ezpublish5/xhtml5/edit\"><p>Die kniffligen Rätsel von „black stories“ gibt es jetzt in der Köln Edition. Von Nippes bis zur Südstadt gilt es, den Tathergang Stück für Stück durch Fragen, Raten und Tüfteln zu rekonstruieren. Immer wieder greifen die 50 rabenschwarzen Geschichten „typisch Kölsches“ auf, und gelegentlich fließen tatsächliche Geschehnisse und Fakten aus der Geschichte Kölns ein. So erfährt die Rategemeinde zu jeder Story auch noch etwas über Köln und lernt nebenbei die schöne Domstadt näher kennen.\n</p><h3>Fazit der Redaktion von Koeln-Magazin.info:</h3><p>Die Köln Edition der beliebten „black stories“ ist ideal für Köln-Begeisterte und die, die es noch werden wollen. Das Spiel eignet sich außerdem gut als Andenken an eine schöne Städtereise. Ein gruseliger Rate-Spaß für Teenager und Erwachsene, der auf keiner Party fehlen darf. Bei den mysteriösen und morbiden Rätselgeschichten rund um Köln ist Gänsehaut garantiert. </p></section>]]></value>\n   </fieldValue>\n    </field>\n  </fields>\n</ContentCreate>"
 								},
 								"url": {
 									"raw": "{{your_domain}}/api/ezp/v2/content/objects",
@@ -2207,6 +2322,124 @@
 						"description": "Using Location path"
 					},
 					"response": []
+				},
+				{
+					"name": "load location using content Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.ez.api.UrlAliasRefList+xml",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{your_domain}}/api/ezp/v2/content/objects/72/locations",
+							"host": [
+								"{{your_domain}}"
+							],
+							"path": [
+								"api",
+								"ezp",
+								"v2",
+								"content",
+								"objects",
+								"72",
+								"locations"
+							]
+						},
+						"description": "Using Location path"
+					},
+					"response": [
+						{
+							"name": "load location using content Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.ez.api.UrlAliasRefList+xml",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{your_domain}}/api/ezp/v2/content/objects/72/locations",
+									"host": [
+										"{{your_domain}}"
+									],
+									"path": [
+										"api",
+										"ezp",
+										"v2",
+										"content",
+										"objects",
+										"72",
+										"locations"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 09 Dec 2019 17:03:53 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.10 (Debian)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "public, s-maxage=86400"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept,cookie,authorization"
+								},
+								{
+									"key": "X-Cache-Debug",
+									"value": "1"
+								},
+								{
+									"key": "xkey",
+									"value": "ez-all location-74 parent-54 path-1 path-2 path-54 path-74 content-72 content-type-14"
+								},
+								{
+									"key": "X-Debug-Token",
+									"value": "191e2d"
+								},
+								{
+									"key": "X-Debug-Token-Link",
+									"value": "http://www.ezplatform2_5_ee_demo.psger/_profiler/191e2d"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "sf_redirect=deleted; expires=Sun, 09-Dec-2018 17:03:53 GMT; Max-Age=0; path=/; httponly"
+								},
+								{
+									"key": "Content-Length",
+									"value": "391"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.ez.api.LocationList+xml"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<LocationList media-type=\"application/vnd.ez.api.LocationList+xml\" href=\"/api/ezp/v2/content/objects/72/locations\">\n    <Location media-type=\"application/vnd.ez.api.Location+xml\" href=\"/api/ezp/v2/content/locations/1/2/54/74\"/>\n    <Location media-type=\"application/vnd.ez.api.Location+xml\" href=\"/api/ezp/v2/content/locations/1/2/345/435\"/>\n</LocationList>"
+						}
+					]
 				},
 				{
 					"name": "Create a new location for content - link",
@@ -8262,6 +8495,72 @@
 					"response": []
 				},
 				{
+					"name": "Views - Multiple Content type identifier search -XML",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/vnd.ez.api.ViewInput+xml; version=1.1"
+							},
+							{
+								"key": "X-CSRF-Token",
+								"value": "{{csrf_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<ViewInput>\n  <identifier>find-user-by-name</identifier>\n  <ContentQuery>\n    <Filter>\n        <OR>\n        \t<ContentTypeIdentifierCriterion>user</ContentTypeIdentifierCriterion>\n            <ContentTypeIdentifierCriterion>user2</ContentTypeIdentifierCriterion>\n        </OR>\n        <FullTextCriterion>georg*</FullTextCriterion>\n    </Filter>\n    <limit>10</limit>\n    <offset>0</offset>\n  </ContentQuery>\n</ViewInput>"
+						},
+						"url": {
+							"raw": "{{your_domain}}/api/ezp/v2/views",
+							"host": [
+								"{{your_domain}}"
+							],
+							"path": [
+								"api",
+								"ezp",
+								"v2",
+								"views"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Views - Multiple Content type identifier search -JSON",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/vnd.ez.api.ViewInput+json; version=1.1"
+							},
+							{
+								"key": "X-CSRF-Token",
+								"value": "{{csrf_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"ViewInput\":{\n      \"identifier\":\"find-user-by-name-yur\",\n      \"public\":false,\n      \"ContentQuery\":{\n         \"Criteria\":{\n\n         },\n         \"FacetBuilders\":{\n\n         },\n         \"SortClauses\":{\n\n         },\n         \"Query\":{\n            \"FullTextCriterion\":\"geo*\",\n            \"ContentTypeIdentifierCriterion\":[\n               \"user\",\n               \"user2\"\n            ]\n         },\n         \"limit\":50,\n         \"offset\":0\n      }\n   }\n}"
+						},
+						"url": {
+							"raw": "{{your_domain}}/api/ezp/v2/views",
+							"host": [
+								"{{your_domain}}"
+							],
+							"path": [
+								"api",
+								"ezp",
+								"v2",
+								"views"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "View Sub items. SubtreeCriterion",
 					"request": {
 						"method": "POST",
@@ -8965,6 +9264,121 @@
 					]
 				},
 				{
+					"name": "Related Relation Content",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "{\n  content {\n    articles {\n      edges {\n        node {\n      relatedArticles{\n         _url\n        _name\n         _info{\n          contentType{\n             identifier\n          }\n        }\n        ... on ArticleContent {\n            title\n            intro{\n                html5\n            }\n          }\n      }\n     }\n    }\n   }\n }\n}\n",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "{{your_domain}}/graphql",
+							"host": [
+								"{{your_domain}}"
+							],
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "contentType Infos",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "{\n   _repository{\n   contentType(identifier: \"blog_post\"){\n     fieldDefinitions{ \n      identifier  \n      name  \n      isRequired  \n      isTranslatable \n      fieldGroup\n    }\n  }\n  }\n}",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "{{your_domain}}/graphql",
+									"host": [
+										"{{your_domain}}"
+									],
+									"path": [
+										"graphql"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 29 Jul 2019 21:11:28 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.10 (Debian)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-Cache-Debug",
+									"value": "1"
+								},
+								{
+									"key": "Vary",
+									"value": "cookie,Accept-Encoding,authorization"
+								},
+								{
+									"key": "X-Debug-Token",
+									"value": "799dd7"
+								},
+								{
+									"key": "X-Debug-Token-Link",
+									"value": "http://www.ezplatform2_5_ee_demo.psger/_profiler/799dd7"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Length",
+									"value": "256"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"_repository\": {\n            \"contentType\": {\n                \"fieldDefinitions\": [\n                    {\n                        \"identifier\": \"title\",\n                        \"name\": \"Title\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"intro\",\n                        \"name\": \"Intro\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"body\",\n                        \"name\": \"Body\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"image\",\n                        \"name\": \"Image\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"publication_date\",\n                        \"name\": \"Publication date\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"author\",\n                        \"name\": \"Author\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"authors_position\",\n                        \"name\": \"Author's position\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"tags\",\n                        \"name\": \"tags\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"metas\",\n                        \"name\": \"Metas\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"metadata\"\n                    }\n                ]\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
 					"name": "query images",
 					"request": {
 						"method": "POST",
@@ -9093,7 +9507,206 @@
 						"body": {
 							"mode": "graphql",
 							"graphql": {
-								"query": "{\n  content {\n    product(id: 67) {\n      title\n      _type {\n        identifier\n        fieldDefinitions {\n          fieldTypeIdentifier\n        }\n      }\n    }\n  }\n}\n",
+								"query": "{\n  content {\n    product(id: 72) {\n      title\n      ezimageasset{\n        uri\n        variation(identifier: large) {\n              uri\n            }\n      }\n      _type {\n        identifier\n        fieldDefinitions {\n          fieldTypeIdentifier\n        }\n      }\n    }\n  }\n}\n",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "{{your_domain}}/graphql",
+							"host": [
+								"{{your_domain}}"
+							],
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "contentType Infos",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "{\n   _repository{\n   contentType(identifier: \"blog_post\"){\n     fieldDefinitions{ \n      identifier  \n      name  \n      isRequired  \n      isTranslatable \n      fieldGroup\n    }\n  }\n  }\n}",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "{{your_domain}}/graphql",
+									"host": [
+										"{{your_domain}}"
+									],
+									"path": [
+										"graphql"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 29 Jul 2019 21:11:28 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.10 (Debian)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-Cache-Debug",
+									"value": "1"
+								},
+								{
+									"key": "Vary",
+									"value": "cookie,Accept-Encoding,authorization"
+								},
+								{
+									"key": "X-Debug-Token",
+									"value": "799dd7"
+								},
+								{
+									"key": "X-Debug-Token-Link",
+									"value": "http://www.ezplatform2_5_ee_demo.psger/_profiler/799dd7"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Length",
+									"value": "256"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"_repository\": {\n            \"contentType\": {\n                \"fieldDefinitions\": [\n                    {\n                        \"identifier\": \"title\",\n                        \"name\": \"Title\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"intro\",\n                        \"name\": \"Intro\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"body\",\n                        \"name\": \"Body\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"image\",\n                        \"name\": \"Image\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"publication_date\",\n                        \"name\": \"Publication date\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"author\",\n                        \"name\": \"Author\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"authors_position\",\n                        \"name\": \"Author's position\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"tags\",\n                        \"name\": \"tags\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"metas\",\n                        \"name\": \"Metas\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"metadata\"\n                    }\n                ]\n            }\n        }\n    }\n}"
+						},
+						{
+							"name": "Product data per Id",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "{\n  content {\n    product(id: 67) {\n      title\n      _type {\n        identifier\n        fieldDefinitions {\n          fieldTypeIdentifier\n        }\n      }\n    }\n  }\n}\n",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "{{your_domain}}/graphql",
+									"host": [
+										"{{your_domain}}"
+									],
+									"path": [
+										"graphql"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 29 Jul 2019 21:16:07 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.10 (Debian)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-Cache-Debug",
+									"value": "1"
+								},
+								{
+									"key": "Vary",
+									"value": "cookie,Accept-Encoding,authorization"
+								},
+								{
+									"key": "X-Debug-Token",
+									"value": "52357f"
+								},
+								{
+									"key": "X-Debug-Token-Link",
+									"value": "http://www.ezplatform2_5_ee_demo.psger/_profiler/52357f"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Length",
+									"value": "207"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"content\": {\n            \"product\": {\n                \"title\": \"Spanish seafood paella\",\n                \"_type\": {\n                    \"identifier\": \"product\",\n                    \"fieldDefinitions\": [\n                        {\n                            \"fieldTypeIdentifier\": \"ezstring\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezrichtext\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezstring\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezrichtext\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezrichtext\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezimage\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezfloat\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezinteger\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezselection\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezboolean\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezboolean\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezboolean\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezboolean\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezboolean\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"eztags\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"novaseometas\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezmatrix\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezimageasset\"\n                        }\n                    ]\n                }\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Current Content state",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "{\n  content {\n    article(id: 208) {\n      title\n       _info{\n           states{\n             identifier\n             id\n             group{\n               identifier\n               id\n              states{\n                 id\n                 identifier\n              }\n            }\n          }\n        }\n    }\n  }\n}\n",
 								"variables": ""
 							}
 						},
@@ -9932,6 +10545,374 @@
 					]
 				},
 				{
+					"name": "SubItem List",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "{\n  _repository{\n    location(locationId:2){\n      pathString\n      children{\n        edges{\n          node{\n             contentInfo{\n               contentType\n              {\n                 identifier\n              }\n            }\n            content{\n              _name\n              _url\n            }\n          }\n        }\n      }\n    }\n  }\n}\n",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "{{your_domain}}/graphql",
+							"host": [
+								"{{your_domain}}"
+							],
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Articles List",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "{\n  content {\n    articles {\n      edges {\n        node {\n          _info {\n            publishedDate {\n              format(constant: rfc1123)\n            }\n          }\n          title\n          image {\n            uri\n            variation(identifier: medium) {\n              uri\n            }\n          }\n          body {\n            html5\n          }\n        }\n      }\n    }\n  }\n}\n",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "{{your_domain}}/graphql",
+									"host": [
+										"{{your_domain}}"
+									],
+									"path": [
+										"graphql"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 29 Jul 2019 21:23:26 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.10 (Debian)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-Cache-Debug",
+									"value": "1"
+								},
+								{
+									"key": "Vary",
+									"value": "cookie,Accept-Encoding,authorization"
+								},
+								{
+									"key": "X-Debug-Token",
+									"value": "2192fc"
+								},
+								{
+									"key": "X-Debug-Token-Link",
+									"value": "http://www.ezplatform2_5_ee_demo.psger/_profiler/2192fc"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Length",
+									"value": "16430"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"content\": {\n            \"articles\": {\n                \"edges\": [\n                    {\n                        \"node\": {\n                            \"_info\": {\n                                \"publishedDate\": {\n                                    \"format\": \"Sat, 17 Nov 2018 19:22:43 +0100\"\n                                }\n                            },\n                            \"title\": \"Mexican Cuisine\",\n                            \"image\": {\n                                \"uri\": \"/var/site/storage/images/5/7/0/2/2075-1-eng-GB/Mexican-Cuisine.jpg\",\n                                \"variation\": {\n                                    \"uri\": \"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/medium/5/7/0/2/2075-1-eng-GB/Mexican-Cuisine.jpg\"\n                                }\n                            },\n                            \"body\": {\n                                \"html5\": \"<br>  <p>Mexican cuisine is primarily a fusion of indigenous Mesoamerican cooking with European, especially Spanish. The basic staples are native foods such as corn, beans and chili peppers.</p><br>  <h2>Main Features</h2><br>  <p>The basic staples are native foods such as corn, beans and chili peppers. Europeans introduced a large number of other foods, the most important of which were meats from domesticated animals (beef, pork, chicken, goat and sheep), dairy products (especially cheese) and various herbs and spices. While the Spanish initially tried to impose their own diet on the country, this was not possible and eventually the foods and cooking techniques began to be mixed, especially in colonial era convents. African and Asian influences were also introduced into the mixture during this era as a result of African slavery in New Spain and the Manila-Acapulco Galleons.</p><br>  <h2>History</h2><br>  <p>Over the centuries this resulted in regional cuisines, based on local conditions such as those in Oaxaca, Veracruz and the Yucat&aacute;n Peninsula. Mexican cuisine is an important aspect of the culture, social structure and popular traditions of Mexico. For this reason and others, Mexican cuisine was inscribed in 2010 on the Representative List of the Intangible Cultural Heritage of Humanity by UNESCO.</p><br>  <p>Mexican cuisine is as complex as any of the great cuisines in the world. It is created mostly with ingredients native to Mexico as well as those brought over by the Spanish conquistadors, with some new influences since then. In addition to staples such as corn and chile peppers, native ingredients include tomatoes, squashes, avocados, cocoa and vanilla, as well as ingredients not generally used in other cuisines such as edible flowers, vegetables such as huauzontle and papaloquelite or small criollo avocados, whose skin is edible.</p><br>  <h2>Food and festivals</h2><br>  <p>Mexican cuisine is elaborate and often tied to symbolism and festivals, one reason it was named as an example of the Intangible Cultural Heritage of Humanity by UNESCO. Many of the foods of Mexico are complicated because of their relation to the social structure of the country. Food preparation, especially for family and social events, is considered to be an investment in order to maintain social relationships. Even the idea of flavor is considered to be social, with meals prepared for certain dinners and certain occasions when they are considered the most tasty.</p><br>  \\n<!-- START vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n        \\n<div  class=\\\"align-right ez-embed-type-image\\\">\\n    \\n    \\n<!-- START vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n    <figure class=\\\"ezimage-field\\\"><img src=\\\"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/large/7/7/9/1/1977-1-eng-GB/guacomole.jpg\\\" alt=\\\"\\\" height=\\\"200\\\" width=\\\"300\\\" /></figure>\\n\\n<!-- STOP vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n</div>\\n\\n<!-- STOP vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n<br>  <p>The ability to cook well, called \\\"saz&oacute;n\\\" (lit. seasoning) is considered to be a gift generally gained from experience and a sense of commitment to the diners. For the Day of the Dead festival, foods such as tamales and mole are set out on altars and it is believed that the visiting dead relatives eat the essence of the food. If eaten afterwards by the living it is considered to be tasteless. In central Mexico, the main festival foods are mole, barbacoa, carnitas and mixiotes. They are often prepared to feed around five hundred guests, requiring groups of cooks. The cooking is part of the social custom meant to bind families and communities.</p><br>  \\n<!-- START vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n        \\n<div  class=\\\"align-left ez-embed-type-image\\\">\\n    \\n    \\n<!-- START vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n    <figure class=\\\"ezimage-field\\\"><img src=\\\"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/large/3/7/9/1/1973-1-eng-GB/enchilada_mole.jpg\\\" alt=\\\"\\\" height=\\\"200\\\" width=\\\"300\\\" /></figure>\\n\\n<!-- STOP vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n</div>\\n\\n<!-- STOP vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n<br>  <p>Mexican regional home cooking is completely different from the food served in most Mexican restaurants outside Mexico, which is usually some variety of Tex-Mex. Some of Mexico&rsquo;s traditional foods involved complex or long cooking processes. Before industrialization, traditional women spent several hours a day boiling dried corn then grinding them on a metate to make the dough for tortillas, cooking them one-by-one on a comal griddle. In some areas, tortillas are still made this way. Sauces and salsas were also ground in a mortar called a molcajete. Today, blenders are more often used, though the texture is a bit different. Most people in Mexico would say that those made with a molcajete taste better, but few can do this now.</p><br>  <h2>Street food</h2><br>  \\n<!-- START vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n        \\n<div  class=\\\"align-right ez-embed-type-image\\\">\\n    \\n    \\n<!-- START vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n    <figure class=\\\"ezimage-field\\\"><img src=\\\"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/large/1/8/9/1/1981-1-eng-GB/mexican_street_food.jpg\\\" alt=\\\"\\\" height=\\\"200\\\" width=\\\"300\\\" /></figure>\\n\\n<!-- STOP vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n</div>\\n\\n<!-- STOP vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n<br>  <p>Mexican street food is one of the most varied parts of the cuisine. It can include tacos, quesadillas, pambazos, tamales, huaraches, alambres, al pastor, and food not suitable to cook at home, including barbacoa, carnitas, and since many homes in Mexico do not have or make use of ovens, roasted chicken. One attraction of street food in Mexico is the satisfaction of hunger or craving without all the social and emotional connotation of eating at home, although longtime customers can have something of a friendship/familial relationship with a chosen vendor.</p><br>\\n\"\n                            }\n                        }\n                    },\n                    {\n                        \"node\": {\n                            \"_info\": {\n                                \"publishedDate\": {\n                                    \"format\": \"Sat, 17 Nov 2018 19:22:45 +0100\"\n                                }\n                            },\n                            \"title\": \"Ethiopian Cuisine\",\n                            \"image\": {\n                                \"uri\": \"/var/site/storage/images/7/2/1/2/2127-1-eng-GB/Ethiopian-Cuisine.jpg\",\n                                \"variation\": {\n                                    \"uri\": \"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/medium/7/2/1/2/2127-1-eng-GB/Ethiopian-Cuisine.jpg\"\n                                }\n                            },\n                            \"body\": {\n                                \"html5\": \"<br>  <p>Ethiopian cuisine characteristically consists of vegetable and often very spicy meat dishes. This is usually in the form of wat, a thick stew, served atop injera, a large sourdough flatbread, which is about 50 centimeters (20 inches) in diameter and made out of fermented teff flour.</p><br>  <h2>Main Features</h2><br>  <p>Ethiopians eat exclusively with their right hands, using pieces of injera to pick up bites of entr&eacute;es and side dishes. Utensils are optional. A typical dish consists of injera accompanied by a spicy stew, which frequently includes beef, lamb, vegetables and various types of legumes, such as lentils. Gurage cuisine also makes use of the false banana plant, a type of ensete. The plant is pulverized and fermented to make a bread-like food called qocho or kocho, which is eaten with kitfo.</p><br>  <h2>History</h2><br>  <p>The Ethiopian Orthodox Church prescribes a number of fasting (tsom) periods, including Wednesdays, Fridays, and the entire Lenten season, so Ethiopian cuisine contains many dishes that are vegan. Pasta is frequently available throughout Ethiopia, including rural areas. Coffee is also a large part of Ethiopian culture and cuisine. After every meal, a coffee ceremony is enacted and espresso coffee is served.</p><br>  \\n<!-- START vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n        \\n<div  class=\\\"align-left ez-embed-type-image\\\">\\n    \\n    \\n<!-- START vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n    <figure class=\\\"ezimage-field\\\"><img src=\\\"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/large/5/4/9/1/1945-1-eng-GB/ethiopian_kitfo.jpg\\\" alt=\\\"\\\" height=\\\"200\\\" width=\\\"300\\\" /></figure>\\n\\n<!-- STOP vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n</div>\\n\\n<!-- STOP vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n<br>  <p>In their adherence to strict fasting, Ethiopian cooks have developed a rich array of cooking oil sources&mdash;besides sesame and safflower&mdash;for use as a substitute for animal fats which is forbidden during fasting periods. Ethiopian cuisine also uses nug (also spelled noog, also known as \\\"niger seed&rdquo;).</p><br>  <h3>Coffee</h3><br>  <p>According to some sources, drinking of coffee (buna) is likely to have originated in Ethiopia. A key national beverage, it is an important part of local commerce.</p><br>  \\n<!-- START vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n        \\n<div  class=\\\"align-right ez-embed-type-image\\\">\\n    \\n    \\n<!-- START vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n    <figure class=\\\"ezimage-field\\\"><img src=\\\"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/large/1/4/9/1/1941-1-eng-GB/coffee_ceremony.jpg\\\" alt=\\\"\\\" height=\\\"200\\\" width=\\\"300\\\" /></figure>\\n\\n<!-- STOP vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n</div>\\n\\n<!-- STOP vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n<br>  <p>The coffee ceremony is the traditional serving of coffee, usually after a big meal. It often involves the use of a jebena, a clay coffee pot in which the coffee is boiled. The preparer roasts the coffee beans right in front of guests, then walks around wafting the smoke throughout the room so participants may sample the scent of coffee. Then the preparer grinds the coffee beans in a traditional tool called a mokecha. The coffee is put into the jebena, boiled with water, and then served with small cups. Coffee is usually served with sugar, but is also served with salt in many parts of Ethiopia. In some parts of the country, niter kibbeh is added instead of sugar or salt.</p><br>  <p>Snacks, such as popcorn or toasted barley (or kollo), are often served with the coffee. In most homes, a dedicated coffee area is surrounded by fresh grass, with special furniture for the coffee maker. A complete ceremony has three rounds of coffee (Abol, Tona and Bereka) and is accompanied by the burning of frankincense.</p><br>  <h3>Spirits</h3><br>  <p>Tej is a potent honey wine. It is similar to mead, which is frequently served in bars (in particular, in a tej bet or \\\"tej house\\\"). Katikala and araqe are inexpensive local spirits that are very strong.</p><br>  <p>Tella is a home-brewed beer served in tella bet (\\\"tella houses\\\") which specialize in serving tella only. Tella is the most common beverage made and served in households during holidays.</p><br>\\n\"\n                            }\n                        }\n                    },\n                    {\n                        \"node\": {\n                            \"_info\": {\n                                \"publishedDate\": {\n                                    \"format\": \"Sat, 17 Nov 2018 19:22:49 +0100\"\n                                }\n                            },\n                            \"title\": \"Thai Cuisine\",\n                            \"image\": {\n                                \"uri\": \"/var/site/storage/images/9/7/1/2/2179-1-eng-GB/Thai-Cuisine.jpg\",\n                                \"variation\": {\n                                    \"uri\": \"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/medium/9/7/1/2/2179-1-eng-GB/Thai-Cuisine.jpg\"\n                                }\n                            },\n                            \"body\": {\n                                \"html5\": \"<br>  <p>Thai cuisine is the national cuisine of Thailand. Balance, detail and variety are of paramount significance to Thai chefs. In his book The Principles of Thai Cookery, celebrity chef, writer and authority on Thai cuisine McDang wrote: \\\"What is Thai food? Every country in the world has its own food profile. It reflects its culture, environment, ingenuity and values. In the case of Thailand, these words come to mind: intricacy; attention to detail; texture; color; taste; and the use of ingredients with medicinal benefits, as well as good flavor.</p><br>  <h2>History</h2><br>  \\n<!-- START vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n        \\n<div  class=\\\"align-right ez-embed-type-image\\\">\\n    \\n    \\n<!-- START vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n    <figure class=\\\"ezimage-field\\\"><img src=\\\"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/large/9/2/0/2/2029-1-eng-GB/yam_wun_sen.jpg\\\" alt=\\\"\\\" height=\\\"300\\\" width=\\\"210\\\" /></figure>\\n\\n<!-- STOP vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n</div>\\n\\n<!-- STOP vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n<br>  <p>Thai cuisine is one of the most popular cuisine in the world. In 2011, seven of Thai's popular dishes make it to the list of 'World's 50 Most Delicious Foods (Readers' Pick)' &mdash; a worldwide online poll by 35,000 people held by CNN International. This made Thai as the cooking tradition with most dish that successfully made it to the list.</p><br>  <p>Thai cuisine and the culinary traditions and cuisines of Thailand's neighbors have mutually influenced one another over the course of many centuries. Regional variations tend to correlate to neighboring states (often sharing the same cultural background and ethnicity on both sides of the border) as well as climate and geography. Many dishes that are now popular in Thailand were originally Chinese dishes. They were introduced to Thailand by the Hokkien people starting in the 15th century, and by the Teochew people who started settling in larger numbers from the late 18th century CE onward, mainly in the towns and cities, and now form the majority of the Thai Chinese.</p><br>  \\n<!-- START vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n        \\n<div  class=\\\"align-left ez-embed-type-image\\\">\\n    \\n    \\n<!-- START vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n    <figure class=\\\"ezimage-field\\\"><img src=\\\"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/large/5/2/0/2/2025-1-eng-GB/thai_vegetable_carving.jpg\\\" alt=\\\"\\\" height=\\\"300\\\" width=\\\"300\\\" /></figure>\\n\\n<!-- STOP vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n</div>\\n\\n<!-- STOP vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n<br>  <h2>Serving</h2><br>  <p>Important to Thai dining is the practice of khluk, mixing the flavors and textures of different dishes with the rice from one's plate. The food is pushed by the fork, held in the left hand, into the spoon held in the right hand, which is then brought to the mouth. A traditional ceramic spoon is sometimes used for soup, and knives are not generally used at the table.</p><br>  <p>Thai meals typically consist of rice (khao in Thai) with many complementary dishes shared by all. The dishes are all served at the same time, including the soups, and it is also customary to provide more dishes than there are guests at a table. A Thai family meal would normally consist of rice with several dishes which should form a harmonious contrast of flavors and textures as well as preparation methods. Traditionally, a meal would have at least five elements: a dip or relish for raw or cooked vegetables (khrueang chim) is the most crucial component of any Thai meal. Khrueang chim, considered a building block of Thai food by Chef McDang, may come in the form of a spicy chili sauce or relish called nam phrik (made of raw or cooked chilies and other ingredients, which are then mashed together), or a type of dip enriched with coconut milk called lon. The other elements would include a clear soup (perhaps a spicy tom yam or a mellow tom chuet), a curry or stew (essentially any dish identified with the kaeng prefix), a deep-fried dish and a stir fried dish of meat, fish, seafood, or vegetables.</p><br>  <h2>Ingredients</h2><br>  \\n<!-- START vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n        \\n<div  class=\\\"align-right ez-embed-type-image\\\">\\n    \\n    \\n<!-- START vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n    <figure class=\\\"ezimage-field\\\"><img src=\\\"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/large/1/2/0/2/2021-1-eng-GB/red_roast_duck_curry.jpg\\\" alt=\\\"\\\" height=\\\"230\\\" width=\\\"300\\\" /></figure>\\n\\n<!-- STOP vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n</div>\\n\\n<!-- STOP vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n<br>  <p>Thai food is known for its enthusiastic use of fresh (rather than dried) herbs and spices. Common flavors in Thai food come from garlic, galangal, coriander/cilantro, lemon grass, shallots, pepper, kaffir lime leaves, shrimp paste, fish sauce, and chilies. Palm sugar, made from the sap of certain Borassus palms, is used to sweeten dishes while lime and tamarind contribute sour notes. Meats used in Thai cuisine are usually pork and chicken, and also duck, beef, and water buffalo. Goat and mutton are rarely eaten except by Muslim Thais.</p><br>\\n\"\n                            }\n                        }\n                    },\n                    {\n                        \"node\": {\n                            \"_info\": {\n                                \"publishedDate\": {\n                                    \"format\": \"Sat, 17 Nov 2018 19:22:52 +0100\"\n                                }\n                            },\n                            \"title\": \"Israeli Cuisine\",\n                            \"image\": {\n                                \"uri\": \"/var/site/storage/images/1/3/2/2/2231-1-eng-GB/Israeli-Cuisine.jpg\",\n                                \"variation\": {\n                                    \"uri\": \"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/medium/1/3/2/2/2231-1-eng-GB/Israeli-Cuisine.jpg\"\n                                }\n                            },\n                            \"body\": {\n                                \"html5\": \"<br>  <p>Israeli cuisine comprises local dishes by people native to Israel and dishes brought to Israel by Jews from the Diaspora. Israeli cuisine has adopted, and continues to adapt, elements of various styles of Jewish cuisine, particularly the Mizrahi, Sephardic and Ashkenazi styles of cooking. It incorporates many foods traditionally eaten in Levantine, Middle Eastern and Mediterranean cuisines, and foods such as falafel, hummus, msabbha, shakshouka, couscous, and za'atar are now widely popular in Israel</p><br>  <h2>Main Features</h2><br>  <p>Other influences on the cuisine are the availability of foods common to the Mediterranean region, especially certain kinds of fruits and vegetables, dairy products and fish; the distinctive traditional dishes prepared at holiday times; the tradition of keeping kosher; and food customs specific to Shabbat and different Jewish holidays.</p><br>  <h2>History</h2><br>  <p>Israel&rsquo;s culinary traditions comprise foods and cooking methods that span three thousand years of history. Over that time, these traditions have been shaped by influences from Asia, Africa and Europe, and religious and ethnic influences have resulted in a culinary melting pot. Biblical and archaeological records provide insight into the culinary life of the region as far back as 968 BCE.</p><br>  \\n<!-- START vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n        \\n<div  class=\\\"align-left ez-embed-type-image\\\">\\n    \\n    \\n<!-- START vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n    <figure class=\\\"ezimage-field\\\"><img src=\\\"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/large/9/4/9/1/1949-1-eng-GB/couscous_salad.jpg\\\" alt=\\\"\\\" height=\\\"225\\\" width=\\\"300\\\" /></figure>\\n\\n<!-- STOP vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n</div>\\n\\n<!-- STOP vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n<br>  <p>The food of the ancient Israelites was based on several products that still play important roles in modern Israeli cuisine. These were known as the seven species: olives, figs, dates, pomegranates, wheat, barley and grapes. The diet, based on locally grown produce, was enhanced by imported spices, readily available due to the country&rsquo;s position at the crossroads of east-west trade routes.</p><br>  <h2>Street Foods:</h2><br>  <p>In Israel, as in many other Middle Eastern countries, \\\"street food\\\" is a kind of fast food that is sometimes literally eaten while standing in the street, while in some cases there are places to sit down. The following are some foods that are usually eaten in this way:</p><br>  <h3>Falafel</h3><br>  <p>Falafel are fried balls or patties of spiced, mashed chickpeas or fava beans and are a common Middle Eastern street food that have become identified with Israeli cuisine. Falafel is most often served in a pita, with pickles, tahina, hummus, cut vegetable salad and often, harif, a hot sauce, the type used depending on the origin of the falafel maker.</p><br>  <h3>Shawarma</h3><br>  \\n<!-- START vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n        \\n<div  class=\\\"align-right ez-embed-type-image\\\">\\n    \\n    \\n<!-- START vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n    <figure class=\\\"ezimage-field\\\"><img src=\\\"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/large/7/5/9/1/1957-1-eng-GB/shawarma.jpg\\\" alt=\\\"\\\" height=\\\"300\\\" width=\\\"199\\\" /></figure>\\n\\n<!-- STOP vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n</div>\\n\\n<!-- STOP vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n<br>  <p>Shawarma, (from &ccedil;evirme, meaning \\\"rotating\\\" in Turkish) is usually made in Israel with turkey, with lamb fat added. The shawarma meat is sliced and marinated and then roasted on a huge rotating skewer. The cooked meat is shaved off and stuffed into a pita, plainly with hummus and tahina, or with additional trimmings such as fresh or fried onion rings, French fries, salads and pickles.</p><br>  <h3>Shakshouka</h3><br>  \\n<!-- START vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n        \\n<div  class=\\\"align-left ez-embed-type-image\\\">\\n    \\n    \\n<!-- START vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n    <figure class=\\\"ezimage-field\\\"><img src=\\\"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/large/3/5/9/1/1953-1-eng-GB/shakshuka.jpg\\\" alt=\\\"\\\" height=\\\"300\\\" width=\\\"300\\\" /></figure>\\n\\n<!-- STOP vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n</div>\\n\\n<!-- STOP vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n<br>  <p>Shakshouka, originally a workman&rsquo;s breakfast popularized by North African Jews in Israel, is made simply of fried eggs in spicy tomato sauce, with other vegetable ingredients or sausage optional. Shakshouka is typically served in the same frying pan in which it is cooked, with thick slices of white bread to mop up the sauce, and a side of salad.</p><br>  <h2>Places to eat</h2><br>  <p>There are thousands of restaurants, casual eateries, caf&eacute;s and bars in Israel, offering a wide array of choices in food and culinary styles.</p><br>  <h3>Falafel stands or kiosks</h3><br>  <p>Falafel stands or kiosks are common in every neighborhood. Falafel vendors compete to stand apart from their competitors and this leads to the offering of additional special extras like chips, deep fried eggplant, salads and pickles for the price of a single portion of falafel.</p><br>  <h3>Hummusia</h3><br>  <p>Hummusia is an establishment that offers mainly hummus with a limited selection of extras such as tahina, hardboiled egg, falafel, onion, pickles, lemon and garlic sauce and pita or taboon bread.</p><br>  <h3>Misada Mizrahit</h3><br>  <p>Misada Mizrahit (literally \\\"Eastern restaurant\\\") refers to Mizrahi Jewish, middle eastern or Arabic restaurants. These popular and relatively inexpensive establishments often offer a selection of meze salads followed by grilled meat with a side of french fries and a simple dessert such as chocolate mousse for dessert.</p><br>  <h3>Steakiyot</h3><br>  <p>Steakiyot are meat grills selling sit down and take away chicken, turkey or lamb as steak, shishlik, kebab and even Jerusalem mixed grill, all in pita or in taboon bread.</p><br>\\n\"\n                            }\n                        }\n                    },\n                    {\n                        \"node\": {\n                            \"_info\": {\n                                \"publishedDate\": {\n                                    \"format\": \"Sat, 17 Nov 2018 19:22:54 +0100\"\n                                }\n                            },\n                            \"title\": \"Jamaican Cuisine\",\n                            \"image\": {\n                                \"uri\": \"/var/site/storage/images/3/8/2/2/2283-1-eng-GB/Jamaican-cuisine.jpg\",\n                                \"variation\": {\n                                    \"uri\": \"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/medium/3/8/2/2/2283-1-eng-GB/Jamaican-cuisine.jpg\"\n                                }\n                            },\n                            \"body\": {\n                                \"html5\": \"<br>  <p>Jamaican cuisine includes a mixture of cooking techniques, flavours, spices and influences from the indigenous people on the island of Jamaica, and the Spanish, British, Africans, Indian and Chinese who have inhabited the island. It is also influenced by the crops introduced into the island from tropical Southeast Asia.</p><br>  <h2>Main Features</h2><br>  <p>Jamaican cuisine includes various dishes from the different cultures brought to the island with the arrival of people from elsewhere. Other dishes are novel or a fusion of techniques and traditions. In addition to ingredients that are native to Jamaica, many foods have been introduced and are now grown locally. A wide variety of seafood, tropical fruits and meats are available.</p><br>  \\n<!-- START vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n        \\n<div  class=\\\"align-left ez-embed-type-image\\\">\\n    \\n    \\n<!-- START vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n    <figure class=\\\"ezimage-field\\\"><img src=\\\"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/large/5/6/9/1/1965-1-eng-GB/jamaican_jerk_chicken.jpg\\\" alt=\\\"\\\" height=\\\"200\\\" width=\\\"300\\\" /></figure>\\n\\n<!-- STOP vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n</div>\\n\\n<!-- STOP vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n<br>  <p>Some Jamaican cuisine dishes are variations on the cuisines and cooking styles brought to the island from elsewhere. These are often modified to incorporate local produce. Others are novel and have developed locally. Popular Jamaican dishes include curry goat, fried dumplings, ackee and saltfish (cod) &ndash; the national dish of Jamaica &ndash; fried plantain, \\\"jerk\\\", steamed cabbage and \\\"rice and peas\\\" (pigeon peas or kidney beans). Jamaican cuisine has been adapted by African, Indian, British, French, Spanish, Chinese influences. Jamaican patties and various pastries and breads are also popular as well as fruit beverages and Jamaican rum.</p><br>  <h2>History</h2><br>  <p>The Spanish, the first European arrivals to the island contributed dishes such as the vinegary concoction escovitched fish (Spanish escabeche) contributed by Spanish Jews. Later, Cantonese/Hakka influences developed the Jamaican patty, an empanada styled turnover filled with spiced meat. African cuisine developed on the island as a result of waves of slavery introduced by the European powers. More Chinese and East Indian influences can also be found in Jamaican cuisine, as a result of indentured laborers who replaced slaves after emancipation brought their own culinary talents (especially curry, which Jamaican chefs sometimes use to season goat meat for special occasions).</p><br>  \\n<!-- START vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n        \\n<div  class=\\\"align-right ez-embed-type-image\\\">\\n    \\n    \\n<!-- START vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n    <figure class=\\\"ezimage-field\\\"><img src=\\\"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/large/9/6/9/1/1969-1-eng-GB/jamaican_patties.jpg\\\" alt=\\\"\\\" height=\\\"300\\\" width=\\\"300\\\" /></figure>\\n\\n<!-- STOP vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n</div>\\n\\n<!-- STOP vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n<br>  <p>African, Indian, American, Chinese and British cuisines are not new to the island. Through many years of British colonialism, the cuisine developed many habits of cooking particular to a trading colony.</p><br>  <p>The Jamaican cuisine is quite diverse and mention must be made of the Rastafarian influence. Rastafarians have a vegetarian approach to preparing food, cooking, and eating, and have introduced a host of unique vegetarian dishes to the Jamaican cuisine. They do not eat pork, and the strict ones do not eat meat, including poultry and fish. There are even some who believe in cooking with little or no salt and cooking in an 'Ital' way.</p><br>  <h2>Popular Dishes</h2><br>  <h3>Ackee and saltfish</h3><br>  \\n<!-- START vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n        \\n<div  class=\\\"align-left ez-embed-type-image\\\">\\n    \\n    \\n<!-- START vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n    <figure class=\\\"ezimage-field\\\"><img src=\\\"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/large/1/6/9/1/1961-1-eng-GB/ackee_and_saltfish.jpg\\\" alt=\\\"\\\" height=\\\"225\\\" width=\\\"300\\\" /></figure>\\n\\n<!-- STOP vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n</div>\\n\\n<!-- STOP vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n<br>  <p>Ackee and saltfish is a traditional Jamaican dish. To prepare the dish, salt cod (salt fish should be soaked overnight to eliminate most of the salt) is saut&eacute;ed with boiled ackee (The ackee fruit was imported to The Caribbean from Ghana before 1725), onions, Scotch Bonnet peppers (optional), tomatoes, and spices, such as black pepper and pimiento. It can be garnished with bacon and tomatoes, and is usually served as breakfast or dinner alongside breadfruit, hard dough bread, dumplings, fried plantain, or boiled green bananas.</p><br>  <p>Ackee and saltfish can also be eaten with rice and peas or plain white rice. When seasonings (onion, escallion, thyme, garlic) and saltfish are combined with plain rice it is often called seasoned rice which is a one pot meal that is usually eaten on Fridays as an inexpensive meal for dinner.</p><br>  <h3>Brown stew chicken</h3><br>  <p>Brown stew chicken, also referred to as stew chicken, is a dish typically eaten for dinner throughout the English speaking Caribbean islands. The dish is popular in Jamaica, Antigua, Trinidad and Tobago, Barbados, Saint Lucia, Grenada, Dominica and in Caribbean communities throughout the world. The dish is called brown because of the distinct dark color of the dish. The color is achieved by browning the chicken in brown sugar, which creates a rich gravy to which main vegetable components like onions, garlic and carrots are added.</p><br>  <h3>Curry goat</h3><br>  <p>Curry goat is a curry dish originating in South Asia and has become very popular in Indo-Caribbean cuisine. This dish has spread throughout the English speaking Caribbean and also the Caribbean diaspora in North America and Great Britain.</p><br>  <p>Curry goat is a popular party dish in Jamaica, and at a 'big dance' a local expert or 'specialist' is often brought in to cook it. It is considerably more mild than the equivalent dishes from the Indian subcontinent and is flavored with a spice mix that is typical of Indo-Jamaican cooking and Scotch Bonnet Peppers; it is almost always served with rice and, in restaurants in North America and Great Britain, other typically Caribbean side dishes such as fried plantain may be served as an accompaniment.</p><br>\\n\"\n                            }\n                        }\n                    },\n                    {\n                        \"node\": {\n                            \"_info\": {\n                                \"publishedDate\": {\n                                    \"format\": \"Sat, 17 Nov 2018 19:22:57 +0100\"\n                                }\n                            },\n                            \"title\": \"Polish Cuisine\",\n                            \"image\": {\n                                \"uri\": \"/var/site/storage/images/5/3/3/2/2335-1-eng-GB/Polish-cuisine.jpg\",\n                                \"variation\": {\n                                    \"uri\": \"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/medium/5/3/3/2/2335-1-eng-GB/Polish-cuisine.jpg\"\n                                }\n                            },\n                            \"body\": {\n                                \"html5\": \"<br>  <p>Polish cuisine has evolved over the centuries to become very eclectic due to Poland's history. Polish cuisine shares many similarities with other Slavic countries, especially Czech, Slovak, and Ukrainian cuisines. It has also been widely influenced by other Central European cuisines, namely German, Austrian and Hungarian cuisines as well as Jewish, French, Turkish and Italian culinary traditions</p><br>  <h2>Main Features</h2><br>  \\n<!-- START vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n        \\n<div  class=\\\"align-left ez-embed-type-image\\\">\\n    \\n    \\n<!-- START vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n    <figure class=\\\"ezimage-field\\\"><img src=\\\"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/large/1/0/0/2/2001-1-eng-GB/city_harvest_in_poznan.jpg\\\" alt=\\\"\\\" height=\\\"200\\\" width=\\\"300\\\" /></figure>\\n\\n<!-- STOP vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n</div>\\n\\n<!-- STOP vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n<br>  <p>It is rich in meat, especially pork, chicken and beef (depending on the region), winter vegetables (cabbage in the dish bigos), and herbs. It is also characteristic in its use of various kinds of noodles the most notable of which are kluski as well as cereals such as kasha (from the Polish word kasza). Generally speaking, Polish cuisine is hearty and uses a lot of cream and eggs. The traditional dishes are often demanding in preparation. Many Poles allow themselves a generous amount of time to serve and enjoy their festive meals, especially Christmas eve dinner (Wigilia) or Easter breakfast which could take a number of days to prepare in their entirety.</p><br>  \\n<!-- START vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n        \\n<div  class=\\\"align-right ez-embed-type-image\\\">\\n    \\n    \\n<!-- START vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n    <figure class=\\\"ezimage-field\\\"><img src=\\\"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/large/7/9/9/1/1997-1-eng-GB/bigos.jpg\\\" alt=\\\"\\\" height=\\\"225\\\" width=\\\"300\\\" /></figure>\\n\\n<!-- STOP vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n</div>\\n\\n<!-- STOP vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n<br>  <p>The Polish national dishes are bigos; pierogi; kie&#322;basa; kotlet schabowy (type of breaded cutlet); go&#322;&#261;bki (type of cabbage roll); zrazy (type of roulade); roast piecze&#324;; sour cucumber soup Polish: zupa og&oacute;rkowa; mushroom soup, Polish: zupa grzybowa (quite different from the North American cream of mushroom); tomato soup (Polish: zupa pomidorowa); ros&oacute;&#322; [&#712;r&#596;&#597;uw] (variety of meat broth); &#380;urek (sour rye soup); flaki (variety of tripe soup); and barszcz among others.</p><br>  <h2>History</h2><br>  <p>Polish cuisine in the Middle Ages was based on dishes made of agricultural produce and cereal crops (millet, rye, wheat), meats of wild and farm animals, fruits, forest berries and game, honey, herbs and local spices. It was known above all for abundant use of salt from Wieliczka and permanent presence of groats (kasza). During the Middle Ages the cuisine of Poland was heavy and spicy. Two main ingredients were meat (both game and beef) and cereal. Apart from cereals, a large portion of the daily diet of mediaeval Poles consisted of beans, mostly broad beans and peas. Among the delicacies of the Polish nobility were honey-braised bear paws served with horseradish-flavoured salad (now species protected in Poland), smoked bear tongue and bear bacon.</p><br>  <p>In the Renaissance period many Italian cooks came to Poland after 1518 along with the Italian queen Bona Sforza (second wife of Sigismund I of Poland). Although native vegetable foods were an ancient and intrinsic part of the cuisine, this began a period in which vegetables like lettuce, leeks, celeriac and cabbage were more widely used. While her southern cooks may have helped elevate and expand the role of various vegetables in royal Polish cuisine, records show that the court of King Jagiello enjoyed a variety of vegetables including lettuce, beets, cabbage, turnip, carrots, peas and cauliflower.</p><br>  <p>Polish-style pickled cucumber (og&oacute;rek kiszony) is a variety developed in the northern Europe. It has been exported worldwide and is found in the cuisines of many countries. It is sour but tends to be seasoned differently. It is usually preserved in wooden barrels. A cucumber only pickled for a few days is different in taste (less sour) than one pickled for a longer time and is called og&oacute;rek ma&#322;osolny, which means \\\"lightly salted cucumber\\\". Another kind of pickled cucumber, popular in Poland, is og&oacute;rek konserwowy (preserved cucumber) which is rather sweet and vinegary in taste, due to different composition of the preserving solution and the fact that it's not fermented, just preserved. It is kept in wooden barrels.</p><br>  <p>With the subsequent decline of Poland, and the grain production crisis that followed The Deluge, potatoes began to replace the traditional use of cereal. The oldest surviving Polish cook-book, Compendium Ferculorum albo zebranie potraw (\\\"Collection of Dishes\\\") by Stanis&#322;aw Czerniecki was published in Krak&oacute;w in 1682. Under the partitions, the cuisine of Poland became heavily influenced by cuisines of the surrounding empires. This included Russian and German cuisines, but also the culinary traditions of most nations of the Austro-Hungarian empire. The 19th century also saw the creation of many Polish cookbooks, by Jan Szyttler, Anna Ciundziewicka, Wincenta Zawadzka, Lucyna &#262;wierczakiewiczowa and others.</p><br>  <p>Post World War II, most enduring of Polish culinary traditions are the pierogi, a national dish of Poland, originating in the ancient culinary traditions of the former Polish eastern territories (Kresy).</p><br>  \\n<!-- START vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n        \\n<div  class=\\\"align-left ez-embed-type-image\\\">\\n    \\n    \\n<!-- START vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n    <figure class=\\\"ezimage-field\\\"><img src=\\\"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/large/3/1/0/2/2013-1-eng-GB/wigilijne_sniadanie.jpg\\\" alt=\\\"\\\" height=\\\"225\\\" width=\\\"300\\\" /></figure>\\n\\n<!-- STOP vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n</div>\\n\\n<!-- STOP vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n<br>  <p>After the end of World War II, Poland fell under Soviet / Communist occupation. Some restaurants were nationalized. The communists envisioned a net of lunch rooms called \\\"bufet\\\" for the workers at various companies, and milk bars for the public. The majority of restaurants that survived the 1940s and 1950s were state-owned. Workplace lunch rooms promoted mostly inexpensive meals, including soups of all kinds, meatballs and pork chops, and staples such as placki ziemniaczane (potato pancakes), placki z jablkami (apple pancakes), kopytka (potato gnocchi), leniwe (farmer's cheese gnocchi served sweet) and pierogi. A typical second course consisted of meat cutlet served with potatoes or buckwheat and \\\"sur&oacute;wka\\\" (raw, julienned vegetables). The popular Polish kotlet schabowy is a breaded cutlet similar to the Austrian Wiener schnitzel and the Italian and Spanish Milanesa.</p><br>  <p>Among the popular dishes introduced by the public restaurants was \\\"kotlet mielony\\\" meatball, a sort of a hamburger often served with beet puree and fresh carrots. The traditional recipes were mostly preserved during the Wigilia feast (Christmas Eve), for which many families tried to prepare 12 traditional courses.</p><br>  <h2>Holiday meals</h2><br>  \\n<!-- START vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n        \\n<div  class=\\\"align-right ez-embed-type-image\\\">\\n    \\n    \\n<!-- START vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n    <figure class=\\\"ezimage-field\\\"><img src=\\\"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/large/5/0/0/2/2005-1-eng-GB/pierogi.jpg\\\" alt=\\\"\\\" height=\\\"208\\\" width=\\\"300\\\" /></figure>\\n\\n<!-- STOP vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n</div>\\n\\n<!-- STOP vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n<br>  <p>Traditional Christmas Eve supper called Wigilia is meatless, usually consists of barszcz (borscht) with uszka (small dumplings) &ndash; a classic Polish Christmas Eve starter, followed by fried carp, carp fillet or cod with apple &amp; leeks fresh salad, carp in aspic etc. traditionally carp (fried or Jewish style) provides a main component of the Christmas Eve meal across Poland. Other popular dishes, for the next day, include pickled matjas herring, rollmops, pierogi with sauerkraut and forest mushrooms, fish soup, kie&#322;basa, hams and bigos (savory stew of cabbage and meat) and vegetable salads. Among popular desserts are gingerbread, cheesecake, various fruits like oranges among others, poppy seed cake makowiec (mak&oacute;wki in Silesia), fruit kompot, kluski with poppyseed, kutia sweet grain pudding in the eastern regions, like (Bia&#322;ystok) and ginger bread. Regional dishes include &#380;urek, siemieniotka (in Silesia), and ko&#322;duny - mushrooms or meat stuffed dumplings in the eastern regions.</p><br>  <h2>T&#322;usty Czwartek</h2><br>  \\n<!-- START vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n        \\n<div  class=\\\"align-left ez-embed-type-image\\\">\\n    \\n    \\n<!-- START vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n    <figure class=\\\"ezimage-field\\\"><img src=\\\"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/large/9/0/0/2/2009-1-eng-GB/smazenie_paczkow.jpg\\\" alt=\\\"\\\" height=\\\"223\\\" width=\\\"300\\\" /></figure>\\n\\n<!-- STOP vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n</div>\\n\\n<!-- STOP vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n<br>  <p>T&#322;usty Czwartek (Fat Thursday) is a Catholic feast celebrated on the last Thursday before Lent, which is also the last day of carnival. Traditionally it is an occasion to enjoy fair amounts of sweets and cakes which afterwards are not allowed by the Church until Easter. T&#322;usty Czwartek belongs to movable feasts, as it is connected with the date of Easter and beginning of the Lent. The next Thursday falls already after Ash Wednesday that is the period of the Lent when the Catholics should refrain from overeating.</p><br>  <p>The most popular sweets during Fat Thursday are p&#261;czki (Polish donuts) or faworki called also in some regions of Poland \\\"chrust\\\". The traditional donuts are filled with rose petal jam (plum jam or apple) and covered with thin layer of icing or powdered sugar, sprinkled with orange peel. Fat Thursday used to mark the beginning of a Fat Week, the period of great gluttony during which Polish ancestors consumed dishes served with smalec (lard), bacon and all kinds of meat.</p><br>  <h2>Easter breakfast</h2><br>  <p>A typical Easter breakfast often consists of cold-cuts served with horseradish sauce and beet salads, breads, bigos, &#380;urek, kie&#322;basa, smoked salmon or herring, marinated vegetable salads, Easter salad (chopped boiled eggs, green peas, cwik&#322;a, carrot, apple, potato, parsley and mayonnaise) coffee, tea and cakes, i.e. chocolate cake, makowiec, mazurek, sernik, etc.</p><br>\\n\"\n                            }\n                        }\n                    },\n                    {\n                        \"node\": {\n                            \"_info\": {\n                                \"publishedDate\": {\n                                    \"format\": \"Sat, 17 Nov 2018 19:23:00 +0100\"\n                                }\n                            },\n                            \"title\": \"Norwegian Cuisine\",\n                            \"image\": {\n                                \"uri\": \"/var/site/storage/images/7/8/3/2/2387-1-eng-GB/Norwegian_cuisine.jpg\",\n                                \"variation\": {\n                                    \"uri\": \"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/medium/7/8/3/2/2387-1-eng-GB/Norwegian_cuisine.jpg\"\n                                }\n                            },\n                            \"body\": {\n                                \"html5\": \"<p>Norwegian cuisine in its traditional form is based largely on the raw materials readily available in Norway and its mountains, wilderness and coast. It differs in many respects from its continental counterparts with a stronger focus on game and fish. Many of the traditional dishes are results of using conserved materials, with respect to the long winters.</p><p>&nbsp;</p><pre>&lt;h2&gt;Main dish&lt;/h2&gt;&lt;p&gt;The one traditional Norwegian dish with a claim to international popularity is smoked salmon. It is now a major export, and could be considered the most important Scandinavian contribution to modern international cuisine. Smoked salmon exists traditionally in many varieties, and is often served with scrambled eggs, dill, sandwiches and mustard sauce. Another traditional salmon product is gravlaks, (literally \\\"buried salmon\\\"). Traditionally, gravlaks would be cured for 24 hours in a mix of sugar and salt and herbs (dill).&lt;/p&gt;\\n</pre><p>&nbsp;</p>\\n<!-- START vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n    \\n<div  class=\\\"\\\">\\n    \\n    \\n<!-- START vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed.html.twig (EzPublishCoreBundle:default/content:embed.html.twig) -->\\n\\n    <h3><a href=\\\"/products/greek-salad-with-red-cabbage\\\">Greek salad with red cabbage</a></h3>\\n\\n<!-- STOP vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed.html.twig (EzPublishCoreBundle:default/content:embed.html.twig) -->\\n\\n</div>\\n\\n<!-- STOP vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n\\n<!-- START app/Resources/views/themes/tastefulplanet/fields/ezrichtext/custom_tags/ezyoutube.html.twig (:themes/tastefulplanet/fields/ezrichtext/custom_tags:ezyoutube.html.twig) -->\\n<div class=\\\"embed-container\\\" >\\n    <iframe\\n            type=\\\"text/html\\\"\\n            src=\\\"//www.youtube.com/embed/dA42vievwZk?autoplay=0\\\"\\n            frameborder=\\\"0\\\">\\n    </iframe>\\n\\n    <p>You Tube video</p>\\n</div>\\n\\n<!-- STOP app/Resources/views/themes/tastefulplanet/fields/ezrichtext/custom_tags/ezyoutube.html.twig (:themes/tastefulplanet/fields/ezrichtext/custom_tags:ezyoutube.html.twig) -->\\n\\n<!-- START app/Resources/views/themes/tastefulplanet/fields/ezrichtext/custom_tags/factbox.html.twig (:themes/tastefulplanet/fields/ezrichtext/custom_tags:factbox.html.twig) -->\\n<div class=\\\"factbox\\\">\\n    <div class=\\\"card factbox-card\\\">\\n        <div class=\\\"card-header factobx-card__header\\\">\\n            FactBox\\n        </div>\\n        <div class=\\\"card-body factbox-card__body\\\">\\n            <p>The one traditional Norwegian dish with a claim to international popularity is smoked salmon. It is now a major export, and</p><p>&nbsp;</p>\\n<!-- START vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n    \\n<div  class=\\\"\\\">\\n    \\n    \\n<!-- START vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed.html.twig (EzPublishCoreBundle:default/content:embed.html.twig) -->\\n\\n    <h3><a href=\\\"/products/greek-salad-with-red-cabbage\\\">Greek salad with red cabbage</a></h3>\\n\\n<!-- STOP vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed.html.twig (EzPublishCoreBundle:default/content:embed.html.twig) -->\\n\\n</div>\\n\\n<!-- STOP vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n<table border=\\\"1\\\" style=\\\"width:100%;\\\"><tbody><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table><p>&nbsp;</p>\\n<!-- START vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n        \\n<div  class=\\\" ez-embed-type-image\\\">\\n    \\n    \\n<!-- START vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n    <figure class=\\\"ezimage-field\\\"><img src=\\\"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/medium/3/5/8/1/1853-1-eng-GB/oslo_at_night.jpg\\\" alt=\\\"\\\" height=\\\"141\\\" width=\\\"200\\\" /></figure>\\n\\n<!-- STOP vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n</div>\\n\\n<!-- STOP vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n<p>could be considered the most important Scandinavian contribution to modern international cuisine</p>\\n        </div>\\n    </div>\\n</div>\\n\\n<!-- STOP app/Resources/views/themes/tastefulplanet/fields/ezrichtext/custom_tags/factbox.html.twig (:themes/tastefulplanet/fields/ezrichtext/custom_tags:factbox.html.twig) -->\\n<pre>sdfsfdfs</pre><table border=\\\"1\\\" style=\\\"width:100%;\\\"><tbody><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table><h2>Main dish</h2><p>The one traditional Norwegian dish with a claim to international popularity is smoked salmon. It is now a major export, and could be considered the most important Scandinavian contribution to modern international cuisine. Smoked salmon exists traditionally in many varieties, and is often served with scrambled eggs, dill, sandwiches and mustard sauce. Another traditional salmon product is gravlaks, (literally \\\"buried salmon\\\"). Traditionally, gravlaks would be cured for 24 hours in a mix of sugar and salt and herbs (dill).</p>\\n<!-- START vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n        \\n<div  class=\\\"align-right ez-embed-type-image\\\">\\n    \\n    \\n<!-- START vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n    <figure class=\\\"ezimage-field\\\"><img src=\\\"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/large/3/9/9/1/1993-1-eng-GB/norwegian_torrfesk.jpg\\\" alt=\\\"\\\" height=\\\"225\\\" width=\\\"300\\\" /></figure>\\n\\n<!-- STOP vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n</div>\\n\\n<!-- STOP vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n<p>The largest Norwegian food export (in fact the main Norwegian export of any kind for most of the country's history) in the past has been stockfish (\\\"t&oslash;rrfisk\\\" in Norwegian). The Atlantic cod variety known as 'skrei' because of its migrating habits, has been a source of wealth for millennia, fished annually in what is known as the 'Lofotfiske' after the island chain of 'Lofoten'. Stockfish has been a staple food internationally for centuries, in particular on the Iberian peninsula and the African coast. Both during the age of sail and in the industrial age, stockfish played a part in world history as an enabling food for cross-Atlantic trade and the slave trade triangle.</p>\\n<!-- START vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n        \\n<div  class=\\\"align-left ez-embed-type-image\\\">\\n    \\n    \\n<!-- START vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n    <figure class=\\\"ezimage-field\\\"><img src=\\\"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/large/5/8/9/1/1985-1-eng-GB/beef_stew.jpg\\\" alt=\\\"\\\" height=\\\"200\\\" width=\\\"300\\\" /></figure>\\n\\n<!-- STOP vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n</div>\\n\\n<!-- STOP vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n<p>Norway is one of the few places outside Asia where sweet and sour flavoring is used extensively. A more peculiar Norwegian fish dish is Rakfisk, which consists of fermented trout, a culinary relation of Swedish surstr&ouml;mming. Until the 20th century, shellfish was not eaten to any extent. This was partly due to the abundance of fish and the relative high expenditure of time involved in catching shellfish when set against its nutritional value, as well as the fact that such food spoils rather quickly, even in a northern climate. However, prawns, crabs and mussels have become quite popular, especially during summer.</p><h2>Fruits and desserts</h2><p>Fruits and berries mature slowly in the cold climate. This makes for a tendency to smaller volume with a more intense taste. Strawberries, bilberries, lingonberries, raspberries and apples are popular and are part of a variety of desserts, and cherries in the parts of the country where those are grown. The wild growing cloudberry is regarded as a delicacy. A typical Norwegian dessert on special occasions is cloudberries with whipped or plain cream. Strawberry-Apple pie is also popular because of its rich flavour of strawberries and apples. Rhubarb pie (rabarbra pai in Norwegian) is another favoured dish in Norway.</p>\\n<!-- START vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n        \\n<div  class=\\\"align-right ez-embed-type-image\\\">\\n    \\n    \\n<!-- START vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n    <figure class=\\\"ezimage-field\\\"><img src=\\\"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/large/9/8/9/1/1989-1-eng-GB/kromkaker_og_sandkaker.jpg\\\" alt=\\\"\\\" height=\\\"200\\\" width=\\\"300\\\" /></figure>\\n\\n<!-- STOP vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/views/default/content/embed_image.html.twig (EzPublishCoreBundle:default/content:embed_image.html.twig) -->\\n\\n</div>\\n\\n<!-- STOP vendor/ezsystems/ezplatform-richtext/src/bundle/Resources/views/RichText/embed/content.html.twig (EzPlatformRichTextBundle:RichText/embed:content.html.twig) -->\\n<p>German and Nordic-style cakes and pastries, such as sponge cakes and Danish pastry (known as \\\"wienerbr&oslash;d\\\", literal translation: \\\"Viennese bread\\\") share the table with a variety of homemade cakes, waffles and biscuits. Cardamom is a common flavouring. Another Norwegian cake is Krumkake, a paper- thin rolled cake filled with whipped cream. (Krumkake means 'Curved Cake' or 'Crooked Cake'). Baked meringues are known as \\\"pikekyss\\\", literally translated as \\\"girl's kiss\\\".</p><p>During Christmas (jul), the traditional Norwegian Holiday season, many different dessert dishes are served including Julekake, a heavily spiced leavened loaf often coated with sugar and cinnamon, and Multekrem (whipped cream with cloudberries).</p><h2>Coffee</h2><p>Norway has a particularly strong affinity for coffee and is the second highest consumer of coffee in the world, with the average Norwegian drinking 142 liters, or 9.5 kg of coffee in 2011. Coffee plays a large role in Norwegian culture; it is common to invite people over for coffee and cakes and to enjoy cups of coffee with dessert after the main courses in get-togethers. The traditional way of serving coffee in Norway is plain black, usually in a mug, rather than a cup. As in the rest of the west, recent years have seen a shift from coffee made by boiling ground beans to Italian-style coffee bars, tended by professional baristas. Coffee is included in one of the most traditional alcoholic beverages in Norway, commonly known as karsk, from Tr&oslash;ndelag.</p>\\n\"\n                            }\n                        }\n                    },\n                    {\n                        \"node\": {\n                            \"_info\": {\n                                \"publishedDate\": {\n                                    \"format\": \"Wed, 12 Jun 2019 17:59:32 +0200\"\n                                }\n                            },\n                            \"title\": \"New article\",\n                            \"image\": {\n                                \"uri\": \"/var/site/storage/images/7/4/6/5/5647-1-eng-GB/http2.gif\",\n                                \"variation\": {\n                                    \"uri\": \"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/medium/7/4/6/5/5647-1-eng-GB/http2.gif\"\n                                }\n                            },\n                            \"body\": {\n                                \"html5\": \"\\n\"\n                            }\n                        }\n                    },\n                    {\n                        \"node\": {\n                            \"_info\": {\n                                \"publishedDate\": {\n                                    \"format\": \"Thu, 13 Jun 2019 10:57:50 +0200\"\n                                }\n                            },\n                            \"title\": \"neuer artikel\",\n                            \"image\": {\n                                \"uri\": \"/var/site/storage/images/1/6/6/5/5661-1-eng-GB/ezsystems.png\",\n                                \"variation\": {\n                                    \"uri\": \"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/medium/1/6/6/5/5661-1-eng-GB/ezsystems.png\"\n                                }\n                            },\n                            \"body\": {\n                                \"html5\": \"\\n\"\n                            }\n                        }\n                    }\n                ]\n            }\n        }\n    }\n}"
+						},
+						{
+							"name": "Product data per Id",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "{\n  content {\n    product(id: 67) {\n      title\n      _type {\n        identifier\n        fieldDefinitions {\n          fieldTypeIdentifier\n        }\n      }\n    }\n  }\n}\n",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "{{your_domain}}/graphql",
+									"host": [
+										"{{your_domain}}"
+									],
+									"path": [
+										"graphql"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 29 Jul 2019 21:16:07 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.10 (Debian)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-Cache-Debug",
+									"value": "1"
+								},
+								{
+									"key": "Vary",
+									"value": "cookie,Accept-Encoding,authorization"
+								},
+								{
+									"key": "X-Debug-Token",
+									"value": "52357f"
+								},
+								{
+									"key": "X-Debug-Token-Link",
+									"value": "http://www.ezplatform2_5_ee_demo.psger/_profiler/52357f"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Length",
+									"value": "207"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"content\": {\n            \"product\": {\n                \"title\": \"Spanish seafood paella\",\n                \"_type\": {\n                    \"identifier\": \"product\",\n                    \"fieldDefinitions\": [\n                        {\n                            \"fieldTypeIdentifier\": \"ezstring\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezrichtext\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezstring\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezrichtext\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezrichtext\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezimage\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezfloat\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezinteger\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezselection\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezboolean\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezboolean\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezboolean\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezboolean\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezboolean\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"eztags\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"novaseometas\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezmatrix\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezimageasset\"\n                        }\n                    ]\n                }\n            }\n        }\n    }\n}"
+						},
+						{
+							"name": "contentType Infos",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "{\n   _repository{\n   contentType(identifier: \"blog_post\"){\n     fieldDefinitions{ \n      identifier  \n      name  \n      isRequired  \n      isTranslatable \n      fieldGroup\n    }\n  }\n  }\n}",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "{{your_domain}}/graphql",
+									"host": [
+										"{{your_domain}}"
+									],
+									"path": [
+										"graphql"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 29 Jul 2019 21:11:28 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.10 (Debian)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-Cache-Debug",
+									"value": "1"
+								},
+								{
+									"key": "Vary",
+									"value": "cookie,Accept-Encoding,authorization"
+								},
+								{
+									"key": "X-Debug-Token",
+									"value": "799dd7"
+								},
+								{
+									"key": "X-Debug-Token-Link",
+									"value": "http://www.ezplatform2_5_ee_demo.psger/_profiler/799dd7"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Length",
+									"value": "256"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"_repository\": {\n            \"contentType\": {\n                \"fieldDefinitions\": [\n                    {\n                        \"identifier\": \"title\",\n                        \"name\": \"Title\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"intro\",\n                        \"name\": \"Intro\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"body\",\n                        \"name\": \"Body\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"image\",\n                        \"name\": \"Image\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"publication_date\",\n                        \"name\": \"Publication date\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"author\",\n                        \"name\": \"Author\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"authors_position\",\n                        \"name\": \"Author's position\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"tags\",\n                        \"name\": \"tags\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"metas\",\n                        \"name\": \"Metas\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"metadata\"\n                    }\n                ]\n            }\n        }\n    }\n}"
+						},
+						{
+							"name": "Products List_siteaccess_aware",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "{\n  content {\n    products {\n      edges {\n        node {\n          _location {\n            urlAliases {\n              path\n            }\n          }\n          id\n          title\n          tags\n          image {\n            uri\n            alternativeText\n            variation(identifier: medium) {\n              uri\n            }\n          }\n        }\n      }\n    }\n  }\n}",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "{{your_domain}}/fr/graphql",
+									"host": [
+										"{{your_domain}}"
+									],
+									"path": [
+										"fr",
+										"graphql"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 29 Jul 2019 21:18:58 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.10 (Debian)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-Cache-Debug",
+									"value": "1"
+								},
+								{
+									"key": "Vary",
+									"value": "cookie,Accept-Encoding,authorization"
+								},
+								{
+									"key": "X-Debug-Token",
+									"value": "c527e3"
+								},
+								{
+									"key": "X-Debug-Token-Link",
+									"value": "http://www.ezplatform2_5_ee_demo.psger/_profiler/c527e3"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1302"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"content\": {\n            \"products\": {\n                \"edges\": [\n                    {\n                        \"node\": {\n                            \"_location\": {\n                                \"urlAliases\": [\n                                    {\n                                        \"path\": \"/des-produits/cheesecake-aux-figues-et-aux-noix-crumble-au-miel-de-figues\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/cheesecake-with-figs-and-walnuts-crumble-with-fig-honey\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/ostekake-med-fiken-og-valnoetter-crumble-med-fiken-honning\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/ostekake-med-fiken-og-valnoetter-crumble-med-fiken-honning\"\n                                    }\n                                ]\n                            },\n                            \"id\": \"RG9tYWluQ29udGVudDo1Mw==\",\n                            \"title\": \"Cheesecake aux figues et aux noix crumble au miel de figues\",\n                            \"tags\": \"Desserts, Cake, Vegetarian, Dairy, Eggs\",\n                            \"image\": {\n                                \"uri\": \"/var/site/storage/images/0/2/2/0/220-2-fre-FR/cheesecake_figs.jpg\",\n                                \"alternativeText\": \"\",\n                                \"variation\": {\n                                    \"uri\": \"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/medium/0/2/2/0/220-2-fre-FR/cheesecake_figs.jpg\"\n                                }\n                            }\n                        }\n                    },\n                    {\n                        \"node\": {\n                            \"_location\": {\n                                \"urlAliases\": [\n                                    {\n                                        \"path\": \"/des-produits/grilles-de-poulet-thailandais-aux-epices-grillees\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/grilled-thai-spice-chicken-sliders\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/grillet-thai-krydderkylling-glidebrytere\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/grillet-thai-krydderkylling-glidebrytere\"\n                                    }\n                                ]\n                            },\n                            \"id\": \"RG9tYWluQ29udGVudDo1NA==\",\n                            \"title\": \"Grilles de poulet thaïlandais aux épices grillées\",\n                            \"tags\": \"Thai, Entrée, Spicy, Meat, Eggs\",\n                            \"image\": {\n                                \"uri\": \"/var/site/storage/images/0/8/2/0/280-2-fre-FR/thai_sliders.jpg\",\n                                \"alternativeText\": \"\",\n                                \"variation\": {\n                                    \"uri\": \"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/medium/0/8/2/0/280-2-fre-FR/thai_sliders.jpg\"\n                                }\n                            }\n                        }\n                    },\n                    {\n                        \"node\": {\n                            \"_location\": {\n                                \"urlAliases\": [\n                                    {\n                                        \"path\": \"/des-produits/bibimbap-coreen\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/korean-bibimbap\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/koreanisches-bibimbap\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/koreanisches-bibimbap\"\n                                    }\n                                ]\n                            },\n                            \"id\": \"RG9tYWluQ29udGVudDo1NQ==\",\n                            \"title\": \"Bibimbap coréen\",\n                            \"tags\": \"Korean, Rice, Eggs, Entrée, Meat, Spicy, Vegetarian\",\n                            \"image\": {\n                                \"uri\": \"/var/site/storage/images/0/4/3/0/340-2-fre-FR/korean_bibimbap.jpg\",\n                                \"alternativeText\": \"\",\n                                \"variation\": {\n                                    \"uri\": \"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/medium/0/4/3/0/340-2-fre-FR/korean_bibimbap.jpg\"\n                                }\n                            }\n                        }\n                    },\n                    {\n                        \"node\": {\n                            \"_location\": {\n                                \"urlAliases\": [\n                                    {\n                                        \"path\": \"/des-produits/poulet-thai-aux-noix-de-cajou\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/thai-chicken-with-cashews\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/thai-chicken-with-cashews\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/thai-chicken-with-cashews\"\n                                    }\n                                ]\n                            },\n                            \"id\": \"RG9tYWluQ29udGVudDo1Ng==\",\n                            \"title\": \"Poulet thaï aux noix de cajou\",\n                            \"tags\": \"Thai, Entrée, Meat, Rice, Spicy\",\n                            \"image\": {\n                                \"uri\": \"/var/site/storage/images/0/0/4/0/400-2-fre-FR/thai_chicken_cashews.jpg\",\n                                \"alternativeText\": \"\",\n                                \"variation\": {\n                                    \"uri\": \"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/medium/0/0/4/0/400-2-fre-FR/thai_chicken_cashews.jpg\"\n                                }\n                            }\n                        }\n                    },\n                    {\n                        \"node\": {\n                            \"_location\": {\n                                \"urlAliases\": [\n                                    {\n                                        \"path\": \"/des-produits/cheesecake-au-citron-et-aux-cerises\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/cherry-lemon-cheesecake\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/kirsch-zitronen-kaesekuchen\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/kirsch-zitronen-kaesekuchen\"\n                                    }\n                                ]\n                            },\n                            \"id\": \"RG9tYWluQ29udGVudDo1Nw==\",\n                            \"title\": \"Cheesecake au citron et aux cerises\",\n                            \"tags\": \"Cake, Dairy, Desserts, Eggs, Vegetarian\",\n                            \"image\": {\n                                \"uri\": \"/var/site/storage/images/0/6/4/0/460-2-fre-FR/cheesecake_cherry.jpg\",\n                                \"alternativeText\": \"\",\n                                \"variation\": {\n                                    \"uri\": \"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/medium/0/6/4/0/460-2-fre-FR/cheesecake_cherry.jpg\"\n                                }\n                            }\n                        }\n                    },\n                    {\n                        \"node\": {\n                            \"_location\": {\n                                \"urlAliases\": [\n                                    {\n                                        \"path\": \"/des-produits/biscuits-aux-noix-de-macadamia-au-chocolat\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/double-chocolate-macadamia-nut-cookies\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/biscuits-aux-noix-de-macadamia-au-chocolat\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/biscuits-aux-noix-de-macadamia-au-chocolat\"\n                                    }\n                                ]\n                            },\n                            \"id\": \"RG9tYWluQ29udGVudDo1OA==\",\n                            \"title\": \"Biscuits aux noix de macadamia au chocolat\",\n                            \"tags\": \"Snack, Dairy, Desserts, Eggs, Vegetarian\",\n                            \"image\": {\n                                \"uri\": \"/var/site/storage/images/0/2/5/0/520-2-fre-FR/cookies_chocolate.jpg\",\n                                \"alternativeText\": \"\",\n                                \"variation\": {\n                                    \"uri\": \"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/medium/0/2/5/0/520-2-fre-FR/cookies_chocolate.jpg\"\n                                }\n                            }\n                        }\n                    },\n                    {\n                        \"node\": {\n                            \"_location\": {\n                                \"urlAliases\": [\n                                    {\n                                        \"path\": \"/des-produits/couscous-vegetarien-marocain\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/moroccan-vegetarian-couscous\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/moroccan-vegetarian-couscous\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/moroccan-vegetarian-couscous\"\n                                    }\n                                ]\n                            },\n                            \"id\": \"RG9tYWluQ29udGVudDo1OQ==\",\n                            \"title\": \"Couscous végétarien marocain\",\n                            \"tags\": \"Moroccan, Entrée, Vegan, Vegetarian\",\n                            \"image\": {\n                                \"uri\": \"/var/site/storage/images/0/8/5/0/580-2-fre-FR/moroccan_couscous.jpg\",\n                                \"alternativeText\": \"\",\n                                \"variation\": {\n                                    \"uri\": \"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/medium/0/8/5/0/580-2-fre-FR/moroccan_couscous.jpg\"\n                                }\n                            }\n                        }\n                    },\n                    {\n                        \"node\": {\n                            \"_location\": {\n                                \"urlAliases\": [\n                                    {\n                                        \"path\": \"/des-produits/granola-yogourt-parfait-aux-baies\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/granola-yogurt-berry-parfait\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/granola-yogurt-berry-parfait\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/granola-yogurt-berry-parfait\"\n                                    }\n                                ]\n                            },\n                            \"id\": \"RG9tYWluQ29udGVudDo2MA==\",\n                            \"title\": \"Granola, yogourt, parfait aux baies\",\n                            \"tags\": \"Breakfast, Desserts, Vegetarian\",\n                            \"image\": {\n                                \"uri\": \"/var/site/storage/images/0/4/6/0/640-2-fre-FR/yogurt_parfait.jpg\",\n                                \"alternativeText\": \"\",\n                                \"variation\": {\n                                    \"uri\": \"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/medium/0/4/6/0/640-2-fre-FR/yogurt_parfait.jpg\"\n                                }\n                            }\n                        }\n                    },\n                    {\n                        \"node\": {\n                            \"_location\": {\n                                \"urlAliases\": [\n                                    {\n                                        \"path\": \"/des-produits/tortilla-espagnole\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/spanish-tortilla\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/tortilla-espagnole\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/tortilla-espagnole\"\n                                    }\n                                ]\n                            },\n                            \"id\": \"RG9tYWluQ29udGVudDo2MQ==\",\n                            \"title\": \"Tortilla espagnole\",\n                            \"tags\": \"Spanish, Appetizer, Eggs, Entrée, Vegetarian\",\n                            \"image\": {\n                                \"uri\": \"/var/site/storage/images/0/0/7/0/700-2-fre-FR/spanish_tortilla.jpg\",\n                                \"alternativeText\": \"\",\n                                \"variation\": {\n                                    \"uri\": \"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/medium/0/0/7/0/700-2-fre-FR/spanish_tortilla.jpg\"\n                                }\n                            }\n                        }\n                    },\n                    {\n                        \"node\": {\n                            \"_location\": {\n                                \"urlAliases\": [\n                                    {\n                                        \"path\": \"/des-produits/spaghetti-aux-palourdes-et-aux-crevettes\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/spaghetti-with-clams-and-shrimps\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/spaghetti-med-muslinger-og-reker\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/spaghetti-med-muslinger-og-reker\"\n                                    }\n                                ]\n                            },\n                            \"id\": \"RG9tYWluQ29udGVudDo2Mg==\",\n                            \"title\": \"Spaghetti aux palourdes et aux crevettes\",\n                            \"tags\": \"Italian, Seafood, Noodles, Entrée, Spicy\",\n                            \"image\": {\n                                \"uri\": \"/var/site/storage/images/0/6/7/0/760-2-fre-FR/pasta_seafood.jpg\",\n                                \"alternativeText\": \"\",\n                                \"variation\": {\n                                    \"uri\": \"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/medium/0/6/7/0/760-2-fre-FR/pasta_seafood.jpg\"\n                                }\n                            }\n                        }\n                    }\n                ]\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
 					"name": "Product search",
 					"request": {
 						"method": "POST",
@@ -10212,6 +11193,291 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"data\": {\n        \"content\": {\n            \"product\": {\n                \"title\": \"Spanish seafood paella\",\n                \"_type\": {\n                    \"identifier\": \"product\",\n                    \"fieldDefinitions\": [\n                        {\n                            \"fieldTypeIdentifier\": \"ezstring\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezrichtext\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezstring\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezrichtext\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezrichtext\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezimage\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezfloat\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezinteger\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezselection\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezboolean\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezboolean\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezboolean\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezboolean\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezboolean\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"eztags\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"novaseometas\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezmatrix\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezimageasset\"\n                        }\n                    ]\n                }\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Search Filtering - Field - soon - see description",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "{\n  content {\n    folders(\n      query: {Field: {target: \"tags\", in: [\"foo\", \"bar\"]}}\n    ) {\n      #...\n    }\n  }\n}\n\n//AND - multiple fields \nquery: {\n  Field: [\n    {target: \"field_a\", ...},\n    {target: \"field_b\", ...}\n  ]\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "{{your_domain}}/graphql",
+							"host": [
+								"{{your_domain}}"
+							],
+							"path": [
+								"graphql"
+							]
+						},
+						"description": "https://github.com/ezsystems/ezplatform-graphql/pull/5"
+					},
+					"response": [
+						{
+							"name": "Product data per Id",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "{\n  content {\n    product(id: 67) {\n      title\n      _type {\n        identifier\n        fieldDefinitions {\n          fieldTypeIdentifier\n        }\n      }\n    }\n  }\n}\n",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "{{your_domain}}/graphql",
+									"host": [
+										"{{your_domain}}"
+									],
+									"path": [
+										"graphql"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 29 Jul 2019 21:16:07 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.10 (Debian)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-Cache-Debug",
+									"value": "1"
+								},
+								{
+									"key": "Vary",
+									"value": "cookie,Accept-Encoding,authorization"
+								},
+								{
+									"key": "X-Debug-Token",
+									"value": "52357f"
+								},
+								{
+									"key": "X-Debug-Token-Link",
+									"value": "http://www.ezplatform2_5_ee_demo.psger/_profiler/52357f"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Length",
+									"value": "207"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"content\": {\n            \"product\": {\n                \"title\": \"Spanish seafood paella\",\n                \"_type\": {\n                    \"identifier\": \"product\",\n                    \"fieldDefinitions\": [\n                        {\n                            \"fieldTypeIdentifier\": \"ezstring\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezrichtext\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezstring\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezrichtext\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezrichtext\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezimage\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezfloat\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezinteger\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezselection\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezboolean\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezboolean\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezboolean\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezboolean\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezboolean\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"eztags\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"novaseometas\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezmatrix\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezimageasset\"\n                        }\n                    ]\n                }\n            }\n        }\n    }\n}"
+						},
+						{
+							"name": "contentType Infos",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "{\n   _repository{\n   contentType(identifier: \"blog_post\"){\n     fieldDefinitions{ \n      identifier  \n      name  \n      isRequired  \n      isTranslatable \n      fieldGroup\n    }\n  }\n  }\n}",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "{{your_domain}}/graphql",
+									"host": [
+										"{{your_domain}}"
+									],
+									"path": [
+										"graphql"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 29 Jul 2019 21:11:28 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.10 (Debian)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-Cache-Debug",
+									"value": "1"
+								},
+								{
+									"key": "Vary",
+									"value": "cookie,Accept-Encoding,authorization"
+								},
+								{
+									"key": "X-Debug-Token",
+									"value": "799dd7"
+								},
+								{
+									"key": "X-Debug-Token-Link",
+									"value": "http://www.ezplatform2_5_ee_demo.psger/_profiler/799dd7"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Length",
+									"value": "256"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"_repository\": {\n            \"contentType\": {\n                \"fieldDefinitions\": [\n                    {\n                        \"identifier\": \"title\",\n                        \"name\": \"Title\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"intro\",\n                        \"name\": \"Intro\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"body\",\n                        \"name\": \"Body\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"image\",\n                        \"name\": \"Image\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"publication_date\",\n                        \"name\": \"Publication date\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"author\",\n                        \"name\": \"Author\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"authors_position\",\n                        \"name\": \"Author's position\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"tags\",\n                        \"name\": \"tags\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"metas\",\n                        \"name\": \"Metas\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"metadata\"\n                    }\n                ]\n            }\n        }\n    }\n}"
+						},
+						{
+							"name": "Products List_siteaccess_aware",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "{\n  content {\n    products {\n      edges {\n        node {\n          _location {\n            urlAliases {\n              path\n            }\n          }\n          id\n          title\n          tags\n          image {\n            uri\n            alternativeText\n            variation(identifier: medium) {\n              uri\n            }\n          }\n        }\n      }\n    }\n  }\n}",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "{{your_domain}}/fr/graphql",
+									"host": [
+										"{{your_domain}}"
+									],
+									"path": [
+										"fr",
+										"graphql"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 29 Jul 2019 21:18:58 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.10 (Debian)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-Cache-Debug",
+									"value": "1"
+								},
+								{
+									"key": "Vary",
+									"value": "cookie,Accept-Encoding,authorization"
+								},
+								{
+									"key": "X-Debug-Token",
+									"value": "c527e3"
+								},
+								{
+									"key": "X-Debug-Token-Link",
+									"value": "http://www.ezplatform2_5_ee_demo.psger/_profiler/c527e3"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1302"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"content\": {\n            \"products\": {\n                \"edges\": [\n                    {\n                        \"node\": {\n                            \"_location\": {\n                                \"urlAliases\": [\n                                    {\n                                        \"path\": \"/des-produits/cheesecake-aux-figues-et-aux-noix-crumble-au-miel-de-figues\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/cheesecake-with-figs-and-walnuts-crumble-with-fig-honey\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/ostekake-med-fiken-og-valnoetter-crumble-med-fiken-honning\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/ostekake-med-fiken-og-valnoetter-crumble-med-fiken-honning\"\n                                    }\n                                ]\n                            },\n                            \"id\": \"RG9tYWluQ29udGVudDo1Mw==\",\n                            \"title\": \"Cheesecake aux figues et aux noix crumble au miel de figues\",\n                            \"tags\": \"Desserts, Cake, Vegetarian, Dairy, Eggs\",\n                            \"image\": {\n                                \"uri\": \"/var/site/storage/images/0/2/2/0/220-2-fre-FR/cheesecake_figs.jpg\",\n                                \"alternativeText\": \"\",\n                                \"variation\": {\n                                    \"uri\": \"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/medium/0/2/2/0/220-2-fre-FR/cheesecake_figs.jpg\"\n                                }\n                            }\n                        }\n                    },\n                    {\n                        \"node\": {\n                            \"_location\": {\n                                \"urlAliases\": [\n                                    {\n                                        \"path\": \"/des-produits/grilles-de-poulet-thailandais-aux-epices-grillees\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/grilled-thai-spice-chicken-sliders\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/grillet-thai-krydderkylling-glidebrytere\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/grillet-thai-krydderkylling-glidebrytere\"\n                                    }\n                                ]\n                            },\n                            \"id\": \"RG9tYWluQ29udGVudDo1NA==\",\n                            \"title\": \"Grilles de poulet thaïlandais aux épices grillées\",\n                            \"tags\": \"Thai, Entrée, Spicy, Meat, Eggs\",\n                            \"image\": {\n                                \"uri\": \"/var/site/storage/images/0/8/2/0/280-2-fre-FR/thai_sliders.jpg\",\n                                \"alternativeText\": \"\",\n                                \"variation\": {\n                                    \"uri\": \"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/medium/0/8/2/0/280-2-fre-FR/thai_sliders.jpg\"\n                                }\n                            }\n                        }\n                    },\n                    {\n                        \"node\": {\n                            \"_location\": {\n                                \"urlAliases\": [\n                                    {\n                                        \"path\": \"/des-produits/bibimbap-coreen\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/korean-bibimbap\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/koreanisches-bibimbap\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/koreanisches-bibimbap\"\n                                    }\n                                ]\n                            },\n                            \"id\": \"RG9tYWluQ29udGVudDo1NQ==\",\n                            \"title\": \"Bibimbap coréen\",\n                            \"tags\": \"Korean, Rice, Eggs, Entrée, Meat, Spicy, Vegetarian\",\n                            \"image\": {\n                                \"uri\": \"/var/site/storage/images/0/4/3/0/340-2-fre-FR/korean_bibimbap.jpg\",\n                                \"alternativeText\": \"\",\n                                \"variation\": {\n                                    \"uri\": \"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/medium/0/4/3/0/340-2-fre-FR/korean_bibimbap.jpg\"\n                                }\n                            }\n                        }\n                    },\n                    {\n                        \"node\": {\n                            \"_location\": {\n                                \"urlAliases\": [\n                                    {\n                                        \"path\": \"/des-produits/poulet-thai-aux-noix-de-cajou\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/thai-chicken-with-cashews\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/thai-chicken-with-cashews\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/thai-chicken-with-cashews\"\n                                    }\n                                ]\n                            },\n                            \"id\": \"RG9tYWluQ29udGVudDo1Ng==\",\n                            \"title\": \"Poulet thaï aux noix de cajou\",\n                            \"tags\": \"Thai, Entrée, Meat, Rice, Spicy\",\n                            \"image\": {\n                                \"uri\": \"/var/site/storage/images/0/0/4/0/400-2-fre-FR/thai_chicken_cashews.jpg\",\n                                \"alternativeText\": \"\",\n                                \"variation\": {\n                                    \"uri\": \"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/medium/0/0/4/0/400-2-fre-FR/thai_chicken_cashews.jpg\"\n                                }\n                            }\n                        }\n                    },\n                    {\n                        \"node\": {\n                            \"_location\": {\n                                \"urlAliases\": [\n                                    {\n                                        \"path\": \"/des-produits/cheesecake-au-citron-et-aux-cerises\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/cherry-lemon-cheesecake\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/kirsch-zitronen-kaesekuchen\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/kirsch-zitronen-kaesekuchen\"\n                                    }\n                                ]\n                            },\n                            \"id\": \"RG9tYWluQ29udGVudDo1Nw==\",\n                            \"title\": \"Cheesecake au citron et aux cerises\",\n                            \"tags\": \"Cake, Dairy, Desserts, Eggs, Vegetarian\",\n                            \"image\": {\n                                \"uri\": \"/var/site/storage/images/0/6/4/0/460-2-fre-FR/cheesecake_cherry.jpg\",\n                                \"alternativeText\": \"\",\n                                \"variation\": {\n                                    \"uri\": \"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/medium/0/6/4/0/460-2-fre-FR/cheesecake_cherry.jpg\"\n                                }\n                            }\n                        }\n                    },\n                    {\n                        \"node\": {\n                            \"_location\": {\n                                \"urlAliases\": [\n                                    {\n                                        \"path\": \"/des-produits/biscuits-aux-noix-de-macadamia-au-chocolat\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/double-chocolate-macadamia-nut-cookies\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/biscuits-aux-noix-de-macadamia-au-chocolat\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/biscuits-aux-noix-de-macadamia-au-chocolat\"\n                                    }\n                                ]\n                            },\n                            \"id\": \"RG9tYWluQ29udGVudDo1OA==\",\n                            \"title\": \"Biscuits aux noix de macadamia au chocolat\",\n                            \"tags\": \"Snack, Dairy, Desserts, Eggs, Vegetarian\",\n                            \"image\": {\n                                \"uri\": \"/var/site/storage/images/0/2/5/0/520-2-fre-FR/cookies_chocolate.jpg\",\n                                \"alternativeText\": \"\",\n                                \"variation\": {\n                                    \"uri\": \"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/medium/0/2/5/0/520-2-fre-FR/cookies_chocolate.jpg\"\n                                }\n                            }\n                        }\n                    },\n                    {\n                        \"node\": {\n                            \"_location\": {\n                                \"urlAliases\": [\n                                    {\n                                        \"path\": \"/des-produits/couscous-vegetarien-marocain\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/moroccan-vegetarian-couscous\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/moroccan-vegetarian-couscous\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/moroccan-vegetarian-couscous\"\n                                    }\n                                ]\n                            },\n                            \"id\": \"RG9tYWluQ29udGVudDo1OQ==\",\n                            \"title\": \"Couscous végétarien marocain\",\n                            \"tags\": \"Moroccan, Entrée, Vegan, Vegetarian\",\n                            \"image\": {\n                                \"uri\": \"/var/site/storage/images/0/8/5/0/580-2-fre-FR/moroccan_couscous.jpg\",\n                                \"alternativeText\": \"\",\n                                \"variation\": {\n                                    \"uri\": \"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/medium/0/8/5/0/580-2-fre-FR/moroccan_couscous.jpg\"\n                                }\n                            }\n                        }\n                    },\n                    {\n                        \"node\": {\n                            \"_location\": {\n                                \"urlAliases\": [\n                                    {\n                                        \"path\": \"/des-produits/granola-yogourt-parfait-aux-baies\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/granola-yogurt-berry-parfait\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/granola-yogurt-berry-parfait\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/granola-yogurt-berry-parfait\"\n                                    }\n                                ]\n                            },\n                            \"id\": \"RG9tYWluQ29udGVudDo2MA==\",\n                            \"title\": \"Granola, yogourt, parfait aux baies\",\n                            \"tags\": \"Breakfast, Desserts, Vegetarian\",\n                            \"image\": {\n                                \"uri\": \"/var/site/storage/images/0/4/6/0/640-2-fre-FR/yogurt_parfait.jpg\",\n                                \"alternativeText\": \"\",\n                                \"variation\": {\n                                    \"uri\": \"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/medium/0/4/6/0/640-2-fre-FR/yogurt_parfait.jpg\"\n                                }\n                            }\n                        }\n                    },\n                    {\n                        \"node\": {\n                            \"_location\": {\n                                \"urlAliases\": [\n                                    {\n                                        \"path\": \"/des-produits/tortilla-espagnole\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/spanish-tortilla\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/tortilla-espagnole\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/tortilla-espagnole\"\n                                    }\n                                ]\n                            },\n                            \"id\": \"RG9tYWluQ29udGVudDo2MQ==\",\n                            \"title\": \"Tortilla espagnole\",\n                            \"tags\": \"Spanish, Appetizer, Eggs, Entrée, Vegetarian\",\n                            \"image\": {\n                                \"uri\": \"/var/site/storage/images/0/0/7/0/700-2-fre-FR/spanish_tortilla.jpg\",\n                                \"alternativeText\": \"\",\n                                \"variation\": {\n                                    \"uri\": \"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/medium/0/0/7/0/700-2-fre-FR/spanish_tortilla.jpg\"\n                                }\n                            }\n                        }\n                    },\n                    {\n                        \"node\": {\n                            \"_location\": {\n                                \"urlAliases\": [\n                                    {\n                                        \"path\": \"/des-produits/spaghetti-aux-palourdes-et-aux-crevettes\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/spaghetti-with-clams-and-shrimps\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/spaghetti-med-muslinger-og-reker\"\n                                    },\n                                    {\n                                        \"path\": \"/des-produits/spaghetti-med-muslinger-og-reker\"\n                                    }\n                                ]\n                            },\n                            \"id\": \"RG9tYWluQ29udGVudDo2Mg==\",\n                            \"title\": \"Spaghetti aux palourdes et aux crevettes\",\n                            \"tags\": \"Italian, Seafood, Noodles, Entrée, Spicy\",\n                            \"image\": {\n                                \"uri\": \"/var/site/storage/images/0/6/7/0/760-2-fre-FR/pasta_seafood.jpg\",\n                                \"alternativeText\": \"\",\n                                \"variation\": {\n                                    \"uri\": \"http://www.ezplatform2_5_ee_demo.psger/var/site/storage/images/_aliases/medium/0/6/7/0/760-2-fre-FR/pasta_seafood.jpg\"\n                                }\n                            }\n                        }\n                    }\n                ]\n            }\n        }\n    }\n}"
 						}
 					]
 				},
@@ -10580,6 +11846,121 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"data\": {\n        \"content\": {\n            \"product\": {\n                \"title\": \"Spanish seafood paella\",\n                \"_type\": {\n                    \"identifier\": \"product\",\n                    \"fieldDefinitions\": [\n                        {\n                            \"fieldTypeIdentifier\": \"ezstring\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezrichtext\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezstring\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezrichtext\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezrichtext\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezimage\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezfloat\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezinteger\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezselection\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezboolean\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezboolean\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezboolean\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezboolean\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezboolean\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"eztags\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"novaseometas\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezmatrix\"\n                        },\n                        {\n                            \"fieldTypeIdentifier\": \"ezimageasset\"\n                        }\n                    ]\n                }\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Article",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation DeleteThisOldArticle {\n  deleteContent(contentId: 470) {\n    contentId\n  }\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "{{your_domain}}/graphql",
+							"host": [
+								"{{your_domain}}"
+							],
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "contentType Infos",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "{\n   _repository{\n   contentType(identifier: \"blog_post\"){\n     fieldDefinitions{ \n      identifier  \n      name  \n      isRequired  \n      isTranslatable \n      fieldGroup\n    }\n  }\n  }\n}",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "{{your_domain}}/graphql",
+									"host": [
+										"{{your_domain}}"
+									],
+									"path": [
+										"graphql"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 29 Jul 2019 21:11:28 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.10 (Debian)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-Cache-Debug",
+									"value": "1"
+								},
+								{
+									"key": "Vary",
+									"value": "cookie,Accept-Encoding,authorization"
+								},
+								{
+									"key": "X-Debug-Token",
+									"value": "799dd7"
+								},
+								{
+									"key": "X-Debug-Token-Link",
+									"value": "http://www.ezplatform2_5_ee_demo.psger/_profiler/799dd7"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Length",
+									"value": "256"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"_repository\": {\n            \"contentType\": {\n                \"fieldDefinitions\": [\n                    {\n                        \"identifier\": \"title\",\n                        \"name\": \"Title\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"intro\",\n                        \"name\": \"Intro\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"body\",\n                        \"name\": \"Body\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"image\",\n                        \"name\": \"Image\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"publication_date\",\n                        \"name\": \"Publication date\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"author\",\n                        \"name\": \"Author\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"authors_position\",\n                        \"name\": \"Author's position\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"tags\",\n                        \"name\": \"tags\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"content\"\n                    },\n                    {\n                        \"identifier\": \"metas\",\n                        \"name\": \"Metas\",\n                        \"isRequired\": false,\n                        \"isTranslatable\": true,\n                        \"fieldGroup\": \"metadata\"\n                    }\n                ]\n            }\n        }\n    }\n}"
 						}
 					]
 				},
