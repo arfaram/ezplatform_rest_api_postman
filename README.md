@@ -1,6 +1,11 @@
-# EZ Platform REST API Examples.
+# EZ Platform REST API/ GraphQL Examples.
 
-See the public postman collection: https://documenter.getpostman.com/view/1976316/S17wM5gG
+Public postman collection: https://documenter.getpostman.com/view/1976316/S17wM5gG
 
 
-Want to contribute! yes, Just Download the postman collection, make/add changes, export the json from postman then create your PR. 
+Contribution are welcome:
+
+1. Download the postman collection file
+2. Add changes
+3. Export the json from postman
+4. CreatePR. 
